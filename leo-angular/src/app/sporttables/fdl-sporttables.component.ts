@@ -13,7 +13,7 @@ export class FdlSporttablesComponent implements OnInit {
               private titleService: Title) { }
 
   ngOnInit() {
-    this.setTitle('Sporttables');
+    this.setTitle('Sporttabellen');
   }
 
   private setTitle(newTitle: string) {

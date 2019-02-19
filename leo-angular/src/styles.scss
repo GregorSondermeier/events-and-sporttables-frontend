@@ -2,3 +2,8 @@
 
 // use reboot from bootstrap 4 to normalize everything
 @import "../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../node_modules/bootstrap/scss/type";
+
+a {
+  color: $gray-900;
+}

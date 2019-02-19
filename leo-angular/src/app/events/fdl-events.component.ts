@@ -14,7 +14,7 @@ export class FdlEventsComponent implements OnInit {
               private titleService: Title) { }
 
   ngOnInit() {
-    this.setTitle('Events');
+    this.setTitle('Veranstaltungen');
   }
 
   private setTitle(newTitle: string) {
