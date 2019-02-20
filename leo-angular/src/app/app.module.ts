@@ -1,26 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FdlEventsComponent } from './events/events.component';
-import { FdlSporttablesComponent } from './sporttables/sporttables.component';
-import { FdlEventsCatswitcherComponent } from './events/events-catswitcher/events-catswitcher.component';
-import { FdlEventsQuicknavComponent } from './events/events-quicknav/events-quicknav.component';
+import { FdlAppComponent } from './app.component';
+import { FdlEventsModule } from "./events/events.module";
+import { FdlSporttablesModule } from "./sporttables/sporttables.module";
+import { FdlPagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FdlAppRoutingModule } from "./app-routing.module";
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FdlEventsComponent,
-    FdlSporttablesComponent,
-    FdlEventsCatswitcherComponent,
-    FdlEventsQuicknavComponent
+    FdlAppComponent,
+    FdlPagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FdlAppRoutingModule,
+    FdlEventsModule,
+    FdlSporttablesModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    FdlAppComponent
+  ]
 })
-export class AppModule { }
+export class FdlAppModule { }

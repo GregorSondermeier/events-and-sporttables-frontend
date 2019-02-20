@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FdlEventsComponent } from "./events/events.component";
-import { FdlSporttablesComponent } from "./sporttables/sporttables.component";
+import { FdlPagenotfoundComponent } from "./pagenotfound/pagenotfound.component";
+import { fdlEventRoutes } from "./events/events.routes";
+import { fdlSporttablesRoutes } from "./sporttables/sporttables.routes";
 
-const routes: Routes = [
-  {
-    path: 'events',
-    component: FdlEventsComponent,
-  },
-  {
-    path: 'sporttables',
-    component: FdlSporttablesComponent,
-  },
-];
+const routes: Routes = fdlEventRoutes
+  .concat(fdlSporttablesRoutes)
+  .concat([
+    {
+      path: '**',
+      component: FdlPagenotfoundComponent,
+    },
+  ]);
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class FdlAppRoutingModule { }
