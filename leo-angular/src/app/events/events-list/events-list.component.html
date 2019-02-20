@@ -1,3 +1,57 @@
-<p>
-  events-list works!
-</p>
+<div class="container-fluid">
+  <h2><b>{{heading | uppercase}}</b></h2>
+</div>
+
+<ul class="list-unstyled fdl-events-highlighted">
+  <li *ngFor="let evt of events | slice:0:highlighted" class="mb-5">
+    <a href>
+      <article>
+        <figure class="figure">
+          <img [src]="evt.imageUrl" [alt]="evt.title" [title]="evt.title" class="figure-img img-fluid" />
+        </figure>
+        <div class="container-fluid">
+          <p class="mb-0 text-secondary">
+            <small>{{evt.location | uppercase}} / {{evt.venue | uppercase}}</small>
+          </p>
+          <h4>
+            <b>{{evt.title}}</b>
+          </h4>
+          <p>
+            {{evt.teaser}}
+          </p>
+          <time [dateTime]="evt.datetime" class="text-secondary">
+            <small>{{evt.datetime | date : 'EE dd.MM. / HH:mm'}}</small>
+          </time>
+        </div>
+      </article>
+    </a>
+  </li>
+</ul>
+
+<ul class="list-unstyled fdl-events">
+  <li *ngFor="let evt of events | slice:highlighted" class="mb-4">
+    <a href>
+      <article class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <p class="mb-0 text-secondary">
+              <small>{{evt.location | uppercase}} / {{evt.venue | uppercase}}</small>
+            </p>
+            <h4 class="mb-0">
+              <b>{{evt.title}}</b>
+            </h4>
+            <time [dateTime]="evt.datetime" class="text-secondary">
+              <small>{{evt.datetime | date : 'EE dd.MM. / HH:mm'}}</small>
+            </time>
+          </div>
+          <div class="col-4">
+            <figure class="figure">
+              <img [src]="evt.imageUrl" [alt]="evt.title" [title]="evt.title" class="figure-img img-fluid" />
+            </figure>
+          </div>
+        </div>
+      </article>
+    </a>
+  </li>
+</ul>
+

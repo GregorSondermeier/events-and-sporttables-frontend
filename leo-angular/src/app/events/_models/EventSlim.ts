@@ -10,12 +10,6 @@ export class EventSlim implements IEventSlim {
   imageUrl: string;
 
   constructor(eventSlim: IEventSlim) {
-    this.id = eventSlim.id;
-    this.title = eventSlim.title;
-    this.location = eventSlim.location;
-    this.venue = eventSlim.venue;
-    this.datetime = eventSlim.datetime;
-    this.teaser = eventSlim.teaser;
-    this.imageUrl = eventSlim.imageUrl;
+    Object.assign(this, eventSlim);
   }
 }
