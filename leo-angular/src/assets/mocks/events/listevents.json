@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 2,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 3,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 4,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 5,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 6,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 7,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 8,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 9,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 10,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 11,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 12,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 13,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 14,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 15,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 16,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 17,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 18,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 19,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  },
+  {
+    "id": 20,
+    "title": "Lorem ipsum dolor sit amet, consetetur sadipscing elit",
+    "location": "Ort",
+    "venue": "venue",
+    "datetime": "2018-02-20T19:00:00.000Z",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    "imageUrl": "https://via.placeholder.com/640x360"
+  }
+]

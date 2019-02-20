@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FdlPagenotfoundComponent } from "./pagenotfound/pagenotfound.component";
+import { FdlEventsComponent } from "./events.component";
 
 const routes: Routes = [
   {
-    path: '**',
-    component: FdlPagenotfoundComponent
+    path: 'events',
+    component: FdlEventsComponent,
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
-export class FdlAppRoutingModule { }
+export class FdlEventsRoutingModule { }

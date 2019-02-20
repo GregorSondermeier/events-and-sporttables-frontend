@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FdlPagenotfoundComponent } from "./pagenotfound/pagenotfound.component";
+import { FdlSporttablesComponent } from "./sporttables.component";
 
 const routes: Routes = [
   {
-    path: '**',
-    component: FdlPagenotfoundComponent
-  }
+    path: 'sporttables',
+    component: FdlSporttablesComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
-export class FdlAppRoutingModule { }
+export class FdlSporttablesRoutingModule { }

@@ -14,9 +14,9 @@ import { BrowserModule } from "@angular/platform-browser";
   ],
   imports: [
     BrowserModule,
-    FdlAppRoutingModule,
     FdlEventsModule,
     FdlSporttablesModule,
+    FdlAppRoutingModule
   ],
   providers: [],
   bootstrap: [
