@@ -4,8 +4,8 @@ import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'fdl-sporttables',
-  styleUrls: ['./fdl-sporttables.component.scss'],
-  templateUrl: './fdl-sporttables.component.html',
+  styleUrls: ['./sporttables.component.scss'],
+  templateUrl: './sporttables.component.html',
 })
 export class FdlSporttablesComponent implements OnInit {
 

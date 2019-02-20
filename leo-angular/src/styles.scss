@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-// use reboot from bootstrap 4 to normalize everything
-@import "../node_modules/bootstrap/scss/bootstrap-reboot";
-@import "../node_modules/bootstrap/scss/type";
+// custom functions/variables/mixins
+@import "scss/variables";
 
-a {
-  color: $gray-900;
-}
+// fonts
+@import "scss/font-icomoon-custom";
+
+// custom bootstrap
+@import "scss/bootstrap-custom";
+
+// custom global rules
+@import "scss/globals";

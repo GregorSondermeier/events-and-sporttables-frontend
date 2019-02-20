@@ -4,8 +4,8 @@ import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 
 @Component({
   selector: 'fdl-events',
-  styleUrls: ['./fdl-events.component.scss'],
-  templateUrl: './fdl-events.component.html',
+  styleUrls: ['./events.component.scss'],
+  templateUrl: './events.component.html',
 
 })
 export class FdlEventsComponent implements OnInit {

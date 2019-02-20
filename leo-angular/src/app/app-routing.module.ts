@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FdlEventsComponent } from "./events/fdl-events.component";
-import { FdlSporttablesComponent } from "./sporttables/fdl-sporttables.component";
+import { FdlEventsComponent } from "./events/events.component";
+import { FdlSporttablesComponent } from "./sporttables/sporttables.component";
 
 const routes: Routes = [
   {

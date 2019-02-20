@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlSporttablesComponent } from './fdl-sporttables.component';
+import { FdlSporttablesComponent } from './sporttables.component';
 
 describe('FdlSporttablesComponent', () => {
   let component: FdlSporttablesComponent;

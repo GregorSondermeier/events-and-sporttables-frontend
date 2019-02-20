@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlEventsComponent } from './fdl-events.component';
+import { FdlEventsQuicknavComponent } from './events-quicknav.component';
 
-describe('FdlEventsComponent', () => {
-  let component: FdlEventsComponent;
-  let fixture: ComponentFixture<FdlEventsComponent>;
+describe('FdlEventsQuicknavComponent', () => {
+  let component: FdlEventsQuicknavComponent;
+  let fixture: ComponentFixture<FdlEventsQuicknavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlEventsComponent ]
+      declarations: [ FdlEventsQuicknavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlEventsComponent);
+    fixture = TestBed.createComponent(FdlEventsQuicknavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
