@@ -7,13 +7,17 @@ import { FdlEventsListComponent } from './events-list/events-list.component';
 import { FdlEventsRoutingModule } from "./events-routing.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
+import { FdlEventsTeaserBigComponent } from './events-teaser-big/events-teaser-big.component';
+import { FdlEventsTeaserSmallComponent } from './events-teaser-small/events-teaser-small.component';
 
 @NgModule({
   declarations: [
     FdlEventsComponent,
     FdlEventsCatswitcherComponent,
     FdlEventsQuicknavComponent,
-    FdlEventsListComponent
+    FdlEventsListComponent,
+    FdlEventsTeaserBigComponent,
+    FdlEventsTeaserSmallComponent
   ],
   imports: [
     BrowserModule,

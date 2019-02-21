@@ -18,7 +18,7 @@ export class FdlEventsListComponent implements OnInit {
    * defines the amount of highlighted events on the top of the list
    */
   @Input()
-  public highlighted: Number;
+  public highlightedOnTop: Number;
 
   // the list of events to display
   @Input()
