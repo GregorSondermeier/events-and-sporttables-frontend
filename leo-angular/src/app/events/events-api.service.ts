@@ -5,10 +5,16 @@ import { EventPreview } from "./_models/EventPreview";
 import { map } from "rxjs/operators";
 import { IEvent } from "./_interfaces/IEvent";
 import { Event } from "./_models/Event";
+import { ICategory } from "./_interfaces/ICategory";
+import { Category } from "./_models/Category";
 
-interface IListParams {
-  category?: string;
+interface IEventsListParams {
+  category?: string,
   pageSize?: number
+}
+
+interface ICategoriesListParams {
+  query?: string
 }
 
 @Injectable({
@@ -18,9 +24,9 @@ export class EventsApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public $list(params: IListParams) {
+  public $list(params: IEventsListParams) {
     return this.httpClient
-      .get<IEventPreview[]>('assets/mocks/events/listevents.json')
+      .get<IEventPreview[]>('assets/mocks/events/eventslist.json')
       .pipe(
         map((data) => {
           if (params.category) {
@@ -44,5 +50,24 @@ export class EventsApiService {
       .pipe(
         map(data => new Event(data))
       )
+  }
+
+  public categories = {
+    $list: (params?: ICategoriesListParams) => {
+      return this.httpClient
+        .get<ICategory[]>('assets/mocks/events/categorieslist.json')
+        .pipe(
+          map(data => {
+            if (params && params.query) {
+              return data
+                .filter((c) => c.name.indexOf(params.query) != -1)
+                .map((c) => new Category(c));
+            } else {
+              return data
+                .map((c) => new Category(c));
+            }
+          })
+        )
+    }
   }
 }
