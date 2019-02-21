@@ -7,8 +7,8 @@ import { IEvent } from "./_interfaces/IEvent";
 import { Event } from "./_models/Event";
 
 interface IListParams {
-  category: string;
-  pageSize: number
+  category?: string;
+  pageSize?: number
 }
 
 @Injectable({
@@ -22,9 +22,19 @@ export class EventsApiService {
     return this.httpClient
       .get<IEventPreview[]>('assets/mocks/events/listevents.json')
       .pipe(
-        map(data => data
-          .splice(0, params.pageSize)
-          .map((e) => new EventPreview(e)))
+        map((data) => {
+          if (params.category) {
+            return data
+              .filter((e) => e.categories.indexOf(params.category) != -1)
+              .splice(0, params.pageSize)
+              .map((e) => new EventPreview(e));
+          } else {
+            return data
+              .sort(() => 0.5 - Math.random())
+              .slice(0, params.pageSize)
+              .map((e) => new EventPreview(e))
+          }
+        })
       );
   }
 

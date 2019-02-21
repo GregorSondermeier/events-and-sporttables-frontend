@@ -3,14 +3,16 @@ import { IEvent } from "../_interfaces/IEvent";
 export class Event implements IEvent {
   id: number;
   title: string;
+  categories: string[];
   location: string;
   venue: string;
   datetime: string;
   teaser: string;
   description: string;
   image: {
-    description: string;
-    url: string
+    url: string,
+    copyright: string,
+    description: string
   };
   tickets: {
     priceFrom: string;

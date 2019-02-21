@@ -24,9 +24,9 @@ export class FdlEventsComponent implements OnInit {
   ngOnInit() {
     this.setTitle('Veranstaltungen');
     this.events = {};
-    this.listEvents({category: 'highlight'});
-    this.listEvents({category: 'concert'});
-    this.listEvents({category: 'comedy'});
+    this.listEvents();
+    this.listEvents({category: 'Comedy'});
+    this.listEvents({category: 'Konzert'});
   }
 
   /**
@@ -40,11 +40,11 @@ export class FdlEventsComponent implements OnInit {
   /**
    * calls the EventsApiService to list the events as defined by the parameters
    */
-  private listEvents(params: {category: string}) {
+  private listEvents(params?: {category?: string}) {
     this.eventsApiService
       .$list(Object.assign({pageSize: 5}, params))
       .subscribe((events) => {
-        this.events[params.category] = events;
+        this.events[params && params.category ? params.category : 'Highlights'] = events;
       })
   }
 

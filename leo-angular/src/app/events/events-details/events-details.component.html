@@ -1,1 +1,21 @@
-<p>{{evt.title}}</p>
+<p class="mb-0 text-secondary">
+  <small>{{evt.location | uppercase}} / {{evt.venue | uppercase}}</small>
+</p>
+
+<h2><b>{{evt.title}}</b></h2>
+
+<time [dateTime]="evt.datetime" class="text-secondary">
+  <small>{{evt.datetime | date : 'EE dd.MM. / HH:mm'}}</small>
+</time>
+
+<figure class="figure">
+  <figure class="figure">
+    <img [src]="evt.image.url"
+         [alt]="evt.title"
+         [title]="evt.title"
+         class="figure-img img-fluid" />
+    <figcaption class="figure-caption">{{evt.image.description}}</figcaption>
+  </figure>
+
+  <figcaption class="figure-caption">{{evt.image.description}}</figcaption>
+</figure>

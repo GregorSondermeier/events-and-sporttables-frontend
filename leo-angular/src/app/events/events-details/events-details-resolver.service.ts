@@ -15,7 +15,6 @@ export class FdlEventsDetailsResolverService implements Resolve<Event> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Event> {
     const id = parseInt(route.paramMap.get('id'));
-    console.debug('id:', id, typeof id);
 
     return this.eventsApiService
       .$get(id)
