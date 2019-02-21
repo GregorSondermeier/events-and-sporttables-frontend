@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { IEventSlim } from "./_interfaces/IEventSlim";
-import { EventSlim } from "./_models/EventSlim";
+import { IEventPreview } from "./_interfaces/IEventPreview";
+import { EventPreview } from "./_models/EventPreview";
 import { map } from "rxjs/operators";
 import { IEvent } from "./_interfaces/IEvent";
 import { Event } from "./_models/Event";
+
+interface IListParams {
+  category: string;
+  pageSize: number
+}
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +18,13 @@ export class EventsApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public $list() {
+  public $list(params: IListParams) {
     return this.httpClient
-      .get<IEventSlim[]>('assets/mocks/events/listevents.json')
+      .get<IEventPreview[]>('assets/mocks/events/listevents.json')
       .pipe(
-        map(data => data.map((e) => new EventSlim(e)))
+        map(data => data
+          .splice(0, params.pageSize)
+          .map((e) => new EventPreview(e)))
       );
   }
 

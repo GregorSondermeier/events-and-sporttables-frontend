@@ -1,4 +1,4 @@
-export interface IEventSlim {
+export interface IEventPreview {
   id: number,
   title: string,
   location: string,

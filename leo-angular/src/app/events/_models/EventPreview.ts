@@ -1,6 +1,6 @@
-import { IEventSlim } from "../_interfaces/IEventSlim";
+import { IEventPreview } from "../_interfaces/IEventPreview";
 
-export class EventSlim implements IEventSlim {
+export class EventPreview implements IEventPreview {
   id: number;
   title: string;
   location: string;
@@ -9,7 +9,7 @@ export class EventSlim implements IEventSlim {
   teaser: string;
   imageUrl: string;
 
-  constructor(eventSlim: IEventSlim) {
+  constructor(eventSlim: IEventPreview) {
     Object.assign(this, eventSlim);
   }
 }

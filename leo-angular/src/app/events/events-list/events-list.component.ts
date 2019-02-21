@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EventSlim } from "../_models/EventSlim";
-import { EventsApiService } from "../events-api.service";
+import { EventPreview } from "../_models/EventPreview";
 
 @Component({
   selector: 'fdl-events-list',
@@ -22,22 +21,10 @@ export class FdlEventsListComponent implements OnInit {
   public highlighted: Number;
 
   // the list of events to display
-  public events: EventSlim[];
+  @Input()
+  public events: EventPreview[];
 
-  constructor(private eventsApiService: EventsApiService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.listEvents();
-  }
-
-  /**
-   * calls the EventsApiService to list the events as defined by the parameters
-   */
-  private listEvents() {
-    this.eventsApiService
-      .$list()
-      .subscribe((events) => {
-        this.events = events.slice(0, 5);
-      })
-  }
+  ngOnInit() { }
 }

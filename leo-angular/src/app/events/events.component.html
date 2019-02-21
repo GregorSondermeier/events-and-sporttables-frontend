@@ -6,11 +6,14 @@
 
 <fdl-events-quicknav></fdl-events-quicknav>
 
-<fdl-events-list [highlighted]="1"
+<fdl-events-list [events]="events['highlight']"
+                 [highlighted]="1"
                  heading="Highlights"></fdl-events-list>
 
-<fdl-events-list [highlighted]="1"
+<fdl-events-list [events]="events['concert']"
+                 [highlighted]="1"
                  heading="Konzerte"></fdl-events-list>
 
-<fdl-events-list [highlighted]="1"
+<fdl-events-list [events]="events['comedy']"
+                 [highlighted]="1"
                  heading="Comedy & Kabarett"></fdl-events-list>
