@@ -4,7 +4,7 @@
 
 <ul class="list-unstyled">
   <li *ngFor="let evt of events | slice:0:highlightedOnTop" class="mb-5">
-    <a href>
+    <a [routerLink]="['/events', evt.id]">
       <fdl-events-teaser-big [evt]="evt"></fdl-events-teaser-big>
     </a>
   </li>
@@ -12,9 +12,8 @@
 
 <ul class="list-unstyled">
   <li *ngFor="let evt of events | slice:highlightedOnTop" class="mb-4">
-    <a href>
+    <a [routerLink]="['/events', evt.id]">
       <fdl-events-teaser-small [evt]="evt"></fdl-events-teaser-small>
     </a>
   </li>
 </ul>
-
