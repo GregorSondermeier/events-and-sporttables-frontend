@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
-import { FdlCommonAdComponent } from "./ad/common-ad.component";
+import { FdlCommonAdComponent } from "./common-ad/common-ad.component";
+import { FdlCommonSocialsharebarComponent } from './common-socialsharebar/common-socialsharebar.component';
 
 @NgModule({
   declarations: [
-    FdlCommonAdComponent
+    FdlCommonAdComponent,
+    FdlCommonSocialsharebarComponent
   ],
   imports: [],
   exports: [
-    FdlCommonAdComponent
+    FdlCommonAdComponent,
+    FdlCommonSocialsharebarComponent
   ]
 })
 export class FdlCommonModule { }
