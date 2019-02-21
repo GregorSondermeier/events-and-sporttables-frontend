@@ -10,6 +10,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FdlEventsTeaserBigComponent } from './events-teaser-big/events-teaser-big.component';
 import { FdlEventsTeaserSmallComponent } from './events-teaser-small/events-teaser-small.component';
 import { FdlEventsDetailsComponent } from './events-details/events-details.component';
+import { FdlCommonModule } from "../common/common.module";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FdlEventsDetailsComponent } from './events-details/events-details.compo
   imports: [
     BrowserModule,
     HttpClientModule,
+    FdlCommonModule,
     FdlEventsRoutingModule
   ],
   providers: [],

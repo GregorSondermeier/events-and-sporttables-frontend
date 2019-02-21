@@ -1,15 +1,15 @@
 <p class="mb-0 text-secondary">
-  <small>{{evt.location | uppercase}} / {{evt.venue | uppercase}}</small>
+  {{evt.location | uppercase}} / {{evt.venue | uppercase}}
 </p>
 
 <h2><b>{{evt.title}}</b></h2>
 
 <time [dateTime]="evt.datetime" class="text-secondary">
-  <small>{{evt.datetime | date : 'EE dd.MM. / HH:mm'}}</small>
+  {{evt.datetime | date : 'EE dd.MM.yyyy | HH:mm'}}
 </time>
 
 <figure class="figure">
-  <figure class="figure">
+  <figure class="figure mb-0">
     <img [src]="evt.image.url"
          [alt]="evt.title"
          [title]="evt.title"
@@ -17,5 +17,33 @@
     <figcaption class="figure-caption">{{evt.image.description}}</figcaption>
   </figure>
 
-  <figcaption class="figure-caption">{{evt.image.description}}</figcaption>
+  <figcaption class="figure-caption">Quelle: {{evt.image.copyright}}</figcaption>
 </figure>
+
+<p class="text-secondary mb-2">
+  {{evt.categories.join(' / ')}}
+</p>
+
+<p>
+  {{evt.teaser}}
+</p>
+
+<fdl-common-ad></fdl-common-ad>
+
+<p>
+  {{evt.description}}
+</p>
+
+<time [dateTime]="evt.datetime">
+  {{evt.datetime | date : 'EE dd.MM.yyyy | HH:mm'}}
+</time>
+
+<p>
+  Tickets ab {{evt.tickets.priceFrom}}
+</p>
+
+<div class="text-center">
+  <a class="btn btn-secondary" [href]="evt.tickets.buyUrl" target="_blank">
+    Tickets kaufen
+  </a>
+</div>

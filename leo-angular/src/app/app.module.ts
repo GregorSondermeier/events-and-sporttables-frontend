@@ -8,16 +8,18 @@ import { FdlAppRoutingModule } from "./app-routing.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { registerLocaleData } from "@angular/common";
 import localeDe from '@angular/common/locales/de';
+import { FdlCommonModule } from "./common/common.module";
 
 registerLocaleData(localeDe);
 
 @NgModule({
   declarations: [
     FdlAppComponent,
-    FdlPagenotfoundComponent,
+    FdlPagenotfoundComponent
   ],
   imports: [
     BrowserModule,
+    FdlCommonModule,
     FdlEventsModule,
     FdlSporttablesModule,
     FdlAppRoutingModule
