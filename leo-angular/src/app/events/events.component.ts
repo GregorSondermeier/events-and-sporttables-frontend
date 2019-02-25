@@ -36,7 +36,6 @@ export class FdlEventsComponent implements OnInit {
 
     this.categoriesInCatswitcher = commonConfigService.getConfig('events').categoriesInCatswitcher;
     this.categoriesOnList = commonConfigService.getConfig('events').categoriesOnFrontpageList;
-    console.debug('categoriesOnList:', this.categoriesOnList);
     this.events = {};
 
   }
@@ -49,7 +48,6 @@ export class FdlEventsComponent implements OnInit {
   }
 
   public redirectToEventsSearch(args: {[key: string]: string}) {
-    console.debug('redirectToEventsSearch(args)', args);
     this.router.navigate(['/events/search'], {
       queryParams: {
         query: args.query
