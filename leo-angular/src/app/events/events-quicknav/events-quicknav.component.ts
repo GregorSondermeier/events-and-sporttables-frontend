@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, LOCALE_ID, OnInit, Output } from '@angular/core';
 import { EventsQuicknavIsExpandedState } from "../_types/EventsQuicknavIsExpandedState";
+import { formatDate } from "@angular/common";
 
 @Component({
   selector: 'fdl-events-quicknav',
@@ -48,11 +49,11 @@ export class FdlEventsQuicknavComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(@Inject(LOCALE_ID) private locale: string) { }
 
   ngOnInit() {
     this.today = new Date();
-    this.tomorrow = new Date(new Date().setDate(this.today.getDate() + 1));
+    this.tomorrow = new Date(new Date().setDate(new Date().getDate() + 1));
   }
 
   /**

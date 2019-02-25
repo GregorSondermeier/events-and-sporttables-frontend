@@ -2,11 +2,13 @@
   <div class="float-left">
     <a [routerLink]="['/events/search']"
        [queryParams]="{date: today | date : 'yyyy-MM-dd'}"
+       queryParamsHandling="merge"
        class="btn fdl-btn-default">
       HEUTE
     </a>
     <a [routerLink]="['/events/search']"
        [queryParams]="{date: tomorrow | date : 'yyyy-MM-dd'}"
+       queryParamsHandling="merge"
        class="btn fdl-btn-default">
       MORGEN
     </a>

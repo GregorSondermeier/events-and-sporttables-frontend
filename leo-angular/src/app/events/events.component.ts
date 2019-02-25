@@ -43,15 +43,15 @@ export class FdlEventsComponent implements OnInit {
   ngOnInit() {
     this.setTitle('Veranstaltungen');
     this.categoriesOnList.forEach((c) => {
-      this.listEvents({category: c.id});
+      this.$listEvents({category: c.id});
     });
   }
 
-  public redirectToEventsSearch(args: {[key: string]: string}) {
+  public redirectToEventsSearch(searchcriteria: {[key: string]: string}) {
     this.router.navigate(['/events/search'], {
       queryParams: {
-        query: args.query,
-        date: args.date
+        query: searchcriteria.query,
+        date: searchcriteria.date
       }
     });
   };
@@ -67,7 +67,7 @@ export class FdlEventsComponent implements OnInit {
   /**
    * calls the EventsApiService to list the events as defined by the parameters
    */
-  private listEvents(params?: {category?: number}) {
+  private $listEvents(params?: {category?: number}) {
     this.eventsApiService
       .$list(Object.assign({pageSize: 5}, params))
       .subscribe((events) => {

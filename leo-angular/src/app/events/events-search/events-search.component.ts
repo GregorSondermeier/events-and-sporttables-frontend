@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
+import { FdlCommonConfigService } from "../../common/common-config.service";
+import { Category } from "../_models/Category";
 
 @Component({
   selector: 'fdl-events-search',
@@ -25,9 +27,21 @@ export class FdlEventsSearchComponent implements OnInit {
    */
   dateObservable: Observable<string>;
 
-  constructor(private route: ActivatedRoute) { }
+  /**
+   * The categories provided for the events catswitcher component
+   */
+  public categoriesInCatswitcher: Category[];
+
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private commonConfigService: FdlCommonConfigService) {
+
+    this.categoriesInCatswitcher = commonConfigService.getConfig('events').categoriesInCatswitcher;
+  }
 
   ngOnInit() {
+    console.debug('FdlEventsSearchComponent ngOnInit()');
+
     this.queryObservable = this.route.queryParamMap
       .pipe(
         map((params) => params.get('query'))
@@ -43,9 +57,24 @@ export class FdlEventsSearchComponent implements OnInit {
         map((params) => params.get('date'))
       );
 
-
+    this.route.queryParams
+      .subscribe((currentQueryParams) => {
+        this.$searchEvents(currentQueryParams)
+      })
   }
 
+  public onSearchcriteriaChange(searchcriteria: {[key: string]: string}) {
+    this.route.queryParams
+      .subscribe((currentQueryParams) => {
+        const mergedQueryParams = Object.assign({}, currentQueryParams, searchcriteria);
+        this.router.navigate(['/events/search'], {
+          queryParams: mergedQueryParams
+        });
+      });
+  }
 
+  private $searchEvents(searchcriteria) {
+    console.debug('$searchEvents(searchcriteria)', searchcriteria);
+  }
 
 }

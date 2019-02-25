@@ -2,14 +2,14 @@
   <h2><b>VERANSTALTUNGEN</b></h2>
 </div>
 
-<ul>
-  <li *ngIf="queryObservable | async">
+<fdl-events-catswitcher [categories]="categoriesInCatswitcher"></fdl-events-catswitcher>
+
+<fdl-events-quicknav (onQuerySearchSubmit)="onSearchcriteriaChange({query: $event})"
+                     (onDateSelect)="onSearchcriteriaChange({date: $event})"></fdl-events-quicknav>
+
+<div class="container-fluid">
+  <pre class="bg-light mt-4 pt-3 pb-3">
     query: {{queryObservable | async}}
-  </li>
-  <li *ngIf="categoryIdObservable | async">
     category: {{categoryIdObservable | async}} ({{categoryIdObservable | async | FdlEventsCategoriesIdToString | async}})
-  </li>
-  <li *ngIf="dateObservable | async">
-    date: {{dateObservable | async}}
-  </li>
-</ul>
+    date: {{dateObservable | async}}</pre>
+</div>
