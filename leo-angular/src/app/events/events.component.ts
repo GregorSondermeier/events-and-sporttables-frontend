@@ -50,7 +50,8 @@ export class FdlEventsComponent implements OnInit {
   public redirectToEventsSearch(args: {[key: string]: string}) {
     this.router.navigate(['/events/search'], {
       queryParams: {
-        query: args.query
+        query: args.query,
+        date: args.date
       }
     });
   };

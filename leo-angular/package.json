@@ -29,7 +29,6 @@
   "author": "Gregor Sondermeier <gregor.sondermeier.github@gmail.com> (https://github.com/GregorSondermeier)",
   "license": "UNLICENSED",
   "dependencies": {
-    "@angular/animations": "~7.2.0",
     "@angular/cli": "^7.3.2",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
@@ -38,6 +37,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^4.0.4",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",

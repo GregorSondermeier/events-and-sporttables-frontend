@@ -17,6 +17,8 @@ import { FdlEventsQuicknavQuerySearchComponent } from './events-quicknav-query-s
 import { FormsModule } from "@angular/forms";
 import { FdlEventsCategoriesIdToStringPipe } from './events-categories/events-categories-id-to-string.pipe';
 import { FdlEventsCategoriesIdsToStringPipe } from './events-categories/events-categories-ids-to-string.pipe';
+import { FdlEventsQuicknavDateSearchComponent } from './events-quicknav-date-search/events-quicknav-date-search.component';
+import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { FdlEventsCategoriesIdsToStringPipe } from './events-categories/events-c
     FdlEventsCategoriesComponent,
     FdlEventsCategoriesIdToStringPipe,
     FdlEventsCategoriesIdsToStringPipe,
-    FdlEventsSearchComponent
+    FdlEventsSearchComponent,
+    FdlEventsQuicknavDateSearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    NgbDatepickerModule,
     FdlCommonModule,
     FdlEventsRoutingModule
   ],

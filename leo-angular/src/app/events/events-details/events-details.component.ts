@@ -16,7 +16,6 @@ export class FdlEventsDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.data
       .subscribe((data: {evt: Event}) => {
-        console.debug(data.evt);
         this.evt = data.evt;
       })
   }

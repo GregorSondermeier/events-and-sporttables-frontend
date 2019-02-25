@@ -1,7 +1,15 @@
 <div class="container-fluid clearfix">
   <div class="float-left">
-    <button type="button" class="btn fdl-btn-default">HEUTE</button>
-    <button type="button" class="btn fdl-btn-default">MORGEN</button>
+    <a [routerLink]="['/events/search']"
+       [queryParams]="{date: today | date : 'yyyy-MM-dd'}"
+       class="btn fdl-btn-default">
+      HEUTE
+    </a>
+    <a [routerLink]="['/events/search']"
+       [queryParams]="{date: tomorrow | date : 'yyyy-MM-dd'}"
+       class="btn fdl-btn-default">
+      MORGEN
+    </a>
   </div>
   <div class="float-right">
     <button type="button"
@@ -23,14 +31,14 @@
 </div>
 
 <div *ngFor="let ies of isExpandedStates">
-  <div *ngIf="ies.isExpanded" [ngSwitch]="ies.expandable">
-    <div *ngSwitchCase="'location'">
+  <div *ngIf="ies.isExpanded" [ngSwitch]="ies.expandable" class="position-relative">
+    <div *ngSwitchCase="'location'" class="position-absolute w-100">
       <p>Location search, isExpanded: {{ies.isExpanded}}</p>
     </div>
-    <div *ngSwitchCase="'calendar'">
-      <p>Calendar search, isExpanded: {{ies.isExpanded}}</p>
+    <div *ngSwitchCase="'calendar'" class="position-absolute w-100">
+      <fdl-events-quicknav-date-search (onDateSelect)="onDateSelect.emit($event)"></fdl-events-quicknav-date-search>
     </div>
-    <div *ngSwitchCase="'query'">
+    <div *ngSwitchCase="'query'" class="position-absolute w-100">
       <fdl-events-quicknav-query-search (onSubmit)="onQuerySearchSubmit.emit($event)"></fdl-events-quicknav-query-search>
     </div>
   </div>

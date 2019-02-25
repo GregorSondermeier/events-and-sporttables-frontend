@@ -20,6 +20,11 @@ export class FdlEventsSearchComponent implements OnInit {
    */
   categoryIdObservable: Observable<number>;
 
+  /**
+   * the date as provided by the query params
+   */
+  dateObservable: Observable<string>;
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -31,7 +36,12 @@ export class FdlEventsSearchComponent implements OnInit {
     this.categoryIdObservable = this.route.queryParamMap
       .pipe(
         map((params) => + params.get('category'))
-      )
+      );
+
+    this.dateObservable = this.route.queryParamMap
+      .pipe(
+        map((params) => params.get('date'))
+      );
 
 
   }

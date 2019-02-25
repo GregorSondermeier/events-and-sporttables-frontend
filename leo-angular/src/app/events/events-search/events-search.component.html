@@ -1,8 +1,15 @@
+<div class="container-fluid">
+  <h2><b>VERANSTALTUNGEN</b></h2>
+</div>
+
 <ul>
-  <li>
+  <li *ngIf="queryObservable | async">
     query: {{queryObservable | async}}
   </li>
-  <li>
+  <li *ngIf="categoryIdObservable | async">
     category: {{categoryIdObservable | async}} ({{categoryIdObservable | async | FdlEventsCategoriesIdToString | async}})
+  </li>
+  <li *ngIf="dateObservable | async">
+    date: {{dateObservable | async}}
   </li>
 </ul>

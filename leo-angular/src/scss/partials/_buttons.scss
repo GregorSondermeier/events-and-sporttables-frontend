@@ -1,5 +1,12 @@
 .btn {
   border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
 }
 
 .btn-link {

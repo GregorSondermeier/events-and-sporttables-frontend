@@ -9,10 +9,26 @@ import { EventsQuicknavIsExpandedState } from "../_types/EventsQuicknavIsExpande
 export class FdlEventsQuicknavComponent implements OnInit {
 
   /**
+   * today's Date
+   */
+  public today: Date;
+
+  /**
+   * tomorrow's Date
+   */
+  public tomorrow: Date;
+
+  /**
    * the output function to call upon query search submit
    */
   @Output()
   public onQuerySearchSubmit: EventEmitter<string> = new EventEmitter();
+
+  /**
+   * the output function to call upon date select
+   */
+  @Output()
+  public onDateSelect: EventEmitter<string> = new EventEmitter();
 
   /**
    * An array that contains the various isCollapsed states for the location, calender and search query
@@ -35,7 +51,8 @@ export class FdlEventsQuicknavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    this.today = new Date();
+    this.tomorrow = new Date(new Date().setDate(this.today.getDate() + 1));
   }
 
   /**
