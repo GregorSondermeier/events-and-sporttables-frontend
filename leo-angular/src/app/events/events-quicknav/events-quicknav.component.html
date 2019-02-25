@@ -4,9 +4,35 @@
     <button type="button" class="btn fdl-btn-default">MORGEN</button>
   </div>
   <div class="float-right">
-    <button type="button" class="btn"><i class="icon-map-pin"></i></button>
-    <button type="button" class="btn"><i class="icon-calendar1"></i></button>
-    <button type="button" class="btn"><i class="icon-search"></i></button>
+    <button type="button"
+            class="btn"
+            (click)="toggleExpand('location')">
+      <i class="icon-map-pin"></i>
+    </button>
+    <button type="button"
+            class="btn"
+            (click)="toggleExpand('calendar')">
+      <i class="icon-calendar1"></i>
+    </button>
+    <button type="button"
+            class="btn"
+            (click)="toggleExpand('query')">
+      <i class="icon-search"></i>
+    </button>
+  </div>
+</div>
+
+<div *ngFor="let ies of isExpandedStates">
+  <div *ngIf="ies.isExpanded" [ngSwitch]="ies.expandable">
+    <div *ngSwitchCase="'location'">
+      <p>Location search, isExpanded: {{ies.isExpanded}}</p>
+    </div>
+    <div *ngSwitchCase="'calendar'">
+      <p>Calendar search, isExpanded: {{ies.isExpanded}}</p>
+    </div>
+    <div *ngSwitchCase="'query'">
+      <p>Query search, isExpanded: {{ies.isExpanded}}</p>
+    </div>
   </div>
 </div>
 
