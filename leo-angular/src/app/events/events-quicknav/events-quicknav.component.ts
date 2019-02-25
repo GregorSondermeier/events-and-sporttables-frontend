@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { EventsQuicknavIsExpandedState } from "../_types/EventsQuicknavIsExpandedState";
 
 @Component({
@@ -7,6 +7,12 @@ import { EventsQuicknavIsExpandedState } from "../_types/EventsQuicknavIsExpande
   styleUrls: ['./events-quicknav.component.scss']
 })
 export class FdlEventsQuicknavComponent implements OnInit {
+
+  /**
+   * the output function to call upon query search submit
+   */
+  @Output()
+  public onQuerySearchSubmit: EventEmitter<string> = new EventEmitter();
 
   /**
    * An array that contains the various isCollapsed states for the location, calender and search query

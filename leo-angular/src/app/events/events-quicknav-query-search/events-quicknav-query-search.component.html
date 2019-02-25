@@ -1,0 +1,24 @@
+<div class="bg-light pt-3 pb-3">
+  <form class="container-fluid"
+        #queryForm="ngForm"
+        (ngSubmit)="onSubmit.emit(query)">
+    <div class="input-group">
+      <input type="text"
+             [(ngModel)]="query"
+             name="query"
+             class="form-control"
+             placeholder="Veranstaltung suchen..."
+             title="Veranstaltung suchen..."
+             aria-label="Veranstaltung suchen..."
+             aria-describedby="query-input-description" />
+      <div class="input-group-append">
+        <button class="input-group-text"
+                type="submit"
+                title="Veranstaltung suchen..."
+                id="query-input-description">
+          <i class="icon-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

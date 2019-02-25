@@ -13,12 +13,15 @@ import { FdlEventsDetailsComponent } from './events-details/events-details.compo
 import { FdlCommonModule } from "../common/common.module";
 import { FdlEventsCategoriesComponent } from './events-categories/events-categories.component';
 import { FdlEventsSearchComponent } from './events-search/events-search.component';
+import { FdlEventsQuicknavQuerySearchComponent } from './events-quicknav-query-search/events-quicknav-query-search.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     FdlEventsComponent,
     FdlEventsCatswitcherComponent,
     FdlEventsQuicknavComponent,
+    FdlEventsQuicknavQuerySearchComponent,
     FdlEventsListComponent,
     FdlEventsTeaserBigComponent,
     FdlEventsTeaserSmallComponent,
@@ -28,6 +31,7 @@ import { FdlEventsSearchComponent } from './events-search/events-search.componen
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     FdlCommonModule,
     FdlEventsRoutingModule

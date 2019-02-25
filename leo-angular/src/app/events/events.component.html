@@ -4,7 +4,7 @@
 
 <fdl-events-catswitcher></fdl-events-catswitcher>
 
-<fdl-events-quicknav></fdl-events-quicknav>
+<fdl-events-quicknav (onQuerySearchSubmit)="redirectToEventsSearch({query: $event})"></fdl-events-quicknav>
 
 <fdl-events-list [events]="events['Highlights']"
                  [highlightedOnTop]="1"

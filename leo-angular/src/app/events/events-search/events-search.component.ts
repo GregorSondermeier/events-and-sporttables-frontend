@@ -20,7 +20,7 @@ export class FdlEventsSearchComponent implements OnInit {
   ngOnInit() {
     this.query = this.route.queryParamMap
       .pipe(
-        map((params) => params.get('q'))
+        map((params) => params.get('query'))
       );
 
     this.query.subscribe((query) => {

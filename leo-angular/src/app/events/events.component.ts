@@ -29,6 +29,15 @@ export class FdlEventsComponent implements OnInit {
     this.listEvents({category: 'Konzert'});
   }
 
+  public redirectToEventsSearch(args: {[key: string]: string}) {
+    console.debug('redirectToEventsSearch(args)', args);
+    this.router.navigate(['/events/search'], {
+      queryParams: {
+        query: args.query
+      }
+    })
+  };
+
   /**
    * sets the page's title
    * @param {string} title

@@ -31,7 +31,7 @@
       <p>Calendar search, isExpanded: {{ies.isExpanded}}</p>
     </div>
     <div *ngSwitchCase="'query'">
-      <p>Query search, isExpanded: {{ies.isExpanded}}</p>
+      <fdl-events-quicknav-query-search (onSubmit)="onQuerySearchSubmit.emit($event)"></fdl-events-quicknav-query-search>
     </div>
   </div>
 </div>
