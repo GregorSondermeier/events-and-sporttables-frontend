@@ -1,3 +1,8 @@
-<p>
-  query: {{query | async}}
-</p>
+<ul>
+  <li>
+    query: {{queryObservable | async}}
+  </li>
+  <li>
+    category: {{categoryIdObservable | async}} ({{categoryIdObservable | async | FdlEventsCategoriesIdToString | async}})
+  </li>
+</ul>

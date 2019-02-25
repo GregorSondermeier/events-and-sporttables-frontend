@@ -1,14 +1,26 @@
 <ul class="list-inline">
   <li class="list-inline-item">
-    <button type="button" class="btn btn-link">KONZERTE</button>
+    <a class="btn btn-link"
+       [routerLink]="['/events/search']" [queryParams]="{category: 20}">
+      KONZERTE
+    </a>
   </li>
   <li class="list-inline-item">
-    <button type="button" class="btn btn-link">KINO</button>
+    <a class="btn btn-link"
+       [routerLink]="['/events/search']" [queryParams]="{category: 31}">
+      SCHAUSPIEL
+    </a>
   </li>
   <li class="list-inline-item">
-    <button type="button" class="btn btn-link">KINDER</button>
+    <a class="btn btn-link"
+       [routerLink]="['/events/search']" [queryParams]="{category: 17}">
+      KINDER
+    </a>
   </li>
   <li class="list-inline-item">
-    <a class="btn btn-link" [routerLink]="['/events/categories']">ANDERES</a>
+    <a class="btn btn-link"
+       [routerLink]="['/events/categories']">
+      ANDERES
+    </a>
   </li>
 </ul>

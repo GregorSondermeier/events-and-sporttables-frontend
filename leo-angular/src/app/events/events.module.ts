@@ -15,6 +15,7 @@ import { FdlEventsCategoriesComponent } from './events-categories/events-categor
 import { FdlEventsSearchComponent } from './events-search/events-search.component';
 import { FdlEventsQuicknavQuerySearchComponent } from './events-quicknav-query-search/events-quicknav-query-search.component';
 import { FormsModule } from "@angular/forms";
+import { FdlEventsCategoriesIdToStringPipe } from './events-categories/events-categories-id-to-string.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from "@angular/forms";
     FdlEventsTeaserSmallComponent,
     FdlEventsDetailsComponent,
     FdlEventsCategoriesComponent,
+    FdlEventsCategoriesIdToStringPipe,
     FdlEventsSearchComponent
   ],
   imports: [

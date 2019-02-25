@@ -35,7 +35,7 @@ export class FdlEventsComponent implements OnInit {
       queryParams: {
         query: args.query
       }
-    })
+    });
   };
 
   /**

@@ -11,21 +11,29 @@ import { map } from "rxjs/operators";
 export class FdlEventsSearchComponent implements OnInit {
 
   /**
-   * the query string entered by the user
+   * the query string as provided by the query params
    */
-  query: Observable<string>;
+  queryObservable: Observable<string>;
+
+  /**
+   * the category id as provided by the query params
+   */
+  categoryIdObservable: Observable<number>;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.query = this.route.queryParamMap
+    this.queryObservable = this.route.queryParamMap
       .pipe(
         map((params) => params.get('query'))
       );
 
-    this.query.subscribe((query) => {
-      console.debug('3: %o', query);
-    });
+    this.categoryIdObservable = this.route.queryParamMap
+      .pipe(
+        map((params) => + params.get('category'))
+      )
+
+
   }
 
 
