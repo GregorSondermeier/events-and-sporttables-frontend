@@ -12,6 +12,7 @@ import { FdlEventsTeaserSmallComponent } from './events-teaser-small/events-teas
 import { FdlEventsDetailsComponent } from './events-details/events-details.component';
 import { FdlCommonModule } from "../common/common.module";
 import { FdlEventsCategoriesComponent } from './events-categories/events-categories.component';
+import { FdlEventsSearchComponent } from './events-search/events-search.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FdlEventsCategoriesComponent } from './events-categories/events-categor
     FdlEventsTeaserBigComponent,
     FdlEventsTeaserSmallComponent,
     FdlEventsDetailsComponent,
-    FdlEventsCategoriesComponent
+    FdlEventsCategoriesComponent,
+    FdlEventsSearchComponent
   ],
   imports: [
     BrowserModule,

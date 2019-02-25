@@ -5,6 +5,7 @@ import { FdlEventsDetailsComponent } from "./events-details/events-details.compo
 import { FdlEventsDetailsResolverService } from "./events-details/events-details-resolver.service";
 import { FdlEventsCategoriesComponent } from "./events-categories/events-categories.component";
 import { FdlEventsCategoriesResolverService } from "./events-categories/events-categories-resolver.service";
+import { FdlEventsSearchComponent } from "./events-search/events-search.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     resolve: {
       categories: FdlEventsCategoriesResolverService
     }
+  },
+  {
+    path: 'events/search',
+    component: FdlEventsSearchComponent
   },
   {
     path: 'events/:id',
