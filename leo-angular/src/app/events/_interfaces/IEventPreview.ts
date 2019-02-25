@@ -1,7 +1,7 @@
 export interface IEventPreview {
   id: number,
   title: string,
-  categories: string[],
+  categories: number[],
   location: string,
   venue: string,
   datetime: string,

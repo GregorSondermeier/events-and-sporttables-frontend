@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from "@angular/router";
 import { Observable } from "rxjs";
-import { EventsApiService } from "../events-api.service";
+import { FdlEventsApiService } from "../events-api.service";
 import { take } from "rxjs/operators";
 import { Category } from "../_models/Category";
 
@@ -11,7 +11,7 @@ import { Category } from "../_models/Category";
 export class FdlEventsCategoriesResolverService implements Resolve<Category[]> {
 
   constructor(private router: Router,
-              private eventsApiService: EventsApiService) {}
+              private eventsApiService: FdlEventsApiService) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Category[]> {
     return this.eventsApiService.categories

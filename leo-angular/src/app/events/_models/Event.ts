@@ -3,7 +3,7 @@ import { IEvent } from "../_interfaces/IEvent";
 export class Event implements IEvent {
   id: number;
   title: string;
-  categories: string[];
+  categories: number[];
   location: string;
   venue: string;
   datetime: string;

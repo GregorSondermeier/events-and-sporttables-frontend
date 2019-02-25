@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Event } from "../_models/Event";
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from "@angular/router";
 import { Observable } from "rxjs";
-import { EventsApiService } from "../events-api.service";
+import { FdlEventsApiService } from "../events-api.service";
 import { take } from "rxjs/operators";
 
 @Injectable({
@@ -11,7 +11,7 @@ import { take } from "rxjs/operators";
 export class FdlEventsDetailsResolverService implements Resolve<Event> {
 
   constructor(private router: Router,
-              private eventsApiService: EventsApiService) {}
+              private eventsApiService: FdlEventsApiService) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Event> {
     const id = parseInt(route.paramMap.get('id'));

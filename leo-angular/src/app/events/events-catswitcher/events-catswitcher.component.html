@@ -1,20 +1,8 @@
 <ul class="list-inline">
-  <li class="list-inline-item">
+  <li class="list-inline-item" *ngFor="let c of categories">
     <a class="btn btn-link"
-       [routerLink]="['/events/search']" [queryParams]="{category: 20}">
-      KONZERTE
-    </a>
-  </li>
-  <li class="list-inline-item">
-    <a class="btn btn-link"
-       [routerLink]="['/events/search']" [queryParams]="{category: 31}">
-      SCHAUSPIEL
-    </a>
-  </li>
-  <li class="list-inline-item">
-    <a class="btn btn-link"
-       [routerLink]="['/events/search']" [queryParams]="{category: 17}">
-      KINDER
+       [routerLink]="['/events/search']" [queryParams]="{category: c.id}">
+      {{c.name | uppercase}}
     </a>
   </li>
   <li class="list-inline-item">

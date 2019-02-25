@@ -1,7 +1,7 @@
 {
   "id": 1,
   "title": "Event 1 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-  "categories": ["Konzert"],
+  "categories": [20],
   "location": "Ort",
   "venue": "Venue",
   "datetime": "2019-02-20 19:00:00.000Z",

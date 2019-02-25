@@ -2,22 +2,12 @@
   <h2><b>VERANSTALTUNGEN</b></h2>
 </div>
 
-<fdl-events-catswitcher></fdl-events-catswitcher>
+<fdl-events-catswitcher [categories]="categoriesInCatswitcher"></fdl-events-catswitcher>
 
 <fdl-events-quicknav (onQuerySearchSubmit)="redirectToEventsSearch({query: $event})"></fdl-events-quicknav>
 
-<fdl-events-list [events]="events['Highlights']"
+<fdl-events-list *ngFor="let col of categoriesOnList"
+                 [events]="events[col.id]"
                  [highlightedOnTop]="1"
-                 heading="Highlights"></fdl-events-list>
-
-<fdl-common-ad></fdl-common-ad>
-
-<fdl-events-list [events]="events['Konzert']"
-                 [highlightedOnTop]="1"
-                 heading="Konzerte"></fdl-events-list>
-
-<fdl-common-ad></fdl-common-ad>
-
-<fdl-events-list [events]="events['Comedy']"
-                 [highlightedOnTop]="1"
-                 heading="Comedy & Kabarett"></fdl-events-list>
+                 [heading]="col.name"
+></fdl-events-list>

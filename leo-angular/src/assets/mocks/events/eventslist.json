@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Event 1 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Konzert"],
+    "categories": [20],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "Event 2 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Konzert"],
+    "categories": [20],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "Event 3 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Konzert"],
+    "categories": [20],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "Event 4 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Konzert"],
+    "categories": [20],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "Event 5 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Konzert"],
+    "categories": [20],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "Event 6 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Comedy", "Kabarett"],
+    "categories": [5, 15],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "title": "Event 7 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Comedy", "Kabarett"],
+    "categories": [5, 15],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "title": "Event 8 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Comedy", "Kabarett"],
+    "categories": [5, 15],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "title": "Event 9 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Comedy", "Kabarett"],
+    "categories": [5, 15],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "title": "Event 10 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Comedy", "Kabarett"],
+    "categories": [5, 15],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "title": "Event 11 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kinder"],
+    "categories": [17],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "title": "Event 12 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kinder"],
+    "categories": [17],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -122,7 +122,7 @@
   {
     "id": 13,
     "title": "Event 13 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kinder"],
+    "categories": [17],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -132,7 +132,7 @@
   {
     "id": 14,
     "title": "Event 14 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kinder"],
+    "categories": [17],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -142,7 +142,7 @@
   {
     "id": 15,
     "title": "Event 15 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kinder"],
+    "categories": [17],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -152,7 +152,7 @@
   {
     "id": 16,
     "title": "Event 16 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kino"],
+    "categories": [31],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -162,7 +162,7 @@
   {
     "id": 17,
     "title": "Event 17 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kino"],
+    "categories": [31],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -172,7 +172,7 @@
   {
     "id": 18,
     "title": "Event 18 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kino"],
+    "categories": [31],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -182,7 +182,7 @@
   {
     "id": 19,
     "title": "Event 19 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kino"],
+    "categories": [31],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",
@@ -192,7 +192,7 @@
   {
     "id": 20,
     "title": "Event 20 Lorem ipsum dolor sit amet, consetetur sadipscing elit",
-    "categories": ["Kino"],
+    "categories": [31],
     "location": "Ort",
     "venue": "Venue",
     "datetime": "2018-02-20T19:00:00.000Z",

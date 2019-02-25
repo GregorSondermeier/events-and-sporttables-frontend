@@ -9,7 +9,7 @@ import { ICategory } from "./_interfaces/ICategory";
 import { Category } from "./_models/Category";
 
 interface IEventsListParams {
-  category?: string,
+  category?: number,
   pageSize?: number
 }
 
@@ -20,7 +20,7 @@ interface ICategoriesListParams {
 @Injectable({
   providedIn: 'root'
 })
-export class EventsApiService {
+export class FdlEventsApiService {
 
   constructor(private httpClient: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class EventsApiService {
       .get<IEventPreview[]>('assets/mocks/events/eventslist.json')
       .pipe(
         map((data) => {
-          if (params.category) {
+          if (params.category != -1) {
             return data
               .filter((e) => e.categories.indexOf(params.category) != -1)
               .splice(0, params.pageSize)

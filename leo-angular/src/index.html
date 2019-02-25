@@ -22,7 +22,18 @@
   </div>
 
   <div style="max-width: 48em; background-color: #fff; margin: 0 auto">
-    <fdl-app></fdl-app>
+    <fdl-app data-config-events='{
+      "categoriesInCatswitcher": [
+        {"name": "Konzerte", "id": 20},
+        {"name": "Schauspiel", "id": 31},
+        {"name": "Kinder", "id": 17}
+      ],
+      "categoriesOnFrontpageList": [
+        {"name": "Highlights", "id": -1},
+        {"name": "Konzerte", "id": 20},
+        {"name": "Comedy", "id": 5},
+        {"name": "Kabarett", "id": 15}
+      ]}'></fdl-app>
   </div>
 </body>
 </html>

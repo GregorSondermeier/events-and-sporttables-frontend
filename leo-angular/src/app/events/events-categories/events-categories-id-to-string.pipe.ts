@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { EventsApiService } from "../events-api.service";
+import { FdlEventsApiService } from "../events-api.service";
 import { Category } from "../_models/Category";
 import { Observable } from "rxjs";
 
@@ -10,7 +10,7 @@ export class FdlEventsCategoriesIdToStringPipe implements PipeTransform {
 
   private categories: Observable<Category[]>;
 
-  constructor(private eventsApiService: EventsApiService) {
+  constructor(private eventsApiService: FdlEventsApiService) {
     this.categories = this.eventsApiService.categories.$list();
   }
 

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { IEventsModuleConfig } from "./events/_interfaces/IEventsModuleConfig";
+import { FdlCommonConfigService } from "./common/common-config.service";
 
 @Component({
   selector: 'fdl-app',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FdlAppComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  eventsConfig: IEventsModuleConfig;
 
-  ngOnInit() {
+  constructor(private elementRef: ElementRef,
+              private commonConfigService: FdlCommonConfigService) {
+
+    let eventsConfigParsed = JSON.parse(this.elementRef.nativeElement.dataset['configEvents']);
+    this.commonConfigService.setConfig('events', eventsConfigParsed);
   }
+
+  ngOnInit() { }
 
 }
