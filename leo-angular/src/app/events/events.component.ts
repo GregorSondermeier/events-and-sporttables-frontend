@@ -15,11 +15,6 @@ import { Category } from "./_models/Category";
 export class FdlEventsComponent implements OnInit {
 
   /**
-   * The categories provided for the events catswitcher component
-   */
-  public categoriesInCatswitcher: Category[];
-
-  /**
    * The various category events lists
    */
   public categoriesOnList: Category[];
@@ -34,7 +29,6 @@ export class FdlEventsComponent implements OnInit {
               private commonConfigService: FdlCommonConfigService,
               private eventsApiService: FdlEventsApiService) {
 
-    this.categoriesInCatswitcher = commonConfigService.getConfig('events').categoriesInCatswitcher;
     this.categoriesOnList = commonConfigService.getConfig('events').categoriesOnFrontpageList;
     this.events = {};
 

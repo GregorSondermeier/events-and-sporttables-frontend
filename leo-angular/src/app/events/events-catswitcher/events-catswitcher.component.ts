@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Category } from "../_models/Category";
+import { FdlCommonConfigService } from "../../common/common-config.service";
 
 @Component({
   selector: 'fdl-events-catswitcher',
@@ -11,12 +12,12 @@ export class FdlEventsCatswitcherComponent implements OnInit {
   /**
    * The categories to be shown in the catswitcher besides the link to all categories
    */
-  @Input()
   public categories: Category[];
 
-  constructor() { }
+  constructor(private commonConfigService: FdlCommonConfigService) { }
 
   ngOnInit() {
+    this.categories = this.commonConfigService.getConfig('events').categoriesInCatswitcher;
   }
 
 }

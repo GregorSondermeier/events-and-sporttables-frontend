@@ -27,16 +27,8 @@ export class FdlEventsSearchComponent implements OnInit {
    */
   dateObservable: Observable<string>;
 
-  /**
-   * The categories provided for the events catswitcher component
-   */
-  public categoriesInCatswitcher: Category[];
-
   constructor(private route: ActivatedRoute,
-              private router: Router,
-              private commonConfigService: FdlCommonConfigService) {
-
-    this.categoriesInCatswitcher = commonConfigService.getConfig('events').categoriesInCatswitcher;
+              private router: Router) {
   }
 
   ngOnInit() {
