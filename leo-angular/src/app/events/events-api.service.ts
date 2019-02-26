@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { IEventPreview } from "./_interfaces/IEventPreview";
 import { EventPreview } from "./_models/EventPreview";
-import { map } from "rxjs/operators";
+import { delay, map } from "rxjs/operators";
 import { IEvent } from "./_interfaces/IEvent";
 import { Event } from "./_models/Event";
 import { ICategory } from "./_interfaces/ICategory";
@@ -28,6 +28,7 @@ export class FdlEventsApiService {
     return this.httpClient
       .get<IEventPreview[]>('assets/mocks/events/eventslist.json')
       .pipe(
+        delay(Math.round(Math.random()*1000)),
         map((data) => {
           if (params.category != -1) {
             return data
@@ -48,6 +49,7 @@ export class FdlEventsApiService {
     return this.httpClient
       .get<IEvent>(`assets/mocks/events/event${id}.json`)
       .pipe(
+        delay(Math.round(Math.random()*1000)),
         map(data => new Event(data))
       )
   }
@@ -57,6 +59,7 @@ export class FdlEventsApiService {
       return this.httpClient
         .get<ICategory[]>('assets/mocks/events/categorieslist.json')
         .pipe(
+          delay(Math.round(Math.random()*1000)),
           map(data => {
             if (params && params.query) {
               return data

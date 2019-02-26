@@ -1,5 +1,9 @@
 <div class="container-fluid">
-  <h2><b>VERANSTALTUNGEN</b></h2>
+  <h2>
+    <a [routerLink]="['/events']">
+      <b>VERANSTALTUNGEN</b>
+    </a>
+  </h2>
 </div>
 
 <fdl-events-catswitcher [categories]="categoriesInCatswitcher"></fdl-events-catswitcher>

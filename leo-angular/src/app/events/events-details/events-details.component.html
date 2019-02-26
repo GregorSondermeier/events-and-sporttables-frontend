@@ -1,9 +1,17 @@
 <div class="container-fluid">
+  <h3 class="h2">
+    <a [routerLink]="['/events']">
+      <b>VERANSTALTUNGEN</b>
+    </a>
+  </h3>
+</div>
+
+<div class="container-fluid">
   <p class="mb-0 text-secondary">
     {{evt.location | uppercase}} / {{evt.venue | uppercase}}
   </p>
 
-  <h2><b>{{evt.title}}</b></h2>
+  <h2 class="h3"><b>{{evt.title}}</b></h2>
 
   <time [dateTime]="evt.datetime" class="text-secondary">
     {{evt.datetime | date : 'EE dd.MM.yyyy | HH:mm'}}

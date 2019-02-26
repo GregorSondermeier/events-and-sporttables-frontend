@@ -1,5 +1,9 @@
 <div class="container-fluid">
-  <h2><b>VERANSTALTUNGEN</b></h2>
+  <h2>
+    <a [routerLink]="['/events']">
+      <b>VERANSTALTUNGEN</b>
+    </a>
+  </h2>
 </div>
 
 <fdl-events-catswitcher [categories]="categoriesInCatswitcher"></fdl-events-catswitcher>
@@ -10,6 +14,6 @@
 <div class="container-fluid">
   <pre class="bg-light mt-4 pt-3 pb-3">
     query: {{queryObservable | async}}
-    category: {{categoryIdObservable | async}} ({{categoryIdObservable | async | FdlEventsCategoriesIdToString | async}})
+    category: {{categoryIdObservable | async | FdlEventsCategoriesIdToString | async}}
     date: {{dateObservable | async}}</pre>
 </div>
