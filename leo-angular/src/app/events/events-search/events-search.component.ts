@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
+import { FdlEventsApiService } from "../events-api.service";
+import { EventPreview } from "../_models/EventPreview";
 
 @Component({
   selector: 'fdl-events-search',
   templateUrl: './events-search.component.html',
-  styleUrls: ['./events-search.component.scss']
+  styleUrls: ['./events-search.component.scss'],
+  providers: [FdlEventsApiService]
 })
 export class FdlEventsSearchComponent implements OnInit {
 
@@ -13,8 +16,14 @@ export class FdlEventsSearchComponent implements OnInit {
    */
   public searchcriteria: {[key: string]: string};
 
+  /**
+   * The list of found events
+   */
+  public events: EventPreview[];
+
   constructor(private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private eventsApiService: FdlEventsApiService) { }
 
   ngOnInit() {
 
@@ -58,6 +67,12 @@ export class FdlEventsSearchComponent implements OnInit {
 
   private $searchEvents() {
     console.debug('$searchEvents(), searchcriteria:', this.searchcriteria);
+    this.eventsApiService
+      .$list({pageSize: 20})
+      .subscribe((events) => {
+        console.debug('events:', events);
+        this.events = events;
+      })
   }
 
 }
