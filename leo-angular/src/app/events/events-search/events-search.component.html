@@ -8,9 +8,14 @@
 
 <fdl-events-catswitcher></fdl-events-catswitcher>
 
-<fdl-events-quicknav (onQuerySearchSubmit)="addItemToSearchcriteria({query: $event})"
-                     (onDateSelect)="addItemToSearchcriteria({date: $event})"
-                     (onLocationSelect)="addItemToSearchcriteria({location: $event})"></fdl-events-quicknav>
+<div class="container-fluid">
+  <fdl-events-quicknav (onQuerySearchSubmit)="addItemToSearchcriteria({query: $event})"
+                       (onDateSelect)="addItemToSearchcriteria({date: $event})"
+                       (onLocationSelect)="addItemToSearchcriteria({location: $event})"></fdl-events-quicknav>
+</div>
 
-<fdl-events-searchcriteria-badges [searchcriteria]="searchcriteria"
-                                  (removeItem)="removeItemFromSearchcriteria($event)"></fdl-events-searchcriteria-badges>
+<div class="container-fluid mt-4 mb-4 fdl-events-searchcriteria-badges-wrapper">
+  <fdl-events-searchcriteria-badges [searchcriteria]="searchcriteria"
+                                    (removeItem)="removeItemFromSearchcriteria($event)"></fdl-events-searchcriteria-badges>
+</div>
+

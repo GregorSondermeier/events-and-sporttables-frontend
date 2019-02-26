@@ -8,12 +8,13 @@
 
 <fdl-events-catswitcher></fdl-events-catswitcher>
 
-<fdl-events-quicknav (onQuerySearchSubmit)="redirectToEventsSearch({query: $event})"
-                     (onDateSelect)="redirectToEventsSearch({date: $event})"
-                     (onLocationSelect)="redirectToEventsSearch({location: $event})"></fdl-events-quicknav>
+<div class="container-fluid">
+  <fdl-events-quicknav (onQuerySearchSubmit)="redirectToEventsSearch({query: $event})"
+                       (onDateSelect)="redirectToEventsSearch({date: $event})"
+                       (onLocationSelect)="redirectToEventsSearch({location: $event})"></fdl-events-quicknav>
+</div>
 
 <fdl-events-list *ngFor="let col of categoriesOnList"
                  [events]="events[col.id]"
                  [highlightedOnTop]="1"
-                 [heading]="col.name"
-></fdl-events-list>
+                 [heading]="col.name"></fdl-events-list>
