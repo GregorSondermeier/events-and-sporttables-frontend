@@ -15,7 +15,7 @@
     <tbody>
     <tr *ngFor="let league of leagues | slice:0:10">
       <td>
-        <a [routerLink]="['/sport']">
+        <a [routerLink]="['/sport/sports', league.sport.id, 'league', league.id, 'results']">
           {{league.sport.name}} - {{league.gender}} - {{league.name}}
         </a>
       </td>
@@ -31,7 +31,7 @@
     <tbody>
     <tr *ngFor="let league of leagues | slice:10:20">
       <td>
-        <a [routerLink]="['/sport']">
+        <a [routerLink]="['/sport/sports', league.sport.id, 'league', league.id, 'results']">
           {{league.sport.name}} - {{league.gender}} - {{league.name}}
         </a>
       </td>
@@ -47,11 +47,13 @@
     <tbody>
     <tr *ngFor="let league of leagues | slice:20">
       <td>
-        <a [routerLink]="['/sport']">
+        <a [routerLink]="['/sport/sports', league.sport.id, 'league', league.id, 'results']">
           {{league.sport.name}} - {{league.gender}} - {{league.name}}
         </a>
       </td>
     </tr>
     </tbody>
   </table>
+
+  <fdl-common-ad></fdl-common-ad>
 </div>

@@ -38,7 +38,7 @@
     <tbody>
     <tr *ngFor="let sport of filteredSports | slice:10:20">
       <td>
-        <a [routerLink]="['/sport/sports/', sport.id, 'leagues']">
+        <a [routerLink]="['/sport/sports', sport.id, 'leagues']">
           {{sport.name}}
         </a>
       </td>
@@ -54,11 +54,13 @@
     <tbody>
     <tr *ngFor="let sport of filteredSports | slice:20">
       <td>
-        <a [routerLink]="['/sport/sports/', sport.id, 'leagues']">
+        <a [routerLink]="['/sport/sports', sport.id, 'leagues']">
           {{sport.name}}
         </a>
       </td>
     </tr>
     </tbody>
   </table>
+
+  <fdl-common-ad></fdl-common-ad>
 </div>
