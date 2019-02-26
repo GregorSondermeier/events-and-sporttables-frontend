@@ -1,0 +1,24 @@
+.list-inline {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.list-inline-item {
+  margin: 0;
+
+  &:not(:first-child) a {
+    padding-left: .5em;
+  }
+
+  &:not(:last-child) {
+    a {
+      padding-right: .5em;
+    }
+
+    &:after {
+      content: '|'
+    }
+
+
+  }
+}

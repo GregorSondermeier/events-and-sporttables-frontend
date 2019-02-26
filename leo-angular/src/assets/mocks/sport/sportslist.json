@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "Badminton"
+  },
+  {
+    "id": 2,
+    "name": "Basketball"
+  },
+  {
+    "id": 3,
+    "name": "Billard"
+  },
+  {
+    "id": 4,
+    "name": "Bogenschießen"
+  },
+  {
+    "id": 5,
+    "name": "Boxen"
+  },
+  {
+    "id": 6,
+    "name": "Dart"
+  },
+  {
+    "id": 7,
+    "name": "Eishockey"
+  },
+  {
+    "id": 8,
+    "name": "Faustball"
+  },
+  {
+    "id": 9,
+    "name": "Feldhockey"
+  },
+  {
+    "id": 10,
+    "name": "Football"
+  },
+  {
+    "id": 11,
+    "name": "Fußball"
+  },
+  {
+    "id": 12,
+    "name": "Gewichtheben"
+  },
+  {
+    "id": 13,
+    "name": "Hallenhockey"
+  },
+  {
+    "id": 14,
+    "name": "Handball"
+  },
+  {
+    "id": 15,
+    "name": "Hockey"
+  },
+  {
+    "id": 16,
+    "name": "Inline-Hockey"
+  },
+  {
+    "id": 17,
+    "name": "Judo"
+  },
+  {
+    "id": 18,
+    "name": "Kanapolo"
+  },
+  {
+    "id": 19,
+    "name": "Kegeln"
+  },
+  {
+    "id": 20,
+    "name": "Poolbillard"
+  },
+  {
+    "id": 21,
+    "name": "Radball"
+  },
+  {
+    "id": 22,
+    "name": "Ringen"
+  },
+  {
+    "id": 23,
+    "name": "Rollhockey"
+  },
+  {
+    "id": 24,
+    "name": "Rugby"
+  },
+  {
+    "id": 25,
+    "name": "Schach"
+  },
+  {
+    "id": 26,
+    "name": "Schießen"
+  },
+  {
+    "id": 27,
+    "name": "Skaterhockey"
+  },
+  {
+    "id": 28,
+    "name": "Snooker"
+  },
+  {
+    "id": 29,
+    "name": "Softball"
+  },
+  {
+    "id": 30,
+    "name": "Squash"
+  },
+  {
+    "id": 31,
+    "name": "Tennis"
+  },
+  {
+    "id": 32,
+    "name": "Tischtennis"
+  },
+  {
+    "id": 33,
+    "name": "Volleyball"
+  },
+  {
+    "id": 34,
+    "name": "Wasserball"
+  }
+]

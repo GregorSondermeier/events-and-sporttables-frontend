@@ -3,11 +3,11 @@ import { Router } from "@angular/router";
 import { Title } from "@angular/platform-browser";
 
 @Component({
-  selector: 'fdl-sporttables',
-  styleUrls: ['./sporttables.component.scss'],
-  templateUrl: './sporttables.component.html',
+  selector: 'fdl-sport',
+  styleUrls: ['./sport.component.scss'],
+  templateUrl: './sport.component.html',
 })
-export class FdlSporttablesComponent implements OnInit {
+export class FdlSportComponent implements OnInit {
 
   constructor(private router: Router,
               private titleService: Title) { }

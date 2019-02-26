@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Category } from "../_models/Category";
-import { Event } from "../_models/Event";
 
 @Component({
   selector: 'fdl-events-categories',

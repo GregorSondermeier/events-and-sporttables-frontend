@@ -17,6 +17,9 @@ export class FdlAppComponent implements OnInit {
 
     let eventsConfigParsed = JSON.parse(this.elementRef.nativeElement.dataset['configEvents']);
     this.commonConfigService.setConfig('events', eventsConfigParsed);
+
+    let mandant = this.elementRef.nativeElement.dataset['configMandant'];
+    this.commonConfigService.setConfig('mandant', mandant);
   }
 
   ngOnInit() { }

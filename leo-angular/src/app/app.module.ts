@@ -2,7 +2,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 
 import { FdlAppComponent } from './app.component';
 import { FdlEventsModule } from "./events/events.module";
-import { FdlSporttablesModule } from "./sporttables/sporttables.module";
+import { FdlSportModule } from "./sport/sport.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { registerLocaleData } from "@angular/common";
 import localeDe from '@angular/common/locales/de';
@@ -19,7 +19,7 @@ registerLocaleData(localeDe);
     BrowserModule,
     FdlCommonModule,
     FdlEventsModule,
-    FdlSporttablesModule,
+    FdlSportModule,
     FdlRoutingModule
   ],
   providers: [
