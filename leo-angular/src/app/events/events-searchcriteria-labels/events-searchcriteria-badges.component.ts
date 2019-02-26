@@ -37,7 +37,7 @@ export class FdlEventsSearchcriteriaBadgesComponent implements OnChanges {
     this.searchcriteriaFormatted = [];
 
     Object.keys(changes.searchcriteria.currentValue)
-      .forEach((key: 'query' | 'date' | 'category') => {
+      .forEach((key: 'query' | 'date' | 'category' | 'location') => {
         let scfItem = {
           key: key,
           value: changes.searchcriteria.currentValue[key],
@@ -52,6 +52,10 @@ export class FdlEventsSearchcriteriaBadgesComponent implements OnChanges {
           case 'date':
             scfItem.formattedKey = 'Datum';
             scfItem.formattedValue = formatDate(changes.searchcriteria.currentValue[key], 'dd.MM.yyyy', this.locale);
+            break;
+          case 'location':
+            scfItem.formattedKey = 'Location';
+            scfItem.formattedValue = changes.searchcriteria.currentValue[key];
             break;
           case 'category':
             scfItem.formattedKey = 'Kategorie';

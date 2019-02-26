@@ -18,8 +18,9 @@ import { FormsModule } from "@angular/forms";
 import { FdlEventsCategoriesIdToStringPipe } from './events-categories/events-categories-id-to-string.pipe';
 import { FdlEventsCategoriesIdsToStringPipe } from './events-categories/events-categories-ids-to-string.pipe';
 import { FdlEventsQuicknavDateSearchComponent } from './events-quicknav-date-search/events-quicknav-date-search.component';
-import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { FdlEventsSearchcriteriaBadgesComponent } from './events-searchcriteria-labels/events-searchcriteria-badges.component';
+import { FdlEventsQuicknavLocationSearchComponent } from './events-quicknav-location-search/events-quicknav-location-search.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +37,15 @@ import { FdlEventsSearchcriteriaBadgesComponent } from './events-searchcriteria-
     FdlEventsCategoriesIdToStringPipe,
     FdlEventsCategoriesIdsToStringPipe,
     FdlEventsSearchComponent,
-    FdlEventsSearchcriteriaBadgesComponent
+    FdlEventsSearchcriteriaBadgesComponent,
+    FdlEventsQuicknavLocationSearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     NgbDatepickerModule,
+    NgbTypeaheadModule,
     FdlCommonModule,
     FdlEventsRoutingModule
   ],

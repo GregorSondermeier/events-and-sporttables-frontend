@@ -13,3 +13,9 @@
 .input-group-append {
   margin-left: -2px;
 }
+
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+}

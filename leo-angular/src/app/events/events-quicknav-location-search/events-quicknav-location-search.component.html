@@ -1,0 +1,29 @@
+<div class="bg-light mt-3 pt-3 pb-3">
+  <form class="container-fluid"
+        #queryForm="ngForm"
+        (ngSubmit)="onSubmit.emit(query)">
+    <div class="input-group">
+      <input type="text"
+             class="form-control"
+             autofocus
+             [(ngModel)]="selectedTypeaheadEntry"
+             [ngbTypeahead]="$searchLocations"
+             (focus)="focus$.next($event.target.value)"
+             (click)="click$.next($event.target.value)"
+             #instance="ngbTypeahead"
+             name="selectedTypeaheadEntry"
+             placeholder="Location suchen..."
+             title="Location suchen..."
+             aria-label="Location suchen..."
+             aria-describedby="Location-input-description" />
+      <div class="input-group-append">
+        <button class="input-group-text"
+                type="submit"
+                title="Veranstaltung suchen..."
+                id="query-input-description">
+          <i class="icon-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -7,6 +7,8 @@ import { IEvent } from "./_interfaces/IEvent";
 import { Event } from "./_models/Event";
 import { ICategory } from "./_interfaces/ICategory";
 import { Category } from "./_models/Category";
+import { ILocation } from "./_interfaces/ILocation";
+import { Location } from "./_models/Location";
 
 interface IEventsListParams {
   category?: number,
@@ -14,6 +16,10 @@ interface IEventsListParams {
 }
 
 interface ICategoriesListParams {
+  query?: string
+}
+
+interface ILocationsListParams {
   query?: string
 }
 
@@ -72,5 +78,25 @@ export class FdlEventsApiService {
           })
         )
     }
-  }
+  };
+
+  public locations = {
+    $list: (params?: ILocationsListParams) => {
+      return this.httpClient
+        .get<ILocation[]>('assets/micks/events/locationslist.json')
+        .pipe(
+          delay(Math.round(Math.random()*1000)),
+          map(data => {
+            if (params && params.query) {
+              return data
+                .filter((l) => l.name.indexOf(params.query) != -1)
+                .map((l) => new Location(l));
+            } else {
+              return data
+                .map((l) => new Location(l));
+            }
+          })
+        )
+    }
+  };
 }
