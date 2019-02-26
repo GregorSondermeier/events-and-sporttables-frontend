@@ -17,7 +17,7 @@ export class FdlEventsCategoriesIdToStringPipe implements PipeTransform {
   transform(categoryId: number): Observable<string> {
     return new Observable((observer) => {
       this.categories.subscribe((categories: Category[]) => {
-        observer.next(categories.find((c) => c.id === categoryId).name)
+        observer.next(categoryId ? categories.find((c) => c.id === categoryId).name : null)
       });
     });
   }

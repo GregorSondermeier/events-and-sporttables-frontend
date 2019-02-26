@@ -17,11 +17,11 @@ export class FdlEventsCategoriesIdsToStringPipe implements PipeTransform {
   transform(categoryIds: number[], separator?: string): Observable<string> {
     return new Observable((observer) => {
       this.categories.subscribe((categories: Category[]) => {
-        observer.next(categoryIds
+        observer.next(categoryIds ? categoryIds
           .map((cid) => categories
             .find((c) => c.id === cid).name
           )
-          .join(separator));
+          .join(separator) : null);
       });
     });
   }
