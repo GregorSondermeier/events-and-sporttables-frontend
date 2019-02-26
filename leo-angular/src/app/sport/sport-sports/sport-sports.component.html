@@ -22,7 +22,7 @@
     <tbody>
     <tr *ngFor="let sport of filteredSports | slice:0:10">
       <td>
-        <a [routerLink]="['/sport']" [queryParams]="{sport: sport.id}" queryParamsHandling="merge">
+        <a [routerLink]="['/sport/sports/', sport.id, 'leagues']">
           {{sport.name}}
         </a>
       </td>
@@ -38,7 +38,7 @@
     <tbody>
     <tr *ngFor="let sport of filteredSports | slice:10:20">
       <td>
-        <a [routerLink]="['/sport']" [queryParams]="{sport: sport.id}" queryParamsHandling="merge">
+        <a [routerLink]="['/sport/sports/', sport.id, 'leagues']">
           {{sport.name}}
         </a>
       </td>
@@ -54,7 +54,7 @@
     <tbody>
     <tr *ngFor="let sport of filteredSports | slice:20">
       <td>
-        <a [routerLink]="['/sport']" [queryParams]="{sport: sport.id}" queryParamsHandling="merge">
+        <a [routerLink]="['/sport/sports/', sport.id, 'leagues']">
           {{sport.name}}
         </a>
       </td>

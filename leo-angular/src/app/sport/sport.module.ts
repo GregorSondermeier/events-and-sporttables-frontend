@@ -6,11 +6,13 @@ import { FdlSportRoutingModule } from "./sport-routing.module";
 import { FdlSportSportsComponent } from './sport-sports/sport-sports.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FdlCommonModule } from "../common/common.module";
+import { FdlSportLeaguesComponent } from './sport-leagues/sport-leagues.component';
 
 @NgModule({
   declarations: [
     FdlSportComponent,
     FdlSportSportsComponent,
+    FdlSportLeaguesComponent,
   ],
   imports: [
     BrowserModule,

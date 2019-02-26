@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "1. Bundesliga"
+  },
+  {
+    "id": 2,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "2. Bundesliga"
+  },
+  {
+    "id": 3,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "3. Bundesliga"
+  },
+  {
+    "id": 4,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "Regionalliga"
+  },
+  {
+    "id": 5,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "Verbandsliga"
+  },
+  {
+    "id": 6,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "Landesliga"
+  },
+  {
+    "id": 7,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "Bezirksliga"
+  },
+  {
+    "id": 8,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Herren",
+    "name": "Kreisliga"
+  },
+  {
+    "id": 9,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "1. Bundesliga"
+  },
+  {
+    "id": 10,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "2. Bundesliga"
+  },
+  {
+    "id": 11,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "3. Bundesliga"
+  },
+  {
+    "id": 12,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "Regionalliga"
+  },
+  {
+    "id": 13,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "Verbandsliga"
+  },
+  {
+    "id": 14,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "Landesliga"
+  },
+  {
+    "id": 15,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "Bezirksliga"
+  },
+  {
+    "id": 16,
+    "sport": {
+      "id": 11,
+      "name": "Fußball"
+    },
+    "gender": "Damen",
+    "name": "Kreisliga"
+  }
+]

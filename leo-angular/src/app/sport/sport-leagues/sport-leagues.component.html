@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <h2>
+    <a [routerLink]="['/sport']">
+      <b>SPORTTABELLEN</b>
+    </a>
+  </h2>
+  <h3>
+    <b>LIGEN</b>
+  </h3>
+  <p><b>Wählen Sie unten die Liga, für die Sie sich interessieren.</b></p>
+</div>
+
+<div class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let league of leagues | slice:0:10">
+      <td>
+        <a [routerLink]="['/sport']">
+          {{league.sport.name}} - {{league.gender}} - {{league.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <fdl-common-ad></fdl-common-ad>
+</div>
+
+<div *ngIf="leagues.length > 10" class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let league of leagues | slice:10:20">
+      <td>
+        <a [routerLink]="['/sport']">
+          {{league.sport.name}} - {{league.gender}} - {{league.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <fdl-common-ad></fdl-common-ad>
+</div>
+
+<div *ngIf="leagues.length > 20" class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let league of leagues | slice:20">
+      <td>
+        <a [routerLink]="['/sport']">
+          {{league.sport.name}} - {{league.gender}} - {{league.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
