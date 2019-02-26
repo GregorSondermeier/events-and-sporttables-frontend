@@ -19,12 +19,14 @@ import { FdlEventsCategoriesIdToStringPipe } from './events-categories/events-ca
 import { FdlEventsCategoriesIdsToStringPipe } from './events-categories/events-categories-ids-to-string.pipe';
 import { FdlEventsQuicknavDateSearchComponent } from './events-quicknav-date-search/events-quicknav-date-search.component';
 import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import { FdlEventsSearchcriteriaBadgesComponent } from './events-searchcriteria-labels/events-searchcriteria-badges.component';
 
 @NgModule({
   declarations: [
     FdlEventsComponent,
     FdlEventsCatswitcherComponent,
     FdlEventsQuicknavComponent,
+    FdlEventsQuicknavDateSearchComponent,
     FdlEventsQuicknavQuerySearchComponent,
     FdlEventsListComponent,
     FdlEventsTeaserBigComponent,
@@ -34,7 +36,7 @@ import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
     FdlEventsCategoriesIdToStringPipe,
     FdlEventsCategoriesIdsToStringPipe,
     FdlEventsSearchComponent,
-    FdlEventsQuicknavDateSearchComponent
+    FdlEventsSearchcriteriaBadgesComponent
   ],
   imports: [
     BrowserModule,

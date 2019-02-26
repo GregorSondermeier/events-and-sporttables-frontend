@@ -32,13 +32,28 @@ export class FdlEventsSearchComponent implements OnInit {
   /**
    * When the search criteria changes by one of the quicknav components, merge it into the current searchcriteria and
    * navigate to the current route
-   * @param {[key: string]: string} searchcriteria the incoming searchcriteria
+   * @param {[key: string]: string} searchcriteriaItem the incoming searchcriteria item
    */
-  public onSearchcriteriaChange(searchcriteria: {[key: string]: string}) {
+  public addItemToSearchcriteria(searchcriteriaItem: {[key: string]: string}) {
       this.router.navigate([`/${this.route.snapshot.url.map(u => u.path).join('/')}`], {
-        queryParams: searchcriteria,
+        queryParams: searchcriteriaItem,
         queryParamsHandling: 'merge'
       });
+  }
+
+  /**
+   * removes an item from the search criteria and navigates to the current route with updated query params
+   * using ES7 destructuring magic to not mutate the searchcriteria (https://stackoverflow.com/a/51566324/3628926)
+   * @param {string} key the key to remove from the searchcriteria
+   */
+  public removeItemFromSearchcriteria(key: string) {
+    const {
+      [key]: omit,
+      ...searchcriteriaAfter
+    } = this.searchcriteria;
+    this.router.navigate([`/${this.route.snapshot.url.map(u => u.path).join('/')}`], {
+      queryParams: searchcriteriaAfter
+    });
   }
 
   private $searchEvents() {

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <pre class="bg-light mt-4 p-3">searchcriteria = {{searchcriteria | json}}</pre>
+
+  <ul class="list-unstyled">
+    <li *ngFor="let item of searchcriteriaFormatted" class="badge badge-secondary" [title]="item.formattedKey">
+      <button type="button"
+              class="btn"
+              (click)="removeItem.emit(item.key)">&times;</button>
+      {{item.formattedValue}}
+    </li>
+  </ul>
+</div>

@@ -8,9 +8,8 @@
 
 <fdl-events-catswitcher></fdl-events-catswitcher>
 
-<fdl-events-quicknav (onQuerySearchSubmit)="onSearchcriteriaChange({query: $event})"
-                     (onDateSelect)="onSearchcriteriaChange({date: $event})"></fdl-events-quicknav>
+<fdl-events-quicknav (onQuerySearchSubmit)="addItemToSearchcriteria({query: $event})"
+                     (onDateSelect)="addItemToSearchcriteria({date: $event})"></fdl-events-quicknav>
 
-<div class="container-fluid">
-  <pre class="bg-light mt-4 p-3">searchcriteria = {{searchcriteria | json}}</pre>
-</div>
+<fdl-events-searchcriteria-badges [searchcriteria]="searchcriteria"
+                                  (removeItem)="removeItemFromSearchcriteria($event)"></fdl-events-searchcriteria-badges>
