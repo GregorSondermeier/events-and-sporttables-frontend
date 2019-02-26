@@ -12,8 +12,5 @@
                      (onDateSelect)="onSearchcriteriaChange({date: $event})"></fdl-events-quicknav>
 
 <div class="container-fluid">
-  <pre class="bg-light mt-4 pt-3 pb-3">
-    query: {{queryObservable | async}}
-    category: {{categoryIdObservable | async | FdlEventsCategoriesIdToString | async}}
-    date: {{dateObservable | async}}</pre>
+  <pre class="bg-light mt-4 p-3">searchcriteria = {{searchcriteria | json}}</pre>
 </div>

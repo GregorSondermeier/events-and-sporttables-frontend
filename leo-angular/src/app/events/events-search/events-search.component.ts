@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { FdlCommonConfigService } from "../../common/common-config.service";
-import { Category } from "../_models/Category";
 
 @Component({
   selector: 'fdl-events-search',
@@ -13,60 +9,40 @@ import { Category } from "../_models/Category";
 export class FdlEventsSearchComponent implements OnInit {
 
   /**
-   * the query string as provided by the query params
+   * the searchcriteria
    */
-  queryObservable: Observable<string>;
-
-  /**
-   * the category id as provided by the query params
-   */
-  categoryIdObservable: Observable<number>;
-
-  /**
-   * the date as provided by the query params
-   */
-  dateObservable: Observable<string>;
+  public searchcriteria: {[key: string]: string};
 
   constructor(private route: ActivatedRoute,
-              private router: Router) {
-  }
+              private router: Router) { }
 
   ngOnInit() {
-    console.debug('FdlEventsSearchComponent ngOnInit()');
 
-    this.queryObservable = this.route.queryParamMap
-      .pipe(
-        map((params) => params.get('query'))
-      );
-
-    this.categoryIdObservable = this.route.queryParamMap
-      .pipe(
-        map((params) => + params.get('category'))
-      );
-
-    this.dateObservable = this.route.queryParamMap
-      .pipe(
-        map((params) => params.get('date'))
-      );
-
+    /**
+     * persist the searchcriteria as given by the query params each time the query params change
+     * and then run search
+     */
     this.route.queryParams
       .subscribe((currentQueryParams) => {
-        this.$searchEvents(currentQueryParams)
+        this.searchcriteria = currentQueryParams;
+        this.$searchEvents();
       })
   }
 
+  /**
+   * When the search criteria changes by one of the quicknav components, merge it into the current searchcriteria and
+   * navigate to the current route
+   * @param {[key: string]: string} searchcriteria the incoming searchcriteria
+   */
   public onSearchcriteriaChange(searchcriteria: {[key: string]: string}) {
-    this.route.queryParams
-      .subscribe((currentQueryParams) => {
-        const mergedQueryParams = Object.assign({}, currentQueryParams, searchcriteria);
-        this.router.navigate(['/events/search'], {
-          queryParams: mergedQueryParams
-        });
+      this.router.navigate([`/${this.route.snapshot.url.map(u => u.path).join('/')}`], {
+        queryParams: searchcriteria,
+        queryParamsHandling: 'merge'
       });
   }
 
-  private $searchEvents(searchcriteria) {
-    console.debug('$searchEvents(searchcriteria)', searchcriteria);
+  private $searchEvents() {
+    console.debug('$searchEvents(), searchcriteria:', this.searchcriteria);
   }
 
 }
