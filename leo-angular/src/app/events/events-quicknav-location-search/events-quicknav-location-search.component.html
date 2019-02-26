@@ -1,7 +1,7 @@
 <div class="bg-light mt-3 pt-3 pb-3">
   <form class="container-fluid"
         #locationForm="ngForm"
-        (ngSubmit)="onLocationSelect.emit(query)">
+        (ngSubmit)="onLocationSelect.emit($event)">
     <div class="input-group">
       <input type="text"
              class="form-control"
