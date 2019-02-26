@@ -32,6 +32,12 @@ export class FdlEventsQuicknavComponent implements OnInit {
   public onDateSelect: EventEmitter<string> = new EventEmitter();
 
   /**
+   * the output function to call upon location select
+   */
+  @Output()
+  public onLocationSelect: EventEmitter<string> = new EventEmitter();
+
+  /**
    * An array that contains the various isCollapsed states for the location, calender and search query
    */
   isExpandedStates: EventsQuicknavIsExpandedState[] = [

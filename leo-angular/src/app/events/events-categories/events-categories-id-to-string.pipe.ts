@@ -8,15 +8,15 @@ import { Observable } from "rxjs";
 })
 export class FdlEventsCategoriesIdToStringPipe implements PipeTransform {
 
-  private categories: Observable<Category[]>;
+  private categoriesObservable: Observable<Category[]>;
 
   constructor(private eventsApiService: FdlEventsApiService) {
-    this.categories = this.eventsApiService.categories.$list();
+    this.categoriesObservable = this.eventsApiService.categories.$list();
   }
 
   transform(categoryId: number): Observable<string> {
     return new Observable((observer) => {
-      this.categories.subscribe((categories: Category[]) => {
+      this.categoriesObservable.subscribe((categories: Category[]) => {
         observer.next(categoryId ? categories.find((c) => c.id === categoryId).name : null)
       });
     });

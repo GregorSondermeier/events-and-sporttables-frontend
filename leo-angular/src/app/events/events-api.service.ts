@@ -23,6 +23,8 @@ interface ILocationsListParams {
   query?: string
 }
 
+const API_BASE_PATH = 'assets/mocks/events/';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -32,7 +34,7 @@ export class FdlEventsApiService {
 
   public $list(params: IEventsListParams) {
     return this.httpClient
-      .get<IEventPreview[]>('assets/mocks/events/eventslist.json')
+      .get<IEventPreview[]>(`${API_BASE_PATH}eventslist.json`)
       .pipe(
         delay(Math.round(Math.random()*1000)),
         map((data) => {
@@ -53,7 +55,7 @@ export class FdlEventsApiService {
 
   public $get(id: number) {
     return this.httpClient
-      .get<IEvent>(`assets/mocks/events/event${id}.json`)
+      .get<IEvent>(`${API_BASE_PATH}event${id}.json`)
       .pipe(
         delay(Math.round(Math.random()*1000)),
         map(data => new Event(data))
@@ -63,7 +65,7 @@ export class FdlEventsApiService {
   public categories = {
     $list: (params?: ICategoriesListParams) => {
       return this.httpClient
-        .get<ICategory[]>('assets/mocks/events/categorieslist.json')
+        .get<ICategory[]>(`${API_BASE_PATH}categorieslist.json`)
         .pipe(
           delay(Math.round(Math.random()*1000)),
           map(data => {
@@ -83,7 +85,7 @@ export class FdlEventsApiService {
   public locations = {
     $list: (params?: ILocationsListParams) => {
       return this.httpClient
-        .get<ILocation[]>('assets/micks/events/locationslist.json')
+        .get<ILocation[]>(`${API_BASE_PATH}locationslist.json`)
         .pipe(
           delay(Math.round(Math.random()*1000)),
           map(data => {

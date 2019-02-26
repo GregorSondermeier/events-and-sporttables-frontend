@@ -35,7 +35,7 @@
 <div *ngFor="let ies of isExpandedStates">
   <div *ngIf="ies.isExpanded" [ngSwitch]="ies.expandable" class="position-relative">
     <div *ngSwitchCase="'location'" class="position-absolute w-100">
-      <fdl-events-quicknav-location-search (onDateSelect)="onDateSelect.emit($event)"></fdl-events-quicknav-location-search>
+      <fdl-events-quicknav-location-search (onLocationSelect)="onLocationSelect.emit($event)"></fdl-events-quicknav-location-search>
     </div>
     <div *ngSwitchCase="'calendar'" class="position-absolute w-100">
       <fdl-events-quicknav-date-search (onDateSelect)="onDateSelect.emit($event)"></fdl-events-quicknav-date-search>

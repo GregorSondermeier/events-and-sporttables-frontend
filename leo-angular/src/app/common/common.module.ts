@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { FdlCommonAdComponent } from "./common-ad/common-ad.component";
 import { FdlCommonSocialsharebarComponent } from './common-socialsharebar/common-socialsharebar.component';
+import { FdlCommonAutofocusDirective } from './common-autofocus.directive';
 
 @NgModule({
   declarations: [
     FdlCommonAdComponent,
-    FdlCommonSocialsharebarComponent
+    FdlCommonSocialsharebarComponent,
+    FdlCommonAutofocusDirective
   ],
   imports: [],
   exports: [
     FdlCommonAdComponent,
-    FdlCommonSocialsharebarComponent
+    FdlCommonSocialsharebarComponent,
+    FdlCommonAutofocusDirective
   ]
 })
 export class FdlCommonModule { }

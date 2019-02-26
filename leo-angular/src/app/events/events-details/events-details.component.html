@@ -8,7 +8,7 @@
 
 <div class="container-fluid">
   <p class="mb-0 text-secondary">
-    {{evt.location | uppercase}} / {{evt.venue | uppercase}}
+    {{evt.location | FdlEventsLocationsIdToString | async | uppercase}} / {{evt.venue | uppercase}}
   </p>
 
   <h2 class="h3"><b>{{evt.title}}</b></h2>

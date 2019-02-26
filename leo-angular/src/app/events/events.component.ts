@@ -45,7 +45,8 @@ export class FdlEventsComponent implements OnInit {
     this.router.navigate(['/events/search'], {
       queryParams: {
         query: searchcriteria.query,
-        date: searchcriteria.date
+        date: searchcriteria.date,
+        location: searchcriteria.location
       }
     });
   };

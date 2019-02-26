@@ -1,12 +1,16 @@
 import { Component, EventEmitter, Inject, Input, LOCALE_ID, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { formatDate } from "@angular/common";
 import { FdlEventsCategoriesIdToStringPipe } from "../events-categories/events-categories-id-to-string.pipe";
+import { FdlEventsLocationsIdToStringPipe } from "../events-locations/events-locations-id-to-string.pipe";
 
 @Component({
   selector: 'fdl-events-searchcriteria-badges',
   templateUrl: './events-searchcriteria-badges.component.html',
   styleUrls: ['./events-searchcriteria-badges.component.scss'],
-  providers: [FdlEventsCategoriesIdToStringPipe]
+  providers: [
+    FdlEventsCategoriesIdToStringPipe,
+    FdlEventsLocationsIdToStringPipe
+  ]
 })
 export class FdlEventsSearchcriteriaBadgesComponent implements OnChanges {
 
@@ -28,7 +32,8 @@ export class FdlEventsSearchcriteriaBadgesComponent implements OnChanges {
   public searchcriteriaFormatted: {key: string, value: string, formattedKey: string, formattedValue: string}[];
 
   constructor(@Inject(LOCALE_ID) private locale: string,
-              private eventsCategoriesIdToStringPipe: FdlEventsCategoriesIdToStringPipe) { }
+              private eventsCategoriesIdToStringPipe: FdlEventsCategoriesIdToStringPipe,
+              private fdlEventsLocationsIdToStringPipe: FdlEventsLocationsIdToStringPipe) { }
 
   /**
    * on changes, populate the searchcriteriaFormatted array with humanly readable formatted values
@@ -55,7 +60,10 @@ export class FdlEventsSearchcriteriaBadgesComponent implements OnChanges {
             break;
           case 'location':
             scfItem.formattedKey = 'Location';
-            scfItem.formattedValue = changes.searchcriteria.currentValue[key];
+            this.fdlEventsLocationsIdToStringPipe.transform(+ changes.searchcriteria.currentValue.location)
+              .subscribe((locationString) => {
+                scfItem.formattedValue = locationString;
+              });
             break;
           case 'category':
             scfItem.formattedKey = 'Kategorie';

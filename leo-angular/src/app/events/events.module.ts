@@ -21,6 +21,7 @@ import { FdlEventsQuicknavDateSearchComponent } from './events-quicknav-date-sea
 import { NgbDatepickerModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { FdlEventsSearchcriteriaBadgesComponent } from './events-searchcriteria-labels/events-searchcriteria-badges.component';
 import { FdlEventsQuicknavLocationSearchComponent } from './events-quicknav-location-search/events-quicknav-location-search.component';
+import { FdlEventsLocationsIdToStringPipe } from './events-locations/events-locations-id-to-string.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FdlEventsQuicknavLocationSearchComponent } from './events-quicknav-loca
     FdlEventsCategoriesIdsToStringPipe,
     FdlEventsSearchComponent,
     FdlEventsSearchcriteriaBadgesComponent,
-    FdlEventsQuicknavLocationSearchComponent
+    FdlEventsQuicknavLocationSearchComponent,
+    FdlEventsLocationsIdToStringPipe
   ],
   imports: [
     BrowserModule,

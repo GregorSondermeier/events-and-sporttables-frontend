@@ -2,7 +2,7 @@ export interface IEvent {
   id: number,
   title: string,
   categories: number[],
-  location: string,
+  location: number,
   venue: string,
   datetime: string,
   teaser: string,

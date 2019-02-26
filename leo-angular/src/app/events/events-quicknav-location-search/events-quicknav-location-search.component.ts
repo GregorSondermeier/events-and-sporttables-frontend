@@ -1,24 +1,35 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { merge, Observable, Subject } from "rxjs";
 import { NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
-import { debounceTime, distinctUntilChanged, filter, map } from "rxjs/operators";
+import { debounceTime, distinctUntilChanged, filter, switchMap, tap } from "rxjs/operators";
+import { FdlEventsApiService } from "../events-api.service";
+import { NgForm } from "@angular/forms";
+import { Location } from "../_models/Location";
 
 @Component({
   selector: 'fdl-events-quicknav-location-search',
   templateUrl: './events-quicknav-location-search.component.html',
-  styleUrls: ['./events-quicknav-location-search.component.scss']
+  styleUrls: ['./events-quicknav-location-search.component.scss'],
+  providers: [FdlEventsApiService]
 })
 export class FdlEventsQuicknavLocationSearchComponent {
 
-  public selectedTypeaheadEntry;
-
-  public typeaheadEntries = ['foo', 'bar', 'hello', 'world'];
+  /**
+   * the selected location
+   */
+  public location: Location;
 
   /**
    * the typeahead instance
    */
-  @ViewChild
-  ('instance') instance: NgbTypeahead;
+  @ViewChild('instance')
+  ngbTypeahead: NgbTypeahead;
+
+  /**
+   * reference to the location form
+   */
+  @ViewChild('locationForm')
+  public form: NgForm;
 
   /**
    * focus subject
@@ -30,8 +41,16 @@ export class FdlEventsQuicknavLocationSearchComponent {
    */
   public click$ = new Subject<string>();
 
+  /**
+   * the output function to call when a location has been selected
+   */
+  @Output()
+  onLocationSelect: EventEmitter<string> = new EventEmitter();
+
+  constructor(private eventsApiService: FdlEventsApiService) { }
+
   public $searchLocations = (queryObservable: Observable<string>) => {
-    const debouncesQuery = queryObservable
+    const debouncedQueryObservable = queryObservable
       .pipe(
         debounceTime(200),
         distinctUntilChanged()
@@ -39,16 +58,41 @@ export class FdlEventsQuicknavLocationSearchComponent {
 
     const clicksWithClosedPopup$ = this.click$
       .pipe(
-        filter(() => !this.instance.isPopupOpen())
+        filter(() => !this.ngbTypeahead.isPopupOpen())
       );
 
     const inputFocus$ = this.focus$;
 
-    return merge(debouncesQuery, inputFocus$, clicksWithClosedPopup$)
+    return merge(debouncedQueryObservable, clicksWithClosedPopup$, inputFocus$)
       .pipe(
-        map((term) => (term === '' ? this.typeaheadEntries
-          : this.typeaheadEntries.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)).slice(0, 10))
-      );
+        debounceTime(200),
+        distinctUntilChanged(),
+        tap(() => console.debug('tap 1')),
+        switchMap((query) => {
+          return this.eventsApiService.locations
+            .$list({query: query})
+            .pipe(
+              tap(() => console.debug('tap 2'))
+            )
+        }),
+        tap(() => console.debug('tap 3'))
+      )
+  };
+
+  /**
+   * formats a location so it can be displayed in both the search result list and the input
+   * @param item
+   */
+  public formatter = (item) => {
+    return item.name;
+  };
+
+  /**
+   * submits the location form when a location has been selected
+   */
+  public onSelectItem(event) {
+    console.debug('onSelectItem(event)', event);
+    this.onLocationSelect.emit(event.item.id);
   }
 
 }

@@ -9,7 +9,8 @@
 <fdl-events-catswitcher></fdl-events-catswitcher>
 
 <fdl-events-quicknav (onQuerySearchSubmit)="addItemToSearchcriteria({query: $event})"
-                     (onDateSelect)="addItemToSearchcriteria({date: $event})"></fdl-events-quicknav>
+                     (onDateSelect)="addItemToSearchcriteria({date: $event})"
+                     (onLocationSelect)="addItemToSearchcriteria({location: $event})"></fdl-events-quicknav>
 
 <fdl-events-searchcriteria-badges [searchcriteria]="searchcriteria"
                                   (removeItem)="removeItemFromSearchcriteria($event)"></fdl-events-searchcriteria-badges>
