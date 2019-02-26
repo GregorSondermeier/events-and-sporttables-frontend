@@ -15,7 +15,7 @@
     <tbody>
     <tr *ngFor="let category of filteredCategories | slice:0:10">
       <td>
-        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}">
+        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}" queryParamsHandling="merge">
           {{category.name}}
         </a>
       </td>
@@ -33,7 +33,7 @@
     <tbody>
     <tr *ngFor="let category of filteredCategories | slice:10:20">
       <td>
-        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}">
+        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}" queryParamsHandling="merge">
           {{category.name}}
         </a>
       </td>
@@ -49,7 +49,7 @@
     <tbody>
     <tr *ngFor="let category of filteredCategories | slice:20">
       <td>
-        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}">
+        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}" queryParamsHandling="merge">
           {{category.name}}
         </a>
       </td>
