@@ -20,10 +20,6 @@ interface ITeamsSearchParams {
   query?: string
 }
 
-interface ITeamsGetParams {
-  id?: number
-}
-
 interface ILeagueListParams {
   sport: number
 }
@@ -87,15 +83,15 @@ export class FdlSportApiService {
         )
     },
 
-    $get: (params: ITeamsGetParams) => {
-      console.debug('FdlSportApiService.teams.$get(params)', params);
+    $get: (teamId: number) => {
+      console.debug('FdlSportApiService.teams.$get(teamId)', teamId);
 
       return this.httpClient
         .get<ITeam>(`${API_BASE_PATH}teamsget.json`)
         .pipe(
           delay(Math.round(Math.random()*1000)),
           map((data) => {
-            if (data.id == params.id) {
+            if (data.id == teamId) {
               return new Team(data);
             } else {
               return null;

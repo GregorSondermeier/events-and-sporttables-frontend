@@ -11,7 +11,7 @@
 <div *ngFor="let ies of isExpandedStates">
   <div *ngIf="ies.isExpanded" [ngSwitch]="ies.expandable" class="position-relative">
     <div *ngSwitchCase="'team'" class="position-absolute w-100">
-      <fdl-sport-quicknav-team-search (onSubmit)="onTeamSearchSubmit.emit($event)"></fdl-sport-quicknav-team-search>
+      <fdl-sport-quicknav-team-search (onTeamSelect)="onTeamSearchSubmit.emit($event)"></fdl-sport-quicknav-team-search>
     </div>
   </div>
 </div>

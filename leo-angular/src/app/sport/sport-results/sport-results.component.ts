@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ResolveData } from "@angular/router";
+import { ActivatedRoute, ResolveData, Router } from "@angular/router";
 import { Results } from "../_models/Results";
 import { FdlSportApiService } from "../sport-api.service";
 import { skip } from "rxjs/operators";
@@ -17,6 +17,7 @@ export class FdpSportResultsComponent implements OnInit {
   public results: Results;
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private sportApiService: FdlSportApiService) { }
 
   ngOnInit() {
@@ -84,5 +85,12 @@ export class FdpSportResultsComponent implements OnInit {
    */
   public getValueOfItemByName(items: string[], schema: string[], item: string): string {
     return items[this.getIndexOfSchemaItem(schema, item)];
+  }
+
+  /**
+   * redirects to a team's details page
+   */
+  public redirectToTeamDetails(teamId: number) {
+    this.router.navigate(['/sport/teams', teamId]);
   }
 }

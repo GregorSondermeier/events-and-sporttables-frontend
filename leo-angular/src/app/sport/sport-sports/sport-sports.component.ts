@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Sports } from "../_models/Sports";
-import { ActivatedRoute, ResolveData } from "@angular/router";
+import { ActivatedRoute, ResolveData, Router } from "@angular/router";
 
 @Component({
   selector: 'fdl-sport-sports',
@@ -48,7 +48,8 @@ export class FdlSportSportsComponent implements OnInit {
    */
   public filteredSports: Sports[];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.data
@@ -68,5 +69,12 @@ export class FdlSportSportsComponent implements OnInit {
     } else {
       this.filteredSports = this.sports;
     }
+  }
+
+  /**
+   * redirects to a team's details page
+   */
+  public redirectToTeamDetails(teamId: number) {
+    this.router.navigate(['/sport/teams', teamId]);
   }
 }

@@ -12,6 +12,7 @@ import { FdlSportQuicknavComponent } from './sport-quicknav/sport-quicknav.compo
 import { FdlSportQuicknavTeamSearchComponent } from './sport-quicknav-team-search/sport-quicknav-team-search.component';
 import { FormsModule } from "@angular/forms";
 import { NgbTypeaheadModule } from "@ng-bootstrap/ng-bootstrap";
+import { FdlSportTeamsDetailsComponent } from './sport-teams-details/sport-teams-details.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NgbTypeaheadModule } from "@ng-bootstrap/ng-bootstrap";
     FdpSportResultsComponent,
     FdlSportQuicknavComponent,
     FdlSportQuicknavTeamSearchComponent,
+    FdlSportTeamsDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { League } from "../_models/League";
 import { ActivatedRoute, ResolveData, Router } from "@angular/router";
+import { Team } from "../_models/Team";
 
 @Component({
-  selector: 'fdl-sport-leagues',
-  templateUrl: './sport-leagues.component.html',
-  styleUrls: ['./sport-leagues.component.scss']
+  selector: 'fdl-sport-teams-details',
+  templateUrl: './sport-teams-details.component.html',
+  styleUrls: ['./sport-teams-details.component.scss']
 })
-export class FdlSportLeaguesComponent implements OnInit {
+export class FdlSportTeamsDetailsComponent implements OnInit {
 
-  /**
-   * all available leagues
-   */
-  public leagues: League[];
+  public team: Team;
 
   constructor(private route: ActivatedRoute,
               private router: Router) { }
@@ -20,8 +17,8 @@ export class FdlSportLeaguesComponent implements OnInit {
   ngOnInit() {
     this.route.data
       .subscribe((data: ResolveData) => {
-        this.leagues = <League[]>data.leagues;
-      })
+        this.team = <Team>data.team;
+      });
   }
 
   /**

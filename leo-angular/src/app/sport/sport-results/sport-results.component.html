@@ -1,7 +1,15 @@
 <div class="container-fluid">
-  <h2 class="font-weight-bold">
-    {{results.league.name}} - {{results.league.group}} - {{results.league.sport.name}}
+  <h2 class="font-weight-bold text-uppercase">
+    <a [routerLink]="['/sport']">
+      Sporttabellen
+    </a>
   </h2>
+
+  <fdl-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></fdl-sport-quicknav>
+
+  <h3 class="font-weight-bold">
+    {{results.league.name}} - {{results.league.group}} - {{results.league.sport.name}}
+  </h3>
 
   <time [dateTime]="results.effective" class="text-secondary">
     Stand: {{results.effective | date : 'dd.MM.yyyy HH:mm'}}
@@ -16,9 +24,9 @@
        queryParamsHandling="merge">
       <i class="icon-chevron-left"></i>
     </a>
-    <h3 class="font-weight-bold text-center mb-0">
+    <h4 class="font-weight-bold text-center mb-0">
       {{results.matchday}}. Spieltag
-    </h3>
+    </h4>
     <a class="position-absolute fdl-icon-right pl-3 pr-3"
        [routerLink]="['/sport/results']"
        [queryParams]="{matchday: results.matchday + 1}"
@@ -29,9 +37,9 @@
 </div>
 
 <div class="container-fluid">
-  <h4 class="font-weight-bold">
+  <h5 class="font-weight-bold">
     Ergebnisse
-  </h4>
+  </h5>
 </div>
 
 <table class="table table-sm table-hover">
@@ -54,9 +62,9 @@
 <fdl-common-ad></fdl-common-ad>
 
 <div class="container-fluid">
-  <h4 class="font-weight-bold">
+  <h5 class="font-weight-bold">
     Tabelle
-  </h4>
+  </h5>
 </div>
 
 <table class="table table-sm table-hover">
@@ -77,9 +85,9 @@
 </table>
 
 <div class="container-fluid">
-  <h5 class="font-weight-bold">
+  <h6 class="font-weight-bold">
     Erklärung Tabelle
-  </h5>
+  </h6>
   <p>{{results.table.description}}</p>
 </div>
 
