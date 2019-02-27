@@ -3,7 +3,7 @@ import { ISports } from "./ISports";
 export interface ILeague {
   id: number,
   sport: ISports,
-  gender: string,
+  group: string,
   name: string,
   currentSeason: number,
   currentMatchday: number

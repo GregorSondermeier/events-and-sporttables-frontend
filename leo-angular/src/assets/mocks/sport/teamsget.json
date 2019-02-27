@@ -1,0 +1,84 @@
+{
+  "id": 0,
+  "name": "Mannschaft 1",
+  "sports": [
+    {
+      "id": 2,
+      "name": "Basketball",
+      "leagues": [
+        {
+          "id": 101,
+          "sport": {
+            "id": 2,
+            "name": "Basketball"
+          },
+          "group": "Herren",
+          "name": "1. Bundesliga",
+          "currentSeason": 2018,
+          "currentMatchday": 12
+        },
+        {
+          "id": 102,
+          "sport": {
+            "id": 2,
+            "name": "Basketball"
+          },
+          "group": "Herren",
+          "name": "2. Bundesliga",
+          "currentSeason": 2018,
+          "currentMatchday": 12
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Fußball",
+      "leagues": [
+        {
+          "id": 1,
+          "sport": {
+            "id": 11,
+            "name": "Fußball"
+          },
+          "group": "Herren",
+          "name": "1. Bundesliga",
+          "currentSeason": 2018,
+          "currentMatchday": 16
+        },
+        {
+          "id": 2,
+          "sport": {
+            "id": 11,
+            "name": "Fußball"
+          },
+          "group": "Herren",
+          "name": "2. Bundesliga",
+          "currentSeason": 2018,
+          "currentMatchday": 16
+        },
+        {
+          "id": 10,
+          "sport": {
+            "id": 11,
+            "name": "Fußball"
+          },
+          "group": "Damen",
+          "name": "2. Bundesliga",
+          "currentSeason": 2018,
+          "currentMatchday": 16
+        },
+        {
+          "id": 11,
+          "sport": {
+            "id": 11,
+            "name": "Fußball"
+          },
+          "group": "Damen",
+          "name": "3. Bundesliga",
+          "currentSeason": 2018,
+          "currentMatchday": 16
+        }
+      ]
+    }
+  ]
+}

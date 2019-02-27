@@ -6,7 +6,7 @@
   },
   "league": {
     "id": 1,
-    "gender": "Herren",
+    "group": "Herren",
     "name": "1. Bundesliga"
   },
   "season": 2018,

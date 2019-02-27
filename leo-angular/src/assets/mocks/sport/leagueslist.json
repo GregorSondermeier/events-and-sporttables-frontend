@@ -5,7 +5,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "1. Bundesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -16,7 +16,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "2. Bundesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -27,7 +27,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "3. Bundesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -38,7 +38,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "Regionalliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -49,7 +49,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "Verbandsliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -60,7 +60,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "Landesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -71,7 +71,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "Bezirksliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -82,7 +82,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Herren",
+    "group": "Herren",
     "name": "Kreisliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -93,7 +93,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "1. Bundesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -104,7 +104,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "2. Bundesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -115,7 +115,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "3. Bundesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -126,7 +126,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "Regionalliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -137,7 +137,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "Verbandsliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -148,7 +148,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "Landesliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -159,7 +159,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "Bezirksliga",
     "currentSeason": 2018,
     "currentMatchday": 16
@@ -170,7 +170,7 @@
       "id": 11,
       "name": "Fußball"
     },
-    "gender": "Damen",
+    "group": "Damen",
     "name": "Kreisliga",
     "currentSeason": 2018,
     "currentMatchday": 16

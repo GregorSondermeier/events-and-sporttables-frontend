@@ -7,10 +7,23 @@ import { ILeague } from "./_interfaces/ILeague";
 import { League } from "./_models/League";
 import { IResults } from "./_interfaces/IResults";
 import { Results } from "./_models/Results";
+import { ITeamPreview } from "./_interfaces/ITeamPreview";
+import { Team } from "./_models/Team";
+import { TeamPreview } from "./_models/TeamPreview";
+import { ITeam } from "./_interfaces/ITeam";
 
 interface ISportsListParams {
   query?: string
 }
+
+interface ITeamsSearchParams {
+  query?: string
+}
+
+interface ITeamsGetParams {
+  id?: number
+}
+
 interface ILeagueListParams {
   sport: number
 }
@@ -47,6 +60,45 @@ export class FdlSportApiService {
             } else {
               return data
                 .map((s) => new Sports(s));
+            }
+          })
+        )
+    }
+  };
+
+  public teams = {
+    $list: (params: ITeamsSearchParams) => {
+      console.debug('FdlSportApiService.teams.$search(params)', params);
+
+      return this.httpClient
+        .get<ITeamPreview[]>(`${API_BASE_PATH}teamslist.json`)
+        .pipe(
+          delay(Math.round(Math.random()*1000)),
+          map((data) => {
+            if (params.query) {
+              return data
+                .filter((t) => t.name.indexOf(params.query) != -1)
+                .map((t) => new TeamPreview(t));
+            } else {
+              return data
+                .map((t) => new TeamPreview(t));
+            }
+          })
+        )
+    },
+
+    $get: (params: ITeamsGetParams) => {
+      console.debug('FdlSportApiService.teams.$get(params)', params);
+
+      return this.httpClient
+        .get<ITeam>(`${API_BASE_PATH}teamsget.json`)
+        .pipe(
+          delay(Math.round(Math.random()*1000)),
+          map((data) => {
+            if (data.id == params.id) {
+              return new Team(data);
+            } else {
+              return null;
             }
           })
         )

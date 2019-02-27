@@ -2,7 +2,7 @@ import { ILeague } from "../_interfaces/ILeague";
 import { Sports } from "./Sports";
 
 export class League implements ILeague {
-  gender: string;
+  group: string;
   id: number;
   name: string;
   sport: Sports;

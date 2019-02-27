@@ -2,7 +2,7 @@
   "effective": "2019-01-26T16:59:00.000Z",
   "league": {
     "id": 1,
-    "gender": "Herren",
+    "group": "Herren",
     "name": "1. Bundesliga",
     "sport": {
       "id": 11,
