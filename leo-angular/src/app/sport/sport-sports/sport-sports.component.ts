@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Sports } from "../_models/Sports";
 import { ActivatedRoute, ResolveData, Router } from "@angular/router";
+import { aggregateFirstLetters } from "../../_vanilla/helpers";
 
 @Component({
   selector: 'fdl-sport-sports',
@@ -14,34 +15,7 @@ export class FdlSportSportsComponent implements OnInit {
    */
   public sports: Sports[];
 
-  public letters: String[] = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z'
-  ];
+  public startingLetters: String[];
 
   /**
    * a list of sports, filtered by starting letter
@@ -55,6 +29,7 @@ export class FdlSportSportsComponent implements OnInit {
     this.route.data
       .subscribe((data: ResolveData) => {
         this.sports = <Sports[]>data.sports;
+        this.startingLetters = aggregateFirstLetters(this.sports, 'name');
         this.filterSports();
       })
   }
@@ -65,7 +40,7 @@ export class FdlSportSportsComponent implements OnInit {
   public filterSports(startingLetter?: string) {
     if (startingLetter) {
       this.filteredSports = this.sports
-        .filter((c) => c.name.toLowerCase().indexOf(startingLetter.toLowerCase()) == 0)
+        .filter((c) => c.name.toLowerCase().startsWith(startingLetter.toLowerCase()))
     } else {
       this.filteredSports = this.sports;
     }

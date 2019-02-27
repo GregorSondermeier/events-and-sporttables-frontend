@@ -42,7 +42,7 @@ export class FdlEventsApiService {
         map((data) => {
           if (params.category != -1 && params.category !== undefined && params.category !== null) {
             return data
-              .filter((e) => e.categories.indexOf(params.category) != -1)
+              .filter((e) => e.categories.includes(params.category))
               .splice(0, params.pageSize)
               .map((e) => new EventPreview(e));
           } else {
@@ -77,7 +77,7 @@ export class FdlEventsApiService {
           map(data => {
             if (params && params.query) {
               return data
-                .filter((c) => c.name.indexOf(params.query) != -1)
+                .filter((c) => c.name.includes(params.query))
                 .map((c) => new Category(c));
             } else {
               return data
@@ -99,7 +99,7 @@ export class FdlEventsApiService {
           map(data => {
             if (params && params.query) {
               return data
-                .filter((l) => l.name.indexOf(params.query) != -1)
+                .filter((l) => l.name.includes(params.query))
                 .map((l) => new Location(l));
             } else {
               return data

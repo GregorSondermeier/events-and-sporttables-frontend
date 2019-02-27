@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ResolveData } from "@angular/router";
 import { Category } from "../_models/Category";
+import { aggregateFirstLetters } from "../../_vanilla/helpers";
 
 @Component({
   selector: 'fdl-events-categories',
@@ -14,34 +15,7 @@ export class FdlEventsCategoriesComponent implements OnInit {
    */
   public categories: Category[];
 
-  public letters: String[] = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z'
-  ];
+  public letters: String[];
 
   /**
    * a list of categories, filtered by starting letter
@@ -54,6 +28,7 @@ export class FdlEventsCategoriesComponent implements OnInit {
     this.route.data
       .subscribe((data: ResolveData) => {
         this.categories = <Category[]>data.categories;
+        this.letters = aggregateFirstLetters(this.categories, 'name');
         this.filterCategories();
       })
   }
@@ -64,7 +39,7 @@ export class FdlEventsCategoriesComponent implements OnInit {
   public filterCategories(startingLetter?: string) {
     if (startingLetter) {
       this.filteredCategories = this.categories
-        .filter((c) => c.name.toLowerCase().indexOf(startingLetter.toLowerCase()) == 0)
+        .filter((c) => c.name.toLowerCase().startsWith(startingLetter.toLowerCase()))
     } else {
       this.filteredCategories = this.categories
     }

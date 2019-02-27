@@ -51,7 +51,7 @@ export class FdlSportApiService {
           map(data => {
             if (params && params.query) {
               return data
-                .filter((s) => s.name.indexOf(params.query) != -1)
+                .filter((s) => s.name.includes(params.query))
                 .map((s) => new Sports(s));
             } else {
               return data
@@ -73,7 +73,7 @@ export class FdlSportApiService {
           map((data) => {
             if (params.query) {
               return data
-                .filter((t) => t.name.indexOf(params.query) != -1)
+                .filter((t) => t.name.includes(params.query))
                 .map((t) => new TeamPreview(t));
             } else {
               return data

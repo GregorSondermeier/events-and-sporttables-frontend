@@ -59,7 +59,7 @@ export class FdpSportResultsComponent implements OnInit {
    * removes blacklisted entries from a shema and returns the sanitized schema without mutating the input schema
    */
   public getSanitizedSchema(schema: string[], blacklist: string[]): string[] {
-    return schema.filter((s) => blacklist.indexOf(s) === -1);
+    return schema.filter((s) => !blacklist.includes(s));
   }
 
   /**
@@ -77,7 +77,7 @@ export class FdpSportResultsComponent implements OnInit {
       blacklistedIndexes.push(this.getIndexOfSchemaItem(schema, blacklistItem));
       return blacklistedIndexes;
     }, []);
-    return items.filter((v, idx) => blacklistedIndexes.indexOf(idx) === -1);
+    return items.filter((v, idx) => !blacklistedIndexes.includes(idx));
   }
 
   /**
