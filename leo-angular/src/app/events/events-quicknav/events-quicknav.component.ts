@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Inject, LOCALE_ID, OnInit, Output } from '@angular/core';
 import { EventsQuicknavIsExpandedState } from "../_types/EventsQuicknavIsExpandedState";
-import { formatDate } from "@angular/common";
 
 @Component({
   selector: 'fdl-events-quicknav',
@@ -64,7 +63,7 @@ export class FdlEventsQuicknavComponent implements OnInit {
 
   /**
    * toggles the isExpandedState for a specific expandable and sets every other isExpandedState to false
-   * @param {EventsQuicknavExpandable} expandable
+   * @param {SportQuicknavExpandable} expandable
    */
   public toggleExpand(expandable) {
     this.isExpandedStates.forEach((ics) => {

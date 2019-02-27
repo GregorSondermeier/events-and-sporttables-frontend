@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { merge, Observable, Subject } from "rxjs";
 import { NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
-import { debounceTime, distinctUntilChanged, filter, switchMap, tap } from "rxjs/operators";
+import { debounceTime, distinctUntilChanged, filter, switchMap } from "rxjs/operators";
 import { FdlEventsApiService } from "../events-api.service";
 import { NgForm } from "@angular/forms";
 import { Location } from "../_models/Location";
@@ -49,6 +49,9 @@ export class FdlEventsQuicknavLocationSearchComponent {
 
   constructor(private eventsApiService: FdlEventsApiService) { }
 
+  /**
+   * the search function called by the ng-bootstrap typeahead plugin
+   */
   public $searchLocations = (queryObservable: Observable<string>) => {
     const debouncedQueryObservable = queryObservable
       .pipe(
@@ -67,15 +70,10 @@ export class FdlEventsQuicknavLocationSearchComponent {
       .pipe(
         debounceTime(200),
         distinctUntilChanged(),
-        tap(() => console.debug('tap 1')),
         switchMap((query) => {
           return this.eventsApiService.locations
             .$list({query: query})
-            .pipe(
-              tap(() => console.debug('tap 2'))
-            )
-        }),
-        tap(() => console.debug('tap 3'))
+        })
       )
   };
 
@@ -90,9 +88,8 @@ export class FdlEventsQuicknavLocationSearchComponent {
   /**
    * submits the location form when a location has been selected
    */
-  public onSelectItem(event) {
-    console.debug('onSelectItem(event)', event);
-    this.onLocationSelect.emit(event.item.id);
+  public onSelectItem($event) {
+    this.onLocationSelect.emit($event.item.id);
   }
 
 }

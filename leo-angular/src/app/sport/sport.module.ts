@@ -8,6 +8,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { FdlCommonModule } from "../common/common.module";
 import { FdlSportLeaguesComponent } from './sport-leagues/sport-leagues.component';
 import { FdpSportResultsComponent } from './sport-results/sport-results.component';
+import { FdlSportQuicknavComponent } from './sport-quicknav/sport-quicknav.component';
+import { FdlSportQuicknavTeamSearchComponent } from './sport-quicknav-team-search/sport-quicknav-team-search.component';
+import { FormsModule } from "@angular/forms";
+import { NgbTypeaheadModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -15,10 +19,14 @@ import { FdpSportResultsComponent } from './sport-results/sport-results.componen
     FdlSportSportsComponent,
     FdlSportLeaguesComponent,
     FdpSportResultsComponent,
+    FdlSportQuicknavComponent,
+    FdlSportQuicknavTeamSearchComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
+    NgbTypeaheadModule,
     FdlCommonModule,
     FdlSportRoutingModule
   ],

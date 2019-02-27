@@ -1,30 +1,30 @@
 <div class="bg-light mt-3 pt-3 pb-3">
   <form class="container-fluid"
-        #locationForm="ngForm"
-        (ngSubmit)="onLocationSelect.emit($event)">
+        #teamForm="ngForm"
+        (ngSubmit)="onTeamSelect.emit($event)">
     <div class="input-group">
       <input type="text"
              class="form-control"
              fdlCommonAutofocus
-             [(ngModel)]="location"
-             [ngbTypeahead]="$searchLocations"
+             [(ngModel)]="team"
+             [ngbTypeahead]="$searchTeams"
              [resultFormatter]="formatter"
              [inputFormatter]="formatter"
              (selectItem)="onSelectItem($event)"
              (focus)="focus$.next($event.target.value)"
              (click)="click$.next($event.target.value)"
              #instance="ngbTypeahead"
-             name="location"
-             placeholder="Location suchen..."
-             title="Location suchen..."
-             aria-label="Location suchen..."
-             aria-describedby="location-input-description" />
+             name="team"
+             placeholder="Team suchen..."
+             title="Team suchen..."
+             aria-label="Team suchen..."
+             aria-describedby="team-input-description" />
       <div class="input-group-append">
         <button class="input-group-text"
                 type="submit"
-                title="Veranstaltung suchen..."
-                id="location-input-description">
-          <i class="icon-map-pin"></i>
+                title="Team suchen..."
+                id="team-input-description">
+          <i class="icon-search"></i>
         </button>
       </div>
     </div>
