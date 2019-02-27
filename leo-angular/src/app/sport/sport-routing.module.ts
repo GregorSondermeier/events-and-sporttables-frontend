@@ -5,6 +5,7 @@ import { FdlSportSportsComponent } from "./sport-sports/sport-sports.component";
 import { FdlSportLeaguesComponent } from "./sport-leagues/sport-leagues.component";
 import { FdlSportLeaguesResolverService } from "./sport-leagues/sport-leagues-resolver.service";
 import { FdpSportResultsComponent } from "./sport-results/sport-results.component";
+import { FdlSportResultsResolverService } from "./sport-results/sport-results-resolver.service";
 
 const routes: Routes = [
   {
@@ -15,15 +16,18 @@ const routes: Routes = [
     }
   },
   {
-    path: 'sport/sports/:sportId/leagues',
+    path: 'sport/leagues',
     component: FdlSportLeaguesComponent,
     resolve: {
       leagues: FdlSportLeaguesResolverService
     }
   },
   {
-    path: 'sport/sports/:sportId/league/:leagueId/results',
-    component: FdpSportResultsComponent
+    path: 'sport/results',
+    component: FdpSportResultsComponent,
+    resolve: {
+      results: FdlSportResultsResolverService
+    }
   },
   {
     path: 'sport',

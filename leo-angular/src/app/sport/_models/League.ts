@@ -6,6 +6,8 @@ export class League implements ILeague {
   id: number;
   name: string;
   sport: Sports;
+  currentSeason: number;
+  currentMatchday: number;
 
   constructor(league: ILeague) {
     Object.assign(this, league);

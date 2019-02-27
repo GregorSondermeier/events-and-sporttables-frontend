@@ -14,13 +14,13 @@ export class FdlSportLeaguesResolverService implements Resolve<League[]> {
               private sportApiService: FdlSportApiService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<League[]> {
-    console.debug('FdlSportLeaguesResolverService.resolve()');
-    console.debug('route.paramMap:', route.paramMap);
 
-    const sportId = parseInt(route.paramMap.get('sportId'));
+    const {
+      sport
+    } = route.queryParams;
 
     return this.sportApiService.leagues
-      .$list({sportId: sportId})
+      .$list({sport})
       .pipe(
         take(1)
       )

@@ -15,7 +15,7 @@
     <tbody>
     <tr *ngFor="let league of leagues | slice:0:10">
       <td>
-        <a [routerLink]="['/sport/sports', league.sport.id, 'league', league.id, 'results']">
+        <a [routerLink]="['/sport/results']" [queryParams]="{sport: league.sport.id, league: league.id, season: league.currentSeason, matchday: league.currentMatchday}">
           {{league.sport.name}} - {{league.gender}} - {{league.name}}
         </a>
       </td>
@@ -31,7 +31,7 @@
     <tbody>
     <tr *ngFor="let league of leagues | slice:10:20">
       <td>
-        <a [routerLink]="['/sport/sports', league.sport.id, 'league', league.id, 'results']">
+        <a [routerLink]="['/sport/results']" [queryParams]="{sport: league.sport.id, league: league.id, season: league.currentSeason, matchday: league.currentMatchday}">
           {{league.sport.name}} - {{league.gender}} - {{league.name}}
         </a>
       </td>
@@ -47,7 +47,7 @@
     <tbody>
     <tr *ngFor="let league of leagues | slice:20">
       <td>
-        <a [routerLink]="['/sport/sports', league.sport.id, 'league', league.id, 'results']">
+        <a [routerLink]="['/sport/results']" [queryParams]="{sport: league.sport.id, league: league.id, season: league.currentSeason, matchday: league.currentMatchday}">
           {{league.sport.name}} - {{league.gender}} - {{league.name}}
         </a>
       </td>

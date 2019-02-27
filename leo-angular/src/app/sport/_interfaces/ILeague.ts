@@ -4,5 +4,7 @@ export interface ILeague {
   id: number,
   sport: ISports,
   gender: string,
-  name: string
+  name: string,
+  currentSeason: number,
+  currentMatchday: number
 }
