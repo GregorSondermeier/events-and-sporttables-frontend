@@ -4,8 +4,8 @@
       <p class="mb-0 text-secondary">
         <small>{{evt.location | FdlEventsLocationsIdToString | async | uppercase}} / {{evt.venue | uppercase}}</small>
       </p>
-      <h4 class="mb-0">
-        <b>{{evt.title}}</b>
+      <h4 class="mb-0 font-weight-bold">
+        {{evt.title}}
       </h4>
       <time [dateTime]="evt.datetime" class="text-secondary">
         <small>{{evt.datetime | date : 'EE dd.MM. / HH:mm'}}</small>

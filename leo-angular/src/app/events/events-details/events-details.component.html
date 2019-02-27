@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <h3 class="h2">
+  <h3  class="h2 font-weight-bold text-uppercase">
     <a [routerLink]="['/events']">
-      <b>VERANSTALTUNGEN</b>
+      Veranstaltungen
     </a>
   </h3>
 </div>
@@ -11,7 +11,9 @@
     {{evt.location | FdlEventsLocationsIdToString | async | uppercase}} / {{evt.venue | uppercase}}
   </p>
 
-  <h2 class="h3"><b>{{evt.title}}</b></h2>
+  <h2  class="h3 font-weight-bold text-uppercase">
+    {{evt.title}}
+  </h2>
 
   <time [dateTime]="evt.datetime" class="text-secondary">
     {{evt.datetime | date : 'EE dd.MM.yyyy | HH:mm'}}
