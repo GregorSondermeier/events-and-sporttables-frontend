@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, ResolveData } from "@angular/router";
 import { Category } from "../_models/Category";
 
 @Component({
@@ -52,8 +52,8 @@ export class FdlEventsCategoriesComponent implements OnInit {
 
   ngOnInit() {
     this.route.data
-      .subscribe((data: {categories: Category[]}) => {
-        this.categories = data.categories;
+      .subscribe((data: ResolveData) => {
+        this.categories = <Category[]>data.categories;
         this.filterCategories();
       })
   }

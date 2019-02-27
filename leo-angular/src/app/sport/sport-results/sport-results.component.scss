@@ -1,0 +1,10 @@
+.position-absolute {
+  top: calc(50% - 0.6em);
+
+  &.fdl-icon-left {
+    left: 0;
+  }
+  &.fdl-icon-right {
+    right: 0;
+  }
+}

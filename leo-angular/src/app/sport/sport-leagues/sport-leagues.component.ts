@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { League } from "../_models/League";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, ResolveData } from "@angular/router";
 
 @Component({
   selector: 'fdl-sport-leagues',
@@ -18,8 +18,8 @@ export class FdlSportLeaguesComponent implements OnInit {
 
   ngOnInit() {
     this.route.data
-      .subscribe((data: {leagues: League[]}) => {
-        this.leagues = data.leagues;
+      .subscribe((data: ResolveData) => {
+        this.leagues = <League[]>data.leagues;
       })
   }
 

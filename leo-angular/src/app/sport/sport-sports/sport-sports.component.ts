@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Sports } from "../_models/Sports";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, ResolveData } from "@angular/router";
 
 @Component({
   selector: 'fdl-sport-sports',
@@ -52,8 +52,8 @@ export class FdlSportSportsComponent implements OnInit {
 
   ngOnInit() {
     this.route.data
-      .subscribe((data: {sports: Sports[]}) => {
-        this.sports = data.sports;
+      .subscribe((data: ResolveData) => {
+        this.sports = <Sports[]>data.sports;
         this.filterSports();
       })
   }

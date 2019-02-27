@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('assets/fonts/icomoon-custom.eot?76nf59');
-  src:  url('assets/fonts/icomoon-custom.eot?76nf59#iefix') format('embedded-opentype'),
-  url('assets/fonts/icomoon-custom.ttf?76nf59') format('truetype'),
-  url('assets/fonts/icomoon-custom.woff?76nf59') format('woff'),
-  url('assets/fonts/icomoon-custom.svg?76nf59#icomoon') format('svg');
+  src:  url('assets/fonts/icomoon-custom.eot?doknh5');
+  src:  url('assets/fonts/icomoon-custom.eot?doknh5#iefix') format('embedded-opentype'),
+  url('assets/fonts/icomoon-custom.ttf?doknh5') format('truetype'),
+  url('assets/fonts/icomoon-custom.woff?doknh5') format('woff'),
+  url('assets/fonts/icomoon-custom.svg?doknh5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -37,6 +37,12 @@
 }
 .icon-map-pin:before {
   content: "\e902";
+}
+.icon-chevron-right:before {
+  content: "\e901";
+}
+.icon-chevron-left:before {
+  content: "\e904";
 }
 .icon-whatsapp1:before {
   content: "\e90a";

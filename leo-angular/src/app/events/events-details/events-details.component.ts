@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, ResolveData } from "@angular/router";
 import { Event } from "../_models/Event";
 
 @Component({
@@ -15,8 +15,8 @@ export class FdlEventsDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.data
-      .subscribe((data: {evt: Event}) => {
-        this.evt = data.evt;
+      .subscribe((data: ResolveData) => {
+        this.evt = <Event>data.evt;
       })
   }
 
