@@ -17,7 +17,8 @@ interface ISportsListParams {
 }
 
 interface ITeamsSearchParams {
-  query?: string
+  query?: string,
+  pageSize?: number
 }
 
 interface ILeagueListParams {
@@ -83,7 +84,7 @@ export class FdlSportApiService {
         )
     },
 
-    $get: (teamId: number) => {
+    $get: (teamId: number | string) => {
       console.debug('FdlSportApiService.teams.$get(teamId)', teamId);
 
       return this.httpClient

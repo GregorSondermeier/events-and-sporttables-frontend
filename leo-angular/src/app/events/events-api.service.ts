@@ -11,7 +11,10 @@ import { ILocation } from "./_interfaces/ILocation";
 import { Location } from "./_models/Location";
 
 interface IEventsListParams {
-  category?: number,
+  query?: string,
+  date?: string,
+  category?: number | string,
+  location?: number | string,
   pageSize?: number
 }
 
@@ -42,7 +45,7 @@ export class FdlEventsApiService {
         map((data) => {
           if (params.category != -1 && params.category !== undefined && params.category !== null) {
             return data
-              .filter((e) => e.categories.includes(params.category))
+              .filter((e) => e.categories.includes(+params.category))
               .splice(0, params.pageSize)
               .map((e) => new EventPreview(e));
           } else {
@@ -55,11 +58,11 @@ export class FdlEventsApiService {
       );
   }
 
-  public $get(id: number) {
-    console.debug('FdlEventsApiService.$get(id)', id);
+  public $get(eventId: number | string) {
+    console.debug('FdlEventsApiService.$get(eventId)', eventId);
 
     return this.httpClient
-      .get<IEvent>(`${API_BASE_PATH}event${id}.json`)
+      .get<IEvent>(`${API_BASE_PATH}event${eventId}.json`)
       .pipe(
         delay(Math.round(Math.random()*1000)),
         map(data => new Event(data))

@@ -71,7 +71,7 @@ export class FdlSportQuicknavTeamSearchComponent {
         distinctUntilChanged(),
         switchMap((query) => {
           return this.sportApiService.teams
-            .$list({query: query})
+            .$list({query})
         })
       )
   };

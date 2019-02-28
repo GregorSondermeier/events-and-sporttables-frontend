@@ -72,7 +72,7 @@ export class FdlEventsQuicknavLocationSearchComponent {
         distinctUntilChanged(),
         switchMap((query) => {
           return this.eventsApiService.locations
-            .$list({query: query})
+            .$list({query})
         })
       )
   };

@@ -62,9 +62,13 @@ export class FdlEventsComponent implements OnInit {
   /**
    * calls the EventsApiService to list the events as defined by the parameters
    */
-  private $listEvents(params?: {category?: number}) {
+  private $listEvents(params: {category?: number}) {
+    const {
+      category
+    } = params,
+      pageSize = 5;
     this.eventsApiService
-      .$list(Object.assign({pageSize: 5}, params))
+      .$list({category, pageSize})
       .subscribe((events) => {
         this.events[params.category] = events;
       })
