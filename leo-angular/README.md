@@ -3,7 +3,37 @@
 This is a prototype client for the Leo Media Database to browse events and sport tables.
 * It is written in [Angular 7.2](https://angular.io/).
 * For styling, a custom version of [Bootstrap 4.3](https://getbootstrap.com/docs/4.3/getting-started/introduction/) is used. See [_bootstrap-custom.scss](src/scss/partials/_bootstrap-custom.scss) for the list of bootstrap components included in this project.
-* For some of the interactive components, [ng-bootstrap 4.0](https://ng-bootstrap.github.io/) is being used. Again, not the whole deal but only the modules needed. See the several *.module.ts Module definitions under [src/app](src/app). 
+* For some of the interactive components, [ng-bootstrap 4.0](https://ng-bootstrap.github.io/) is being used. Again, not the whole deal but only the modules needed. See the several *.module.ts Module definitions under [src/app](src/app).
+
+**Table of Contents**
+
+- [Events Module](#events-module)
+  * [Data Types](#data-types)
+  * [Mocked API Endpoints](#mocked-api-endpoints)
+    + [$list(params?: IEventsListParams): IEventPreview[]](#--list-params---ieventslistparams---ieventpreview---)
+    + [$get(eventId?: number|string): IEvent[]](#--get-eventid---number-string---ievent---)
+    + [categories.$list(params?: ICategoriesListParams): ICategory[]](#-categories-list-params---icategorieslistparams---icategory---)
+    + [locations.$list(params?: ILocationsListParams): ILocation[]](#-locations-list-params---ilocationslistparams---ilocation---)
+- [Sports Module](#sports-module)
+  * [Data Types](#data-types-1)
+  * [Mocked API Endpints](#mocked-api-endpints)
+    + [sports.$list(params?: ISportsListParams): ISports[]](#-sports-list-params---isportslistparams---isports---)
+    + [teams.$list(params?: ITeamsSearchParams): ITeamPreview[]](#-teams-list-params---iteamssearchparams---iteampreview---)
+    + [teams.$get(teamId: number | string): ITeam](#-teams-get-teamid--number---string---iteam-)
+    + [leagues.$list(params: ILeagueListParams): ILeague[]](#-leagues-list-params--ileaguelistparams---ileague---)
+    + [results.$get(params: IResultsGetParams): IResult](#-results-get-params--iresultsgetparams---iresult-)
+- [How to develop locally](#how-to-develop-locally)
+  * [Install dependencies](#install-dependencies)
+  * [Development server](#development-server)
+  * [Code scaffolding](#code-scaffolding)
+  * [Build](#build)
+  * [Running unit tests](#running-unit-tests)
+  * [Running end-to-end tests](#running-end-to-end-tests)
+  * [Further help](#further-help)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+---- 
 
 ## Events Module
 
