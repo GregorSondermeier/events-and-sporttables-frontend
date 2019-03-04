@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { IEventPreview } from "./_interfaces/IEventPreview";
 import { EventPreview } from "./_models/EventPreview";
-import { delay, map } from "rxjs/operators";
+import { delay, map, tap } from "rxjs/operators";
 import { IEvent } from "./_interfaces/IEvent";
 import { Event } from "./_models/Event";
 import { ICategory } from "./_interfaces/ICategory";
@@ -55,6 +55,9 @@ export class FdlEventsApiService {
               .slice(0, params.pageSize)
               .map((e) => new EventPreview(e))
           }
+        }),
+        tap((eventPreviews) => {
+          console.debug('eventPreviews:', eventPreviews);
         })
       );
   }
@@ -66,7 +69,10 @@ export class FdlEventsApiService {
       .get<IEvent>(`${API_BASE_PATH}event${eventId}.json`)
       .pipe(
         delay(Math.round(Math.random()*1000)),
-        map(data => new Event(data))
+        map(data => new Event(data)),
+        tap((event) => {
+          console.debug('event:', event);
+        })
       )
   }
 
@@ -87,6 +93,9 @@ export class FdlEventsApiService {
               return data
                 .map((c) => new Category(c));
             }
+          }),
+          tap((categories) => {
+            console.debug('categories:', categories);
           })
         )
     }
@@ -109,6 +118,9 @@ export class FdlEventsApiService {
               return data
                 .map((l) => new Location(l));
             }
+          }),
+          tap((locations) => {
+            console.debug('locations:', locations);
           })
         )
     }

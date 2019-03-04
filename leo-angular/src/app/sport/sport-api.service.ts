@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { delay, map } from "rxjs/operators";
+import { delay, map, tap } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
 import { ISportsPreview } from "./_interfaces/ISportsPreview";
 import { SportsPreview } from "./_models/SportsPreview";
@@ -59,6 +59,9 @@ export class FdlSportApiService {
               return data
                 .map((s) => new SportsPreview(s));
             }
+          }),
+          tap((sportsPreviews) => {
+            console.debug('sportsPreviews:', sportsPreviews);
           })
         )
     }
@@ -81,6 +84,9 @@ export class FdlSportApiService {
               return data
                 .map((t) => new TeamPreview(t));
             }
+          }),
+          tap((teamPreviews) => {
+            console.debug('teamPreviews:', teamPreviews);
           })
         )
     },
@@ -98,6 +104,9 @@ export class FdlSportApiService {
             } else {
               return null;
             }
+          }),
+          tap((team) => {
+            console.debug('team:', team);
           })
         )
     }
@@ -115,6 +124,9 @@ export class FdlSportApiService {
             return data
               .filter((l) => l.sport.id == params.sport)
               .map((l) => new League(l));
+          }),
+          tap((leagues) => {
+            console.debug('leagues:', leagues);
           })
         )
     }
@@ -128,7 +140,10 @@ export class FdlSportApiService {
         .get<IResults>(`${API_BASE_PATH}sport${params.sport}_league${params.league}_season${params.season}_matchday${params.matchday}.json`)
         .pipe(
           delay(Math.round(Math.random()*1000)),
-          map((data) => new Results(data))
+          map((data) => new Results(data)),
+          tap((results) => {
+            console.debug('results:', results);
+          })
         )
     }
   }

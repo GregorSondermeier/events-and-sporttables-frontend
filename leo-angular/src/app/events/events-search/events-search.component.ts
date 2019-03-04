@@ -66,7 +66,6 @@ export class FdlEventsSearchComponent implements OnInit {
   }
 
   private $searchEvents() {
-    console.debug('$searchEvents(), searchcriteria:', this.searchcriteria);
     const {
       query,
       date,
@@ -77,7 +76,6 @@ export class FdlEventsSearchComponent implements OnInit {
     this.eventsApiService
       .$list({query, date, category, location, pageSize})
       .subscribe((events) => {
-        console.debug('events:', events);
         this.events = events;
       })
   }
