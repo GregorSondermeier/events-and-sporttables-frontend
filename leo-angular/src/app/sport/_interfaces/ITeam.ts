@@ -1,11 +1,7 @@
-import { ILeague } from "./ILeague";
+import { ISports } from "./ISports";
 
 export interface ITeam {
   id: number,
   name: string,
-  sports: {
-    id: number,
-    name: string,
-    leagues: ILeague[]
-  }[]
+  sports: ISports[]
 }

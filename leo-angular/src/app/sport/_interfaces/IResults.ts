@@ -7,11 +7,11 @@ export interface IResults {
   matchday: number,
   results: {
     schema: string[],
-    items: string[]
+    items: string[][]
   },
   table: {
     schema: string[],
-    items: string[],
+    items: string[][],
     description: string
   }
 }

@@ -1,21 +1,13 @@
 import { ITeam } from "../_interfaces/ITeam";
-import { League } from "./League";
+import { Sports } from "./Sports";
 
 export class Team implements ITeam {
   id: number;
   name: string;
-  sports: {
-    id: number;
-    name: string;
-    leagues: League[]
-  }[];
+  sports: Sports[];
 
   constructor(team: ITeam) {
     Object.assign(this, team);
-    this.sports = this.sports
-      .map((sport) => {
-        sport.leagues = sport.leagues.map((l) => new League(l));
-        return sport;
-      })
+    this.sports = this.sports.map((s) => new Sports(s));
   }
 }

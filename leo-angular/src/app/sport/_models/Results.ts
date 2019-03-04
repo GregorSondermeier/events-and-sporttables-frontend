@@ -7,12 +7,12 @@ export class Results implements IResults {
   matchday: number;
   results: {
     schema: string[];
-    items: string[]
+    items: string[][]
   };
   season: number;
   table: {
     schema: string[];
-    items: string[];
+    items: string[][];
     description: string
   };
 

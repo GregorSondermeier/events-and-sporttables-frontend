@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Sports } from "../_models/Sports";
+import { SportsPreview } from "../_models/SportsPreview";
 import { ActivatedRoute, ResolveData, Router } from "@angular/router";
 import { aggregateFirstLetters } from "../../_vanilla/helpers";
 
@@ -13,14 +13,14 @@ export class FdlSportSportsComponent implements OnInit {
   /**
    * all available sports
    */
-  public sports: Sports[];
+  public sports: SportsPreview[];
 
   public startingLetters: String[];
 
   /**
    * a list of sports, filtered by starting letter
    */
-  public filteredSports: Sports[];
+  public filteredSports: SportsPreview[];
 
   constructor(private route: ActivatedRoute,
               private router: Router) { }
@@ -28,7 +28,7 @@ export class FdlSportSportsComponent implements OnInit {
   ngOnInit() {
     this.route.data
       .subscribe((data: ResolveData) => {
-        this.sports = <Sports[]>data.sports;
+        this.sports = <SportsPreview[]>data.sports;
         this.startingLetters = aggregateFirstLetters(this.sports, 'name');
         this.filterSports();
       })
