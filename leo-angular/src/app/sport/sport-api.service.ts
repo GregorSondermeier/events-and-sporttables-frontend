@@ -11,6 +11,7 @@ import { ITeamPreview } from "./_interfaces/ITeamPreview";
 import { Team } from "./_models/Team";
 import { TeamPreview } from "./_models/TeamPreview";
 import { ITeam } from "./_interfaces/ITeam";
+import { environment } from "../../environments/environment";
 
 interface ISportsListParams {
   query?: string
@@ -32,7 +33,7 @@ interface IResultsGetParams {
   matchday: number
 }
 
-const API_BASE_PATH = 'http://127.0.0.1:8080/assets/mocks/sport/';
+const API_BASE_PATH = `${environment.production ? 'http://127.0.0.1:8080/' : ''}assets/mocks/sport/`;
 
 @Injectable({
   providedIn: 'root'
