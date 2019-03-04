@@ -15,11 +15,14 @@ export class FdlAppComponent implements OnInit {
   constructor(private elementRef: ElementRef,
               private commonConfigService: FdlCommonConfigService) {
 
-    let eventsConfigParsed = JSON.parse(this.elementRef.nativeElement.dataset['configEvents']);
+    const eventsConfigParsed = JSON.parse(this.elementRef.nativeElement.dataset['configEvents']);
     this.commonConfigService.setConfig('events', eventsConfigParsed);
 
-    let mandant = this.elementRef.nativeElement.dataset['configMandant'];
+    const mandant = this.elementRef.nativeElement.dataset['configMandant'];
     this.commonConfigService.setConfig('mandant', mandant);
+
+    const ad = JSON.parse(this.elementRef.nativeElement.dataset['configAd']);
+    this.commonConfigService.setConfig('ad', ad);
   }
 
   ngOnInit() { }
