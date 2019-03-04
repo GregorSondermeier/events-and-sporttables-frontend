@@ -26,7 +26,7 @@ interface ILocationsListParams {
   query?: string
 }
 
-const API_BASE_PATH = 'assets/mocks/events/';
+const API_BASE_PATH = 'http://127.0.0.1:8080/assets/mocks/events/';
 
 @Injectable({
   providedIn: 'root'

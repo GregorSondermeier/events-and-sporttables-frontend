@@ -32,7 +32,7 @@ interface IResultsGetParams {
   matchday: number
 }
 
-const API_BASE_PATH = 'assets/mocks/sport/';
+const API_BASE_PATH = 'http://127.0.0.1:8080/assets/mocks/sport/';
 
 @Injectable({
   providedIn: 'root'
