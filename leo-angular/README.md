@@ -192,7 +192,9 @@ Run `npm run ng generate component component-name` to generate a new component. 
 
 ### Build
 
-Run `npm run ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use `npm run ng build -- --prod` for a production build.
+Run `npm run ng build` to build the project. The build artifacts will be stored in the `dist/` directory.  
+Use `npm run ng build -- --prod` for a production build.  
+Use `npm run ng build -- --prod --output-hashing none` for a production build without hash values in the generated file names.
 
 ### Running unit tests
 
