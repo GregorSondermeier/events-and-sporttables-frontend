@@ -13,10 +13,10 @@
   <p><b>Wählen Sie unten die Sportart, für die Sie sich interessieren, oder suchen Sie nach Ort oder Verein.</b></p>
 </div>
 
-<div class="bg-light container-fluid">
-  <ul class="list-inline">
-    <li class="list-inline-item"><a (click)="filterSports()">ALLE</a></li>
-    <li *ngFor="let letter of startingLetters" class="list-inline-item"><a (click)="filterSports(letter)">{{letter | uppercase}}</a></li>
+<div class="bg-light container-fluid pt-2 pb-2">
+  <ul class="list-inline mb-0">
+    <li class="list-inline-item mr-0"><a (click)="filterSports()">ALLE</a></li>
+    <li *ngFor="let letter of startingLetters" class="list-inline-item mr-0"><a (click)="filterSports(letter)">{{letter | uppercase}}</a></li>
   </ul>
 </div>
 

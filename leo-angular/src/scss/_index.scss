@@ -4,15 +4,21 @@
 // fonts
 @import "fonts/icomoon-custom";
 
-// custom bootstrap
-@import "partials/bootstrap-custom";
+.fdl-app {
+  // custom normalizing
+  @import "partials/normalize";
 
-// custom typography
-@import "partials/types";
+  // custom bootstrap
+  @import "partials/bootstrap-custom";
 
-// custom global rules
-@import "partials/globals";
+  // custom typography
+  @import "partials/types";
 
-// custom rules
-@import "partials/buttons";
-@import "partials/forms";
+  // custom global rules
+  @import "partials/globals";
+
+  // custom rules
+  @import "partials/buttons";
+  @import "partials/forms";
+
+}
