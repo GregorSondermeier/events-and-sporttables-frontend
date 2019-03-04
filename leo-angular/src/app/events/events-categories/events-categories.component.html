@@ -10,7 +10,7 @@
   <p><b>Wählen Sie unten die Veranstaltungs-Kategorie, für die Sie sich interessieren.</b></p>
 </div>
 
-<div class="bg-light container-fluid pt-2 pb-2">
+<div class="bg-light container-fluid pt-2 pb-2 mb-4">
   <ul class="list-inline mb-0">
     <li class="list-inline-item mr-0"><a (click)="filterCategories()">ALLE</a></li>
     <li *ngFor="let letter of letters" class="list-inline-item mr-0"><a (click)="filterCategories(letter)">{{letter | uppercase}}</a></li>
