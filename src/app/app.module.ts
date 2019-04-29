@@ -7,7 +7,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { registerLocaleData } from "@angular/common";
 import localeDe from '@angular/common/locales/de';
 import { GsCommonModule } from "./common/common.module";
-import { GsRoutingModule } from "./routing/gs-routing.module";
+import { GsRoutingModule } from "./routing/routing.module";
 
 registerLocaleData(localeDe);
 
