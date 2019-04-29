@@ -1,6 +1,6 @@
 # Events and Sporttables Frontend
 
-This is a prototype client for the Leo Media Database to browse events and sport tables.
+This is a prototype client for a JSON based database to browse events and sport tables.
 * It is written in [Angular 7.2](https://angular.io/).
 * For styling, a custom version of [Bootstrap 4.3](https://getbootstrap.com/docs/4.3/getting-started/introduction/) is used. See [_bootstrap-custom.scss](src/scss/partials/_bootstrap-custom.scss) for the list of bootstrap components included in this project.
 * For some of the interactive components, [ng-bootstrap 4.0](https://ng-bootstrap.github.io/) is being used. Again, not the whole deal but only the modules needed. See the several *.module.ts Module definitions under [src/app](src/app).

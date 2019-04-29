@@ -20,16 +20,16 @@ describe('FdlAppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Leo'`, () => {
+  it(`should have as title 'Events and Sporttables'`, () => {
     const fixture = TestBed.createComponent(FdlAppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Leo Sporttabellen & Eventdatenbanken');
+    expect(app.title).toEqual('Events and Sporttables');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(FdlAppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Leo Sporttabellen & Eventdatenbanken');
+    expect(compiled.querySelector('h1').textContent).toContain('Events and Sporttables');
   });
 });

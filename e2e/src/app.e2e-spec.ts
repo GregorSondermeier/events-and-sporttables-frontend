@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Leo Sporttabellen & Eventdatenbanken');
+    expect(page.getTitleText()).toEqual('Sporttabellen & Eventdatenbanken');
   });
 
   afterEach(async () => {
