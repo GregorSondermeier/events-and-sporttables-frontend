@@ -14,7 +14,7 @@ const routes: Routes = [
     GsRouting404Component
   ],
   imports: [
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes)
   ],
   exports: [
     RouterModule,
