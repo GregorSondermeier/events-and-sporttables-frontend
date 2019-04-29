@@ -4,21 +4,15 @@
 // fonts
 @import "fonts/icomoon-custom";
 
-gs-app {
-  // custom normalizing
-  @import "partials/normalize";
+// custom bootstrap
+@import "partials/bootstrap-custom";
 
-  // custom bootstrap
-  @import "partials/bootstrap-custom";
+// custom typography
+@import "partials/types";
 
-  // custom typography
-  @import "partials/types";
+// custom global rules
+@import "partials/globals";
 
-  // custom global rules
-  @import "partials/globals";
-
-  // custom rules
-  @import "partials/buttons";
-  @import "partials/forms";
-
-}
+// custom rules
+@import "partials/buttons";
+@import "partials/forms";
