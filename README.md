@@ -1,4 +1,4 @@
-# Funke Digital LeoAngular
+# Events and Sporttables Frontend
 
 This is a prototype client for the Leo Media Database to browse events and sport tables.
 * It is written in [Angular 7.2](https://angular.io/).

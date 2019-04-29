@@ -13,13 +13,9 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/funkedigital/playground/"
+    "url": "https://github.com/GregorSondermeier/events-and-sporttables-frontend/"
   },
   "keywords": [
-    "funke",
-    "digital",
-    "leo",
-    "online",
     "angular",
     "sport",
     "tables",
