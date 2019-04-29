@@ -33,7 +33,8 @@ interface IResultsGetParams {
   matchday: number
 }
 
-const API_BASE_PATH = `${environment.production ? 'http://127.0.0.1:8080/' : 'http://localhost:4200/'}assets/mocks/sport/`;
+// const API_BASE_PATH = `${environment.production ? 'http://127.0.0.1:8080/' : 'http://localhost:4200/'}assets/mocks/sport/`;
+const API_BASE_PATH = 'assets/mocks/sport/';
 
 @Injectable({
   providedIn: 'root'
