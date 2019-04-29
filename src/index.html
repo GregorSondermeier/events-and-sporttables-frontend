@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Events and Sporttables</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body style="background-color: #ccc">
+
+  <div style="margin-bottom: 2em">
+
+    <p>
+      <b>Switch Module:</b>
+    </p>
+
+    <ul>
+      <li>
+        <a href="/events">Veranstaltungen</a>
+      </li>
+      <li>
+        <a href="/sport">Sporttabellen</a>
+      </li>
+    </ul>
+  </div>
+
+  <div style="max-width: 48em; background-color: #fff; margin: 0 auto">
+    <gs-app
+      data-config-events='{
+        "categoriesInCatswitcher": [
+          {"name": "Konzerte", "id": 20},
+          {"name": "Schauspiel", "id": 31},
+          {"name": "Kinder", "id": 17}
+        ],
+        "categoriesOnFrontpageList": [
+          {"name": "Highlights", "id": -1},
+          {"name": "Konzerte", "id": 20},
+          {"name": "Comedy", "id": 5},
+          {"name": "Kabarett", "id": 15}
+        ]}'
+      data-config-mandant="mgt"
+      data-config-ad='{
+        "dimensions": [300, 250],
+        "color": "ff0"
+      }'></gs-app>
+  </div>
+</body>
+</html>

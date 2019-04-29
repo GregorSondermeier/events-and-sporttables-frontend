@@ -1,0 +1,161 @@
+{
+  "effective": "2019-01-19T10:37:00.000Z",
+  "sport": {
+    "id": 11,
+    "name": "Fußball"
+  },
+  "league": {
+    "id": 1,
+    "group": "Herren",
+    "name": "1. Bundesliga"
+  },
+  "season": 2018,
+  "matchday": 15,
+  "results": [
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 1,
+            "name": "Mannschaft 1"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 2,
+            "name": "Mannschaft 2"
+          },
+          "score": 0
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 3,
+            "name": "Mannschaft 3"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 4,
+            "name": "Mannschaft 4"
+          },
+          "score": 0
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 5,
+            "name": "Mannschaft 5"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 4,
+            "name": "Mannschaft 6"
+          },
+          "score": 0
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 7,
+            "name": "Mannschaft 7"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 8,
+            "name": "Mannschaft 8"
+          },
+          "score": 0
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 9,
+            "name": "Mannschaft 9"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 10,
+            "name": "Mannschaft 10"
+          },
+          "score": 0
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 11,
+            "name": "Mannschaft 11"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 12,
+            "name": "Mannschaft 12"
+          },
+          "score": 0
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 13,
+            "name": "Mannschaft 13"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 14,
+            "name": "Mannschaft 14"
+          },
+          "score": 0
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "team": {
+            "id": 15,
+            "name": "Mannschaft 15"
+          },
+          "score": 0
+        },
+        {
+          "team": {
+            "id": 16,
+            "name": "Mannschaft 16"
+          },
+          "score": 0
+        }
+      ]
+    }
+  ]
+
+}

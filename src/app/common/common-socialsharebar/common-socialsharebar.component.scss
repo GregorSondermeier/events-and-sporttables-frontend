@@ -1,0 +1,22 @@
+.btn.btn-share {
+  width: 50px;
+  height: 50px;
+  font-size: 27px;
+  color: #fff;
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+  }
+
+  &.btn-twitter {
+    background-color: #55acee;
+  }
+
+  &.btn-facebook {
+    background-color: #0069b4;
+  }
+
+  &.btn-whatsapp {
+    background-color: #25d366;
+  }
+}

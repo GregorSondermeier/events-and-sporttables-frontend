@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <h3  class="h2 font-weight-bold text-uppercase">
+    <a [routerLink]="['/events']">
+      Veranstaltungen
+    </a>
+  </h3>
+</div>
+
+<div class="container-fluid">
+  <p class="mb-0 text-secondary">
+    {{evt.location | GsEventsLocationsIdToString | async | uppercase}} / {{evt.venue | uppercase}}
+  </p>
+
+  <h2  class="h3 font-weight-bold text-uppercase">
+    {{evt.title}}
+  </h2>
+
+  <time [dateTime]="evt.datetime" class="text-secondary">
+    {{evt.datetime | date : 'EE dd.MM.yyyy | HH:mm'}}
+  </time>
+</div>
+
+<figure class="figure">
+  <figure class="figure mb-0">
+    <img [src]="evt.image.url"
+         [alt]="evt.title"
+         [title]="evt.title"
+         class="figure-img img-fluid" />
+    <figcaption class="figure-caption">{{evt.image.description}}</figcaption>
+  </figure>
+
+  <figcaption class="figure-caption">Quelle: {{evt.image.copyright}}</figcaption>
+</figure>
+
+<div class="container-fluid">
+  <gs-common-socialsharebar [entity]="evt"></gs-common-socialsharebar>
+
+  <p class="text-secondary mt-3 mb-2">
+    {{evt.categories | GsEventsCategoriesIdsToString : ' / ' | async}}
+  </p>
+
+  <p>
+    {{evt.teaser}}
+  </p>
+
+  <gs-common-ad></gs-common-ad>
+
+  <p>
+    {{evt.description}}
+  </p>
+
+  <time [dateTime]="evt.datetime">
+    {{evt.datetime | date : 'EE dd.MM.yyyy | HH:mm'}}
+  </time>
+
+  <p>
+    Tickets ab {{evt.tickets.priceFrom}}
+  </p>
+
+  <div class="text-center">
+    <a class="btn btn-secondary" [href]="evt.tickets.buyUrl" target="_blank">
+      Tickets kaufen
+    </a>
+  </div>
+</div>

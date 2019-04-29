@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <h2 class="font-weight-bold text-uppercase">
+    <a [routerLink]="['/events']">
+      Veranstaltungen
+    </a>
+  </h2>
+</div>
+
+<gs-events-catswitcher></gs-events-catswitcher>
+
+<div class="container-fluid">
+  <gs-events-quicknav (onQuerySearchSubmit)="addItemToSearchcriteria({query: $event})"
+                       (onDateSelect)="addItemToSearchcriteria({date: $event})"
+                       (onLocationSelect)="addItemToSearchcriteria({location: $event})"></gs-events-quicknav>
+</div>
+
+<div class="container-fluid mt-4 gs-events-searchcriteria-badges-wrapper">
+  <gs-events-searchcriteria-badges [searchcriteria]="searchcriteria"
+                                    (removeItem)="removeItemFromSearchcriteria($event)"></gs-events-searchcriteria-badges>
+</div>
+
+
+<gs-events-list [events]="events | slice:0:5"
+                 [highlightedOnTop]="1"
+                 heading="Suchergebnisse"></gs-events-list>
+
+<gs-common-ad></gs-common-ad>
+
+<div *ngIf="events && events.length > 5">
+  <gs-events-list [events]="events | slice:5:10"
+                   [highlightedOnTop]="0"></gs-events-list>
+
+  <gs-common-ad></gs-common-ad>
+</div>
+
+<div *ngIf="events && events.length > 10">
+  <gs-events-list [events]="events | slice:10"
+                   [highlightedOnTop]="0"></gs-events-list>
+
+  <gs-common-ad></gs-common-ad>
+</div>

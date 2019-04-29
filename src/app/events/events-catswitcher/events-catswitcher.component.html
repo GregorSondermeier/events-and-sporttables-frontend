@@ -1,0 +1,14 @@
+<ul class="list-inline">
+  <li class="list-inline-item" *ngFor="let c of categories">
+    <a class="btn btn-link"
+       [routerLink]="['/events/search']" [queryParams]="{category: c.id}" queryParamsHandling="merge">
+      {{c.name | uppercase}}
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn btn-link"
+       [routerLink]="['/events/categories']" queryParamsHandling="merge">
+      ANDERES
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,247 @@
+{
+  "table": [
+    {
+      "team": {
+        "id": 1,
+        "name": "Mannschaft 1"
+      },
+      "position": 1,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": "success"
+    },
+    {
+      "team": {
+        "id": 2,
+        "name": "Mannschaft 2"
+      },
+      "position": 2,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": "success"
+    },
+    {
+      "team": {
+        "id": 3,
+        "name": "Mannschaft 3"
+      },
+      "position": 3,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 4,
+        "name": "Mannschaft 4"
+      },
+      "position": 4,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 5,
+        "name": "Mannschaft 5"
+      },
+      "position": 5,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 6,
+        "name": "Mannschaft 6"
+      },
+      "position": 6,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 7,
+        "name": "Mannschaft 7"
+      },
+      "position": 7,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 8,
+        "name": "Mannschaft 8"
+      },
+      "position": 8,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 9,
+        "name": "Mannschaft 9"
+      },
+      "position": 9,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 10,
+        "name": "Mannschaft 10"
+      },
+      "position": 10,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 11,
+        "name": "Mannschaft 11"
+      },
+      "position": 11,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 12,
+        "name": "Mannschaft 12"
+      },
+      "position": 12,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 13,
+        "name": "Mannschaft 13"
+      },
+      "position": 13,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": null
+    },
+    {
+      "team": {
+        "id": 14,
+        "name": "Mannschaft 14"
+      },
+      "position": 14,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": "danger"
+    },
+    {
+      "team": {
+        "id": 15,
+        "name": "Mannschaft 15"
+      },
+      "position": 15,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": "danger"
+    },
+    {
+      "team": {
+        "id": 16,
+        "name": "Mannschaft 16"
+      },
+      "position": 16,
+      "matches": 15,
+      "goalratio": {
+        "won": 0,
+        "lost": 0,
+        "difference": 0
+      },
+      "points": 0,
+      "flag": "danger"
+    }
+  ],
+  "description": "Durch die erste Linie sind die Champions-League-Plätze gekennzeichnet, durch die zweite die Plätze für die Europa-League-(Qualifikation), durch die dritte der Relegationsplatz und durch die vierte die Abstiegsplätze gekennzeichnet."
+}
+
+]

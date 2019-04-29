@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col text-center">
+    <a class="btn btn-share btn-twitter"
+       [href]="'https://twitter.com/intent/tweet?url=' + shareUrlEncoded"
+       target="_blank">
+      <i class="icon-twitter1"></i>
+    </a>
+  </div>
+  <div class="col text-center">
+    <a class="btn btn-share btn-facebook"
+       [href]="'https://www.facebook.com/sharer/sharer.php?u=' + shareUrlEncoded"
+       target="_blank">
+      <i class="icon-facebook1"></i>
+    </a>
+  </div>
+  <div class="col text-center">
+    <a class="btn btn-share btn-whatsapp"
+       [href]="'whatsapp://send?text=' + shareUrlEncoded"
+       target="_blank">
+      <i class="icon-whatsapp1"></i>
+    </a>
+  </div>
+  <div class="col text-center">
+    <a class="btn btn-share btn-secondary btn-mail"
+       [href]="'mailto:?body=' + shareUrlEncoded"
+       target="_blank">
+      <i class="icon-mail_outline"></i>
+    </a>
+  </div>
+</div>

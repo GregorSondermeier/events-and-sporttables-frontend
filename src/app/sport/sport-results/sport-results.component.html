@@ -1,0 +1,94 @@
+<div class="container-fluid">
+  <h2 class="font-weight-bold text-uppercase">
+    <a [routerLink]="['/sport']">
+      Sporttabellen
+    </a>
+  </h2>
+
+  <gs-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></gs-sport-quicknav>
+
+  <h3 class="font-weight-bold">
+    {{results.league.name}} - {{results.league.group}} - {{results.league.sport.name}}
+  </h3>
+
+  <time [dateTime]="results.effective" class="text-secondary">
+    Stand: {{results.effective | date : 'dd.MM.yyyy HH:mm'}}
+  </time>
+</div>
+
+<div class="bg-light mt-3 mb-3 pt-1 pb-1">
+  <div class="position-relative">
+    <a class="position-absolute gs-icon-left pl-3 pr-3"
+       [routerLink]="['/sport/results']"
+       [queryParams]="{matchday: results.matchday - 1}"
+       queryParamsHandling="merge">
+      <i class="icon-chevron-left"></i>
+    </a>
+    <h4 class="font-weight-bold text-center mb-0">
+      {{results.matchday}}. Spieltag
+    </h4>
+    <a class="position-absolute gs-icon-right pl-3 pr-3"
+       [routerLink]="['/sport/results']"
+       [queryParams]="{matchday: results.matchday + 1}"
+       queryParamsHandling="merge">
+      <i class="icon-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <h5 class="font-weight-bold">
+    Ergebnisse
+  </h5>
+</div>
+
+<table class="table table-sm table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th *ngFor="let s of results.results.schema">
+        {{s}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of results.results.items">
+      <td *ngFor="let s of i">
+        {{s}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<gs-common-ad></gs-common-ad>
+
+<div class="container-fluid">
+  <h5 class="font-weight-bold">
+    Tabelle
+  </h5>
+</div>
+
+<table class="table table-sm table-hover">
+  <thead class="thead-light">
+   <tr>
+     <th *ngFor="let s of getSanitizedSchema(results.table.schema, ['flag'])">
+       {{s}}
+     </th>
+   </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of results.table.items" [ngClass]="{'success': 'bg-success', 'danger': 'bg-danger'}[getValueOfItemByName(i, results.table.schema, 'flag')]">
+      <td *ngFor="let s of getSanitizedItems(i, results.table.schema, ['flag'])">
+        {{s}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="container-fluid">
+  <h6 class="font-weight-bold">
+    Erklärung Tabelle
+  </h6>
+  <p>{{results.table.description}}</p>
+</div>
+
+<gs-common-ad></gs-common-ad>
