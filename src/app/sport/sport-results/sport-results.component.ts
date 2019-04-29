@@ -5,7 +5,7 @@ import { GsSportApiService } from "../sport-api.service";
 import { skip } from "rxjs/operators";
 
 @Component({
-  selector: 'fdp-sport-results',
+  selector: 'gs-sport-results',
   templateUrl: './sport-results.component.html',
   styleUrls: ['./sport-results.component.scss']
 })
