@@ -1,9 +1,9 @@
 {
-  "$schema": "leo-app/node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "leo-app": {
+    "events-and-sporttables-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "leo-app:build"
+            "browserTarget": "events-and-sporttables-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "leo-app:build:production"
+              "browserTarget": "events-and-sporttables-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "leo-app:build"
+            "browserTarget": "events-and-sporttables-app:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "leo-app-e2e": {
+    "events-and-sporttables-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "leo-app:serve"
+            "devServerTarget": "events-and-sporttables-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "leo-app:serve:production"
+              "devServerTarget": "events-and-sporttables-app:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "leo-app"
+  "defaultProject": "events-and-sporttables-app"
 }
