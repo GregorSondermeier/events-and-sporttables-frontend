@@ -3,7 +3,7 @@ import { Team } from "../_models/Team";
 import { NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
 import { NgForm } from "@angular/forms";
 import { merge, Observable, Subject } from "rxjs";
-import { FdlSportApiService } from "../sport-api.service";
+import { GsSportApiService } from "../sport-api.service";
 import { debounceTime, distinctUntilChanged, filter, switchMap } from "rxjs/operators";
 
 @Component({
@@ -11,7 +11,7 @@ import { debounceTime, distinctUntilChanged, filter, switchMap } from "rxjs/oper
   templateUrl: './sport-quicknav-team-search.component.html',
   styleUrls: ['./sport-quicknav-team-search.component.scss']
 })
-export class FdlSportQuicknavTeamSearchComponent {
+export class GsSportQuicknavTeamSearchComponent {
 
   /**
    * the selected team
@@ -46,7 +46,7 @@ export class FdlSportQuicknavTeamSearchComponent {
   @Output()
   onTeamSelect: EventEmitter<string> = new EventEmitter();
 
-  constructor(private sportApiService: FdlSportApiService) { }
+  constructor(private sportApiService: GsSportApiService) { }
 
   /**
    * the search function called by the ng-bootstrap typeahead plugin

@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from "@angular/router";
 import { League } from "../_models/League";
-import { FdlSportApiService } from "../sport-api.service";
+import { GsSportApiService } from "../sport-api.service";
 import { Observable } from "rxjs";
 import { take } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
-export class FdlSportLeaguesResolverService implements Resolve<League[]> {
+export class GsSportLeaguesResolverService implements Resolve<League[]> {
 
   constructor(private router: Router,
-              private sportApiService: FdlSportApiService) { }
+              private sportApiService: GsSportApiService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<League[]> {
 

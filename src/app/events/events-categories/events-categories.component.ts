@@ -8,7 +8,7 @@ import { aggregateFirstLetters } from "../../_vanilla/helpers";
   templateUrl: './events-categories.component.html',
   styleUrls: ['./events-categories.component.scss']
 })
-export class FdlEventsCategoriesComponent implements OnInit {
+export class GsEventsCategoriesComponent implements OnInit {
 
   /**
    * All available categories

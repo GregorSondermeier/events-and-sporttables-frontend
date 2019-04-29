@@ -1,18 +1,18 @@
 import { Component, EventEmitter, Inject, Input, LOCALE_ID, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { formatDate } from "@angular/common";
-import { FdlEventsCategoriesIdToStringPipe } from "../events-categories/events-categories-id-to-string.pipe";
-import { FdlEventsLocationsIdToStringPipe } from "../events-locations/events-locations-id-to-string.pipe";
+import { GsEventsCategoriesIdToStringPipe } from "../events-categories/events-categories-id-to-string.pipe";
+import { GsEventsLocationsIdToStringPipe } from "../events-locations/events-locations-id-to-string.pipe";
 
 @Component({
   selector: 'fdl-events-searchcriteria-badges',
   templateUrl: './events-searchcriteria-badges.component.html',
   styleUrls: ['./events-searchcriteria-badges.component.scss'],
   providers: [
-    FdlEventsCategoriesIdToStringPipe,
-    FdlEventsLocationsIdToStringPipe
+    GsEventsCategoriesIdToStringPipe,
+    GsEventsLocationsIdToStringPipe
   ]
 })
-export class FdlEventsSearchcriteriaBadgesComponent implements OnChanges {
+export class GsEventsSearchcriteriaBadgesComponent implements OnChanges {
 
   /**
    * the searchcriteria to be displayed
@@ -32,8 +32,8 @@ export class FdlEventsSearchcriteriaBadgesComponent implements OnChanges {
   public searchcriteriaFormatted: {key: string, value: string, formattedKey: string, formattedValue: string}[];
 
   constructor(@Inject(LOCALE_ID) private locale: string,
-              private eventsCategoriesIdToStringPipe: FdlEventsCategoriesIdToStringPipe,
-              private fdlEventsLocationsIdToStringPipe: FdlEventsLocationsIdToStringPipe) { }
+              private eventsCategoriesIdToStringPipe: GsEventsCategoriesIdToStringPipe,
+              private fdlEventsLocationsIdToStringPipe: GsEventsLocationsIdToStringPipe) { }
 
   /**
    * on changes, populate the searchcriteriaFormatted array with humanly readable formatted values

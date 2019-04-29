@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlEventsCatswitcherComponent } from './events-catswitcher.component';
+import { GsEventsCatswitcherComponent } from './events-catswitcher.component';
 
-describe('FdlEventsCatswitcherComponent', () => {
-  let component: FdlEventsCatswitcherComponent;
-  let fixture: ComponentFixture<FdlEventsCatswitcherComponent>;
+describe('GsEventsCatswitcherComponent', () => {
+  let component: GsEventsCatswitcherComponent;
+  let fixture: ComponentFixture<GsEventsCatswitcherComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlEventsCatswitcherComponent ]
+      declarations: [ GsEventsCatswitcherComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlEventsCatswitcherComponent);
+    fixture = TestBed.createComponent(GsEventsCatswitcherComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ResolveData, Router } from "@angular/router";
 import { Results } from "../_models/Results";
-import { FdlSportApiService } from "../sport-api.service";
+import { GsSportApiService } from "../sport-api.service";
 import { skip } from "rxjs/operators";
 
 @Component({
@@ -18,7 +18,7 @@ export class FdpSportResultsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private sportApiService: FdlSportApiService) { }
+              private sportApiService: GsSportApiService) { }
 
   ngOnInit() {
     this.route.data

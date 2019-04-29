@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
-import { FdlEventsApiService } from "./events-api.service";
+import { GsEventsApiService } from "./events-api.service";
 import { EventPreview } from "./_models/EventPreview";
-import { FdlCommonConfigService } from "../common/common-config.service";
+import { GsCommonConfigService } from "../common/common-config.service";
 import { Category } from "./_models/Category";
 
 @Component({
@@ -12,7 +12,7 @@ import { Category } from "./_models/Category";
   templateUrl: './events.component.html',
 
 })
-export class FdlEventsComponent implements OnInit {
+export class GsEventsComponent implements OnInit {
 
   /**
    * The various category events lists
@@ -26,8 +26,8 @@ export class FdlEventsComponent implements OnInit {
 
   constructor(private router: Router,
               private titleService: Title,
-              private commonConfigService: FdlCommonConfigService,
-              private eventsApiService: FdlEventsApiService) {
+              private commonConfigService: GsCommonConfigService,
+              private eventsApiService: GsEventsApiService) {
 
     this.categoriesOnList = commonConfigService.getConfig('events').categoriesOnFrontpageList;
     this.events = {};

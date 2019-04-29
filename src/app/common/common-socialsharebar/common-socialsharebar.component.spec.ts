@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlCommonSocialsharebarComponent } from './common-socialsharebar.component';
+import { GsCommonSocialsharebarComponent } from './common-socialsharebar.component';
 
-describe('FdlCommonSocialsharebarComponent', () => {
-  let component: FdlCommonSocialsharebarComponent;
-  let fixture: ComponentFixture<FdlCommonSocialsharebarComponent>;
+describe('GsCommonSocialsharebarComponent', () => {
+  let component: GsCommonSocialsharebarComponent;
+  let fixture: ComponentFixture<GsCommonSocialsharebarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlCommonSocialsharebarComponent ]
+      declarations: [ GsCommonSocialsharebarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlCommonSocialsharebarComponent);
+    fixture = TestBed.createComponent(GsCommonSocialsharebarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

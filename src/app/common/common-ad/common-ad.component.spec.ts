@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlCommonAdComponent } from './common-ad.component';
+import { GsCommonAdComponent } from './common-ad.component';
 
-describe('FdlCommonAdComponent', () => {
-  let component: FdlCommonAdComponent;
-  let fixture: ComponentFixture<FdlCommonAdComponent>;
+describe('GsCommonAdComponent', () => {
+  let component: GsCommonAdComponent;
+  let fixture: ComponentFixture<GsCommonAdComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlCommonAdComponent ]
+      declarations: [ GsCommonAdComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlCommonAdComponent);
+    fixture = TestBed.createComponent(GsCommonAdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -8,7 +8,7 @@
 
 <div class="container-fluid">
   <p class="mb-0 text-secondary">
-    {{evt.location | FdlEventsLocationsIdToString | async | uppercase}} / {{evt.venue | uppercase}}
+    {{evt.location | GsEventsLocationsIdToString | async | uppercase}} / {{evt.venue | uppercase}}
   </p>
 
   <h2  class="h3 font-weight-bold text-uppercase mt-2">
@@ -36,7 +36,7 @@
   <fdl-common-socialsharebar [entity]="evt"></fdl-common-socialsharebar>
 
   <p class="text-secondary mt-3 mb-2">
-    {{evt.categories | FdlEventsCategoriesIdsToString : ' / ' | async}}
+    {{evt.categories | GsEventsCategoriesIdsToString : ' / ' | async}}
   </p>
 
   <p>

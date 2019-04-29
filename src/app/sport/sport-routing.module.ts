@@ -1,41 +1,41 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FdlSportSportsResolverService } from "./sport-sports/sport-sports-resolver.service";
-import { FdlSportSportsComponent } from "./sport-sports/sport-sports.component";
-import { FdlSportLeaguesComponent } from "./sport-leagues/sport-leagues.component";
-import { FdlSportLeaguesResolverService } from "./sport-leagues/sport-leagues-resolver.service";
+import { GsSportSportsResolverService } from "./sport-sports/sport-sports-resolver.service";
+import { GsSportSportsComponent } from "./sport-sports/sport-sports.component";
+import { GsSportLeaguesComponent } from "./sport-leagues/sport-leagues.component";
+import { GsSportLeaguesResolverService } from "./sport-leagues/sport-leagues-resolver.service";
 import { FdpSportResultsComponent } from "./sport-results/sport-results.component";
-import { FdlSportResultsResolverService } from "./sport-results/sport-results-resolver.service";
-import { FdlSportTeamsDetailsComponent } from "./sport-teams-details/sport-teams-details.component";
-import { FdlSportsTeamDetailsResolverService } from "./sport-teams-details/sports-team-details-resolver.service";
+import { GsSportResultsResolverService } from "./sport-results/sport-results-resolver.service";
+import { GsSportTeamsDetailsComponent } from "./sport-teams-details/sport-teams-details.component";
+import { GsSportsTeamDetailsResolverService } from "./sport-teams-details/sports-team-details-resolver.service";
 
 const routes: Routes = [
   {
     path: 'sport/sports',
-    component: FdlSportSportsComponent,
+    component: GsSportSportsComponent,
     resolve: {
-      sports: FdlSportSportsResolverService
+      sports: GsSportSportsResolverService
     }
   },
   {
     path: 'sport/leagues',
-    component: FdlSportLeaguesComponent,
+    component: GsSportLeaguesComponent,
     resolve: {
-      leagues: FdlSportLeaguesResolverService
+      leagues: GsSportLeaguesResolverService
     }
   },
   {
     path: 'sport/results',
     component: FdpSportResultsComponent,
     resolve: {
-      results: FdlSportResultsResolverService
+      results: GsSportResultsResolverService
     }
   },
   {
     path: 'sport/teams/:id',
-    component: FdlSportTeamsDetailsComponent,
+    component: GsSportTeamsDetailsComponent,
     resolve: {
-      team: FdlSportsTeamDetailsResolverService
+      team: GsSportsTeamDetailsResolverService
     }
   },
   {
@@ -48,4 +48,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
-export class FdlSportRoutingModule { }
+export class GsSportRoutingModule { }

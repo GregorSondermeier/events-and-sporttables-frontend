@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/cor
 import { merge, Observable, Subject } from "rxjs";
 import { NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
 import { debounceTime, distinctUntilChanged, filter, switchMap } from "rxjs/operators";
-import { FdlEventsApiService } from "../events-api.service";
+import { GsEventsApiService } from "../events-api.service";
 import { NgForm } from "@angular/forms";
 import { Location } from "../_models/Location";
 
@@ -10,9 +10,9 @@ import { Location } from "../_models/Location";
   selector: 'fdl-events-quicknav-location-search',
   templateUrl: './events-quicknav-location-search.component.html',
   styleUrls: ['./events-quicknav-location-search.component.scss'],
-  providers: [FdlEventsApiService]
+  providers: [GsEventsApiService]
 })
-export class FdlEventsQuicknavLocationSearchComponent {
+export class GsEventsQuicknavLocationSearchComponent {
 
   /**
    * the selected location
@@ -47,7 +47,7 @@ export class FdlEventsQuicknavLocationSearchComponent {
   @Output()
   onLocationSelect: EventEmitter<string> = new EventEmitter();
 
-  constructor(private eventsApiService: FdlEventsApiService) { }
+  constructor(private eventsApiService: GsEventsApiService) { }
 
   /**
    * the search function called by the ng-bootstrap typeahead plugin

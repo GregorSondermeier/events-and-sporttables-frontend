@@ -6,7 +6,7 @@ import { EventPreview } from "../_models/EventPreview";
   templateUrl: './events-teaser-small.component.html',
   styleUrls: ['./events-teaser-small.component.scss']
 })
-export class FdlEventsTeaserSmallComponent implements OnInit {
+export class GsEventsTeaserSmallComponent implements OnInit {
 
   /**
    * The event to display

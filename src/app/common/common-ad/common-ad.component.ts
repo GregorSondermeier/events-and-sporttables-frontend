@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FdlCommonConfigService } from "../common-config.service";
+import { GsCommonConfigService } from "../common-config.service";
 
 @Component({
   selector: 'fdl-common-ad',
   templateUrl: './common-ad.component.html',
   styleUrls: ['./common-ad.component.scss']
 })
-export class FdlCommonAdComponent implements OnInit {
+export class GsCommonAdComponent implements OnInit {
 
   /**
    * The dimensions (width, height)
@@ -18,7 +18,7 @@ export class FdlCommonAdComponent implements OnInit {
    */
   public color: string;
 
-  constructor(private commonConfigService: FdlCommonConfigService) { }
+  constructor(private commonConfigService: GsCommonConfigService) { }
 
   ngOnInit() {
     this.dimensions = this.commonConfigService.getConfig('ad').dimensions;

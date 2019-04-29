@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlEventsQuicknavLocationSearchComponent } from './events-quicknav-location-search.component';
+import { GsEventsQuicknavLocationSearchComponent } from './events-quicknav-location-search.component';
 
 describe('EventsQuicknavLocationSearchComponent', () => {
-  let component: FdlEventsQuicknavLocationSearchComponent;
-  let fixture: ComponentFixture<FdlEventsQuicknavLocationSearchComponent>;
+  let component: GsEventsQuicknavLocationSearchComponent;
+  let fixture: ComponentFixture<GsEventsQuicknavLocationSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlEventsQuicknavLocationSearchComponent ]
+      declarations: [ GsEventsQuicknavLocationSearchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlEventsQuicknavLocationSearchComponent);
+    fixture = TestBed.createComponent(GsEventsQuicknavLocationSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

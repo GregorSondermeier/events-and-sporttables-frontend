@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
   templateUrl: './common-socialsharebar.component.html',
   styleUrls: ['./common-socialsharebar.component.scss']
 })
-export class FdlCommonSocialsharebarComponent implements OnInit {
+export class GsCommonSocialsharebarComponent implements OnInit {
 
   /**
    * The entity to share. Could be anything. Currently only an event.

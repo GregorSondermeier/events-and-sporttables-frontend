@@ -6,7 +6,7 @@ import { SportQuicknavIsExpandedState } from "../_types/SportQuicknavIsExpandedS
   templateUrl: './sport-quicknav.component.html',
   styleUrls: ['./sport-quicknav.component.scss']
 })
-export class FdlSportQuicknavComponent implements OnInit {
+export class GsSportQuicknavComponent implements OnInit {
 
   /**
    * the output function to call upon query search submit

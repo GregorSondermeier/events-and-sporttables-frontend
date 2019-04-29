@@ -6,7 +6,7 @@ import { NgForm } from "@angular/forms";
   templateUrl: './events-quicknav-query-search.component.html',
   styleUrls: ['./events-quicknav-query-search.component.scss']
 })
-export class FdlEventsQuicknavQuerySearchComponent implements OnInit {
+export class GsEventsQuicknavQuerySearchComponent implements OnInit {
 
   /**
    * the output function to call upon form submit

@@ -7,7 +7,7 @@ import { Title } from "@angular/platform-browser";
   styleUrls: ['./sport.component.scss'],
   templateUrl: './sport.component.html',
 })
-export class FdlSportComponent implements OnInit {
+export class GsSportComponent implements OnInit {
 
   constructor(private router: Router,
               private titleService: Title) { }

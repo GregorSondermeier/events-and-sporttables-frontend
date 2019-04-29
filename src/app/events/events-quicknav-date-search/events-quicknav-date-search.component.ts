@@ -7,7 +7,7 @@ import { formatDate } from "@angular/common";
   templateUrl: './events-quicknav-date-search.component.html',
   styleUrls: ['./events-quicknav-date-search.component.scss']
 })
-export class FdlEventsQuicknavDateSearchComponent implements OnInit {
+export class GsEventsQuicknavDateSearchComponent implements OnInit {
 
   /**
    * the currently selected date

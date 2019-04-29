@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class FdlCommonConfigService {
+export class GsCommonConfigService {
 
   private config: {[module: string]: any};
 

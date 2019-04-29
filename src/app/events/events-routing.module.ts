@@ -1,33 +1,33 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FdlEventsComponent } from "./events.component";
-import { FdlEventsDetailsComponent } from "./events-details/events-details.component";
-import { FdlEventsDetailsResolverService } from "./events-details/events-details-resolver.service";
-import { FdlEventsCategoriesComponent } from "./events-categories/events-categories.component";
-import { FdlEventsCategoriesResolverService } from "./events-categories/events-categories-resolver.service";
-import { FdlEventsSearchComponent } from "./events-search/events-search.component";
+import { GsEventsComponent } from "./events.component";
+import { GsEventsDetailsComponent } from "./events-details/events-details.component";
+import { GsEventsDetailsResolverService } from "./events-details/events-details-resolver.service";
+import { GsEventsCategoriesComponent } from "./events-categories/events-categories.component";
+import { GsEventsCategoriesResolverService } from "./events-categories/events-categories-resolver.service";
+import { GsEventsSearchComponent } from "./events-search/events-search.component";
 
 const routes: Routes = [
   {
     path: 'events',
-    component: FdlEventsComponent,
+    component: GsEventsComponent,
   },
   {
     path: 'events/categories',
-    component: FdlEventsCategoriesComponent,
+    component: GsEventsCategoriesComponent,
     resolve: {
-      categories: FdlEventsCategoriesResolverService
+      categories: GsEventsCategoriesResolverService
     }
   },
   {
     path: 'events/search',
-    component: FdlEventsSearchComponent
+    component: GsEventsSearchComponent
   },
   {
     path: 'events/:id',
-    component: FdlEventsDetailsComponent,
+    component: GsEventsDetailsComponent,
     resolve: {
-      evt: FdlEventsDetailsResolverService
+      evt: GsEventsDetailsResolverService
     }
   }
 ];
@@ -36,4 +36,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
-export class FdlEventsRoutingModule { }
+export class GsEventsRoutingModule { }

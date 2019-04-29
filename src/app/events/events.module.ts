@@ -1,46 +1,46 @@
 import { NgModule } from '@angular/core';
 
-import { FdlEventsComponent } from './events.component';
-import { FdlEventsCatswitcherComponent } from './events-catswitcher/events-catswitcher.component';
-import { FdlEventsQuicknavComponent } from './events-quicknav/events-quicknav.component';
-import { FdlEventsListComponent } from './events-list/events-list.component';
-import { FdlEventsRoutingModule } from "./events-routing.module";
+import { GsEventsComponent } from './events.component';
+import { GsEventsCatswitcherComponent } from './events-catswitcher/events-catswitcher.component';
+import { GsEventsQuicknavComponent } from './events-quicknav/events-quicknav.component';
+import { GsEventsListComponent } from './events-list/events-list.component';
+import { GsEventsRoutingModule } from "./events-routing.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
-import { FdlEventsTeaserBigComponent } from './events-teaser-big/events-teaser-big.component';
-import { FdlEventsTeaserSmallComponent } from './events-teaser-small/events-teaser-small.component';
-import { FdlEventsDetailsComponent } from './events-details/events-details.component';
-import { FdlCommonModule } from "../common/common.module";
-import { FdlEventsCategoriesComponent } from './events-categories/events-categories.component';
-import { FdlEventsSearchComponent } from './events-search/events-search.component';
-import { FdlEventsQuicknavQuerySearchComponent } from './events-quicknav-query-search/events-quicknav-query-search.component';
+import { GsEventsTeaserBigComponent } from './events-teaser-big/events-teaser-big.component';
+import { GsEventsTeaserSmallComponent } from './events-teaser-small/events-teaser-small.component';
+import { GsEventsDetailsComponent } from './events-details/events-details.component';
+import { GsCommonModule } from "../common/common.module";
+import { GsEventsCategoriesComponent } from './events-categories/events-categories.component';
+import { GsEventsSearchComponent } from './events-search/events-search.component';
+import { GsEventsQuicknavQuerySearchComponent } from './events-quicknav-query-search/events-quicknav-query-search.component';
 import { FormsModule } from "@angular/forms";
-import { FdlEventsCategoriesIdToStringPipe } from './events-categories/events-categories-id-to-string.pipe';
-import { FdlEventsCategoriesIdsToStringPipe } from './events-categories/events-categories-ids-to-string.pipe';
-import { FdlEventsQuicknavDateSearchComponent } from './events-quicknav-date-search/events-quicknav-date-search.component';
+import { GsEventsCategoriesIdToStringPipe } from './events-categories/events-categories-id-to-string.pipe';
+import { GsEventsCategoriesIdsToStringPipe } from './events-categories/events-categories-ids-to-string.pipe';
+import { GsEventsQuicknavDateSearchComponent } from './events-quicknav-date-search/events-quicknav-date-search.component';
 import { NgbDatepickerModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
-import { FdlEventsSearchcriteriaBadgesComponent } from './events-searchcriteria-labels/events-searchcriteria-badges.component';
-import { FdlEventsQuicknavLocationSearchComponent } from './events-quicknav-location-search/events-quicknav-location-search.component';
-import { FdlEventsLocationsIdToStringPipe } from './events-locations/events-locations-id-to-string.pipe';
+import { GsEventsSearchcriteriaBadgesComponent } from './events-searchcriteria-labels/events-searchcriteria-badges.component';
+import { GsEventsQuicknavLocationSearchComponent } from './events-quicknav-location-search/events-quicknav-location-search.component';
+import { GsEventsLocationsIdToStringPipe } from './events-locations/events-locations-id-to-string.pipe';
 
 @NgModule({
   declarations: [
-    FdlEventsComponent,
-    FdlEventsCatswitcherComponent,
-    FdlEventsQuicknavComponent,
-    FdlEventsQuicknavDateSearchComponent,
-    FdlEventsQuicknavQuerySearchComponent,
-    FdlEventsListComponent,
-    FdlEventsTeaserBigComponent,
-    FdlEventsTeaserSmallComponent,
-    FdlEventsDetailsComponent,
-    FdlEventsCategoriesComponent,
-    FdlEventsCategoriesIdToStringPipe,
-    FdlEventsCategoriesIdsToStringPipe,
-    FdlEventsSearchComponent,
-    FdlEventsSearchcriteriaBadgesComponent,
-    FdlEventsQuicknavLocationSearchComponent,
-    FdlEventsLocationsIdToStringPipe
+    GsEventsComponent,
+    GsEventsCatswitcherComponent,
+    GsEventsQuicknavComponent,
+    GsEventsQuicknavDateSearchComponent,
+    GsEventsQuicknavQuerySearchComponent,
+    GsEventsListComponent,
+    GsEventsTeaserBigComponent,
+    GsEventsTeaserSmallComponent,
+    GsEventsDetailsComponent,
+    GsEventsCategoriesComponent,
+    GsEventsCategoriesIdToStringPipe,
+    GsEventsCategoriesIdsToStringPipe,
+    GsEventsSearchComponent,
+    GsEventsSearchcriteriaBadgesComponent,
+    GsEventsQuicknavLocationSearchComponent,
+    GsEventsLocationsIdToStringPipe
   ],
   imports: [
     BrowserModule,
@@ -48,10 +48,10 @@ import { FdlEventsLocationsIdToStringPipe } from './events-locations/events-loca
     HttpClientModule,
     NgbDatepickerModule,
     NgbTypeaheadModule,
-    FdlCommonModule,
-    FdlEventsRoutingModule
+    GsCommonModule,
+    GsEventsRoutingModule
   ],
   providers: [],
   bootstrap: []
 })
-export class FdlEventsModule { }
+export class GsEventsModule { }

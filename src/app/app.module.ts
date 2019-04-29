@@ -1,26 +1,26 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 
-import { FdlAppComponent } from './app.component';
-import { FdlEventsModule } from "./events/events.module";
-import { FdlSportModule } from "./sport/sport.module";
+import { GsAppComponent } from './app.component';
+import { GsEventsModule } from "./events/events.module";
+import { GsSportModule } from "./sport/sport.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { registerLocaleData } from "@angular/common";
 import localeDe from '@angular/common/locales/de';
-import { FdlCommonModule } from "./common/common.module";
-import { FdlRoutingModule } from "./routing/fdl-routing.module";
+import { GsCommonModule } from "./common/common.module";
+import { GsRoutingModule } from "./routing/fdl-routing.module";
 
 registerLocaleData(localeDe);
 
 @NgModule({
   declarations: [
-    FdlAppComponent,
+    GsAppComponent,
   ],
   imports: [
     BrowserModule,
-    FdlCommonModule,
-    FdlEventsModule,
-    FdlSportModule,
-    FdlRoutingModule
+    GsCommonModule,
+    GsEventsModule,
+    GsSportModule,
+    GsRoutingModule
   ],
   providers: [
     {
@@ -29,7 +29,7 @@ registerLocaleData(localeDe);
     }
   ],
   bootstrap: [
-    FdlAppComponent
+    GsAppComponent
   ]
 })
-export class FdlAppModule { }
+export class GsAppModule { }

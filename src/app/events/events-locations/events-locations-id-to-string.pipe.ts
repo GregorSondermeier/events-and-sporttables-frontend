@@ -1,16 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Observable } from "rxjs";
 import { Location } from "../_models/Location";
-import { FdlEventsApiService } from "../events-api.service";
+import { GsEventsApiService } from "../events-api.service";
 
 @Pipe({
-  name: 'FdlEventsLocationsIdToString'
+  name: 'GsEventsLocationsIdToString'
 })
-export class FdlEventsLocationsIdToStringPipe implements PipeTransform {
+export class GsEventsLocationsIdToStringPipe implements PipeTransform {
 
   private locationsObservable: Observable<Location[]>;
 
-  constructor(private eventsApiService: FdlEventsApiService) {
+  constructor(private eventsApiService: GsEventsApiService) {
     this.locationsObservable = this.eventsApiService.locations.$list();
   }
 

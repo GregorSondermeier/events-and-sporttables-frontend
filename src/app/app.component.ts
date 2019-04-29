@@ -1,19 +1,19 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { IEventsModuleConfig } from "./events/_interfaces/IEventsModuleConfig";
-import { FdlCommonConfigService } from "./common/common-config.service";
+import { GsCommonConfigService } from "./common/common-config.service";
 
 @Component({
   selector: 'fdl-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class FdlAppComponent implements OnInit {
+export class GsAppComponent implements OnInit {
 
   @Input()
   eventsConfig: IEventsModuleConfig;
 
   constructor(private elementRef: ElementRef,
-              private commonConfigService: FdlCommonConfigService) {
+              private commonConfigService: GsCommonConfigService) {
 
     const eventsConfigParsed = JSON.parse(this.elementRef.nativeElement.dataset['configEvents']);
     this.commonConfigService.setConfig('events', eventsConfigParsed);

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlEventsQuicknavDateSearchComponent } from './events-quicknav-date-search.component';
+import { GsEventsQuicknavDateSearchComponent } from './events-quicknav-date-search.component';
 
 describe('EventsQuicknavDateSearchComponent', () => {
-  let component: FdlEventsQuicknavDateSearchComponent;
-  let fixture: ComponentFixture<FdlEventsQuicknavDateSearchComponent>;
+  let component: GsEventsQuicknavDateSearchComponent;
+  let fixture: ComponentFixture<GsEventsQuicknavDateSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlEventsQuicknavDateSearchComponent ]
+      declarations: [ GsEventsQuicknavDateSearchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlEventsQuicknavDateSearchComponent);
+    fixture = TestBed.createComponent(GsEventsQuicknavDateSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

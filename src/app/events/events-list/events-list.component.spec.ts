@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlEventsListComponent } from './events-list.component';
+import { GsEventsListComponent } from './events-list.component';
 
-describe('FdlEventsListComponent', () => {
-  let component: FdlEventsListComponent;
-  let fixture: ComponentFixture<FdlEventsListComponent>;
+describe('GsEventsListComponent', () => {
+  let component: GsEventsListComponent;
+  let fixture: ComponentFixture<GsEventsListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlEventsListComponent ]
+      declarations: [ GsEventsListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlEventsListComponent);
+    fixture = TestBed.createComponent(GsEventsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

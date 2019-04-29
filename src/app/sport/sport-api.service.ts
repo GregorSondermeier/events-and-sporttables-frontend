@@ -38,13 +38,13 @@ const API_BASE_PATH = `${environment.production ? 'http://127.0.0.1:8080/' : 'ht
 @Injectable({
   providedIn: 'root'
 })
-export class FdlSportApiService {
+export class GsSportApiService {
 
   constructor(private httpClient: HttpClient) { }
 
   public sports = {
     $list: (params?: ISportsListParams) => {
-      console.debug('FdlSportApiService.sports.$list(params)', params);
+      console.debug('GsSportApiService.sports.$list(params)', params);
 
       return this.httpClient
         .get<ISportsPreview[]>(`${API_BASE_PATH}sportslist.json`)
@@ -69,7 +69,7 @@ export class FdlSportApiService {
 
   public teams = {
     $list: (params: ITeamsSearchParams) => {
-      console.debug('FdlSportApiService.teams.$search(params)', params);
+      console.debug('GsSportApiService.teams.$search(params)', params);
 
       return this.httpClient
         .get<ITeamPreview[]>(`${API_BASE_PATH}teamslist.json`)
@@ -92,7 +92,7 @@ export class FdlSportApiService {
     },
 
     $get: (teamId: number | string) => {
-      console.debug('FdlSportApiService.teams.$get(teamId)', teamId);
+      console.debug('GsSportApiService.teams.$get(teamId)', teamId);
 
       return this.httpClient
         .get<ITeam>(`${API_BASE_PATH}teamsget.json`)
@@ -114,7 +114,7 @@ export class FdlSportApiService {
 
   public leagues = {
     $list: (params: ILeagueListParams) => {
-      console.debug('FdlSportApiService.leagues.$list(params)', params);
+      console.debug('GsSportApiService.leagues.$list(params)', params);
 
       return this.httpClient
         .get<ILeague[]>(`${API_BASE_PATH}leagueslist.json`)
@@ -134,7 +134,7 @@ export class FdlSportApiService {
 
   public results = {
     $get: (params: IResultsGetParams) => {
-      console.debug('FdlSportApiService.results.$get(params)', params);
+      console.debug('GsSportApiService.results.$get(params)', params);
 
       return this.httpClient
         .get<IResults>(`${API_BASE_PATH}sport${params.sport}_league${params.league}_season${params.season}_matchday${params.matchday}.json`)

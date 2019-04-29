@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from "@angular/router";
-import { FdlSportApiService } from "../sport-api.service";
+import { GsSportApiService } from "../sport-api.service";
 import { Results } from "../_models/Results";
 import { Observable } from "rxjs";
 import { take } from "rxjs/operators";
@@ -8,10 +8,10 @@ import { take } from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
-export class FdlSportResultsResolverService implements Resolve<Results> {
+export class GsSportResultsResolverService implements Resolve<Results> {
 
   constructor(private router: Router,
-              private sportApiService: FdlSportApiService) { }
+              private sportApiService: GsSportApiService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Results> {
 

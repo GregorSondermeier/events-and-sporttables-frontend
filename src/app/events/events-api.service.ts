@@ -32,12 +32,12 @@ const API_BASE_PATH = `${environment.production ? 'http://127.0.0.1:8080/' : 'ht
 @Injectable({
   providedIn: 'root'
 })
-export class FdlEventsApiService {
+export class GsEventsApiService {
 
   constructor(private httpClient: HttpClient) { }
 
   public $list(params: IEventsListParams) {
-    console.debug('FdlEventsApiService.$list(params)', params);
+    console.debug('GsEventsApiService.$list(params)', params);
 
     return this.httpClient
       .get<IEventPreview[]>(`${API_BASE_PATH}eventslist.json`)
@@ -63,7 +63,7 @@ export class FdlEventsApiService {
   }
 
   public $get(eventId: number | string) {
-    console.debug('FdlEventsApiService.$get(eventId)', eventId);
+    console.debug('GsEventsApiService.$get(eventId)', eventId);
 
     return this.httpClient
       .get<IEvent>(`${API_BASE_PATH}event${eventId}.json`)
@@ -78,7 +78,7 @@ export class FdlEventsApiService {
 
   public categories = {
     $list: (params?: ICategoriesListParams) => {
-      console.debug('FdlEventsApiService.categories.$list(params)', params);
+      console.debug('GsEventsApiService.categories.$list(params)', params);
 
       return this.httpClient
         .get<ICategory[]>(`${API_BASE_PATH}categorieslist.json`)
@@ -103,7 +103,7 @@ export class FdlEventsApiService {
 
   public locations = {
     $list: (params?: ILocationsListParams) => {
-      console.debug('FdlEventsApiService.categories.$list(params)', params);
+      console.debug('GsEventsApiService.categories.$list(params)', params);
 
       return this.httpClient
         .get<ILocation[]>(`${API_BASE_PATH}locationslist.json`)

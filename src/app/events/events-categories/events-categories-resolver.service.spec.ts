@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FdlEventsCategoriesResolverService } from './events-categories-resolver.service';
+import { GsEventsCategoriesResolverService } from './events-categories-resolver.service';
 
-describe('FdlEventsCategoriesResolverService', () => {
+describe('GsEventsCategoriesResolverService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: FdlEventsCategoriesResolverService = TestBed.get(FdlEventsCategoriesResolverService);
+    const service: GsEventsCategoriesResolverService = TestBed.get(GsEventsCategoriesResolverService);
     expect(service).toBeTruthy();
   });
 });

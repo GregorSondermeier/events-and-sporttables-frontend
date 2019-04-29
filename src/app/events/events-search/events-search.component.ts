@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { FdlEventsApiService } from "../events-api.service";
+import { GsEventsApiService } from "../events-api.service";
 import { EventPreview } from "../_models/EventPreview";
 
 @Component({
   selector: 'fdl-events-search',
   templateUrl: './events-search.component.html',
   styleUrls: ['./events-search.component.scss'],
-  providers: [FdlEventsApiService]
+  providers: [GsEventsApiService]
 })
-export class FdlEventsSearchComponent implements OnInit {
+export class GsEventsSearchComponent implements OnInit {
 
   /**
    * the searchcriteria
@@ -23,7 +23,7 @@ export class FdlEventsSearchComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private eventsApiService: FdlEventsApiService) { }
+              private eventsApiService: GsEventsApiService) { }
 
   ngOnInit() {
 

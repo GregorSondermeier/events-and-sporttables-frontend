@@ -7,7 +7,7 @@ import { ActivatedRoute, ResolveData, Router } from "@angular/router";
   templateUrl: './sport-leagues.component.html',
   styleUrls: ['./sport-leagues.component.scss']
 })
-export class FdlSportLeaguesComponent implements OnInit {
+export class GsSportLeaguesComponent implements OnInit {
 
   /**
    * all available leagues

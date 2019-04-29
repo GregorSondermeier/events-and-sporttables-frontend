@@ -6,7 +6,7 @@ import { EventsQuicknavIsExpandedState } from "../_types/EventsQuicknavIsExpande
   templateUrl: './events-quicknav.component.html',
   styleUrls: ['./events-quicknav.component.scss']
 })
-export class FdlEventsQuicknavComponent implements OnInit {
+export class GsEventsQuicknavComponent implements OnInit {
 
   /**
    * today's Date

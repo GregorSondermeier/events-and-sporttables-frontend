@@ -8,7 +8,7 @@ import { aggregateFirstLetters } from "../../_vanilla/helpers";
   templateUrl: './sport-sports.component.html',
   styleUrls: ['./sport-sports.component.scss']
 })
-export class FdlSportSportsComponent implements OnInit {
+export class GsSportSportsComponent implements OnInit {
 
   /**
    * all available sports

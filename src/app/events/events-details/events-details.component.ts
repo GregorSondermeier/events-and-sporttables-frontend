@@ -7,7 +7,7 @@ import { Event } from "../_models/Event";
   templateUrl: './events-details.component.html',
   styleUrls: ['./events-details.component.scss']
 })
-export class FdlEventsDetailsComponent implements OnInit {
+export class GsEventsDetailsComponent implements OnInit {
 
   public evt: Event;
 

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './routing-404.component.html',
   styleUrls: ['./routing-404.component.scss']
 })
-export class FdlRouting404Component implements OnInit {
+export class GsRouting404Component implements OnInit {
 
   constructor() { }
 

@@ -7,7 +7,7 @@ import { Team } from "../_models/Team";
   templateUrl: './sport-teams-details.component.html',
   styleUrls: ['./sport-teams-details.component.scss']
 })
-export class FdlSportTeamsDetailsComponent implements OnInit {
+export class GsSportTeamsDetailsComponent implements OnInit {
 
   public team: Team;
 

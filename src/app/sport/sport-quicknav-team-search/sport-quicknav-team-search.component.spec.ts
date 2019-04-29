@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FdlSportQuicknavTeamSearchComponent } from './sport-quicknav-team-search.component';
+import { GsSportQuicknavTeamSearchComponent } from './sport-quicknav-team-search.component';
 
 describe('SportQuicknavTeamSearchComponent', () => {
-  let component: FdlSportQuicknavTeamSearchComponent;
-  let fixture: ComponentFixture<FdlSportQuicknavTeamSearchComponent>;
+  let component: GsSportQuicknavTeamSearchComponent;
+  let fixture: ComponentFixture<GsSportQuicknavTeamSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdlSportQuicknavTeamSearchComponent ]
+      declarations: [ GsSportQuicknavTeamSearchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FdlSportQuicknavTeamSearchComponent);
+    fixture = TestBed.createComponent(GsSportQuicknavTeamSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
