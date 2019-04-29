@@ -1,7 +1,7 @@
 {
   "name": "events-and-sporttables-frontend",
   "version": "0.0.1",
-  "description": "An angular SPA for displaying sport tables and event overviews sourced from LEO Online.",
+  "description": "An angular SPA for displaying sporttables and event overviews sourced from a JSON based database.",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
