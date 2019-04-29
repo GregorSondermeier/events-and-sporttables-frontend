@@ -1,0 +1,21 @@
+<div *ngIf="heading" class="container-fluid">
+  <h2 class="font-weight-bold text-uppercase">
+    {{heading}}
+  </h2>
+</div>
+
+<ul class="list-unstyled">
+  <li *ngFor="let evt of events | slice:0:highlightedOnTop" class="mb-5">
+    <a [routerLink]="['/events', evt.id]">
+      <gs-events-teaser-big [evt]="evt"></gs-events-teaser-big>
+    </a>
+  </li>
+</ul>
+
+<ul class="list-unstyled">
+  <li *ngFor="let evt of events | slice:highlightedOnTop" class="mb-4">
+    <a [routerLink]="['/events', evt.id]">
+      <gs-events-teaser-small [evt]="evt"></gs-events-teaser-small>
+    </a>
+  </li>
+</ul>

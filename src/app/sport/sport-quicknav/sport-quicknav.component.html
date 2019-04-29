@@ -1,0 +1,17 @@
+<div class="clearfix">
+  <div class="float-right">
+    <button type="button"
+            class="btn"
+            (click)="toggleExpand('team')">
+      <i class="icon-search"></i>
+    </button>
+  </div>
+</div>
+
+<div *ngFor="let ies of isExpandedStates">
+  <div *ngIf="ies.isExpanded" [ngSwitch]="ies.expandable" class="position-relative">
+    <div *ngSwitchCase="'team'" class="position-absolute w-100">
+      <gs-sport-quicknav-team-search (onTeamSelect)="onTeamSearchSubmit.emit($event)"></gs-sport-quicknav-team-search>
+    </div>
+  </div>
+</div>

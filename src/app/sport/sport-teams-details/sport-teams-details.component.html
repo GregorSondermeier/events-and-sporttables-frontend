@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <h2 class="font-weight-bold text-uppercase">
+    <a [routerLink]="['/sport']">
+      Sporttabellen
+    </a>
+  </h2>
+
+  <gs-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></gs-sport-quicknav>
+
+  <h3 class="font-weight-bold text-uppercase">
+    {{team.name}}
+  </h3>
+
+  <div *ngFor="let sport of team.sports">
+    <h4 class="font-weight-bold">
+      {{sport.name}}
+    </h4>
+
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let league of sport.leagues">
+          <td>
+            <a [routerLink]="['/sport/results']" [queryParams]="{sport: league.sport.id, league: league.id, season: league.currentSeason, matchday: league.currentMatchday}">
+              {{league.name}} - {{league.group}} - {{league.sport.name}}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<gs-common-ad></gs-common-ad>

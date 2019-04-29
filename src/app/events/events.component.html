@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <h2 class="font-weight-bold text-uppercase">
+    <a [routerLink]="['/events']">
+      Veranstaltungen
+    </a>
+  </h2>
+</div>
+
+<gs-events-catswitcher></gs-events-catswitcher>
+
+<div class="container-fluid">
+  <gs-events-quicknav (onQuerySearchSubmit)="redirectToEventsSearch({query: $event})"
+                       (onDateSelect)="redirectToEventsSearch({date: $event})"
+                       (onLocationSelect)="redirectToEventsSearch({location: $event})"></gs-events-quicknav>
+</div>
+
+<gs-events-list *ngFor="let col of categoriesOnList"
+                 [events]="events[col.id]"
+                 [highlightedOnTop]="1"
+                 [heading]="col.name"></gs-events-list>

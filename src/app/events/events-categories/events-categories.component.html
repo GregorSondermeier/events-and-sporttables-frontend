@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <h2 class="font-weight-bold text-uppercase">
+    <a [routerLink]="['/events']">
+      Veranstaltungen
+    </a>
+  </h2>
+  <h3 class="font-weight-bold text-uppercase">
+    Kategorien
+  </h3>
+  <p><b>Wählen Sie unten die Veranstaltungs-Kategorie, für die Sie sich interessieren.</b></p>
+</div>
+
+<div class="bg-light container-fluid">
+  <ul class="list-inline">
+    <li class="list-inline-item"><a (click)="filterCategories()">ALLE</a></li>
+    <li *ngFor="let letter of letters" class="list-inline-item"><a (click)="filterCategories(letter)">{{letter | uppercase}}</a></li>
+  </ul>
+</div>
+
+<div class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let category of filteredCategories | slice:0:10">
+      <td>
+        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}" queryParamsHandling="merge">
+          {{category.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <gs-common-ad></gs-common-ad>
+</div>
+
+
+
+<div *ngIf="filteredCategories.length > 10" class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let category of filteredCategories | slice:10:20">
+      <td>
+        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}" queryParamsHandling="merge">
+          {{category.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <gs-common-ad></gs-common-ad>
+</div>
+
+<div *ngIf="filteredCategories.length > 20" class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let category of filteredCategories | slice:20">
+      <td>
+        <a [routerLink]="['/events/search']" [queryParams]="{category: category.id}" queryParamsHandling="merge">
+          {{category.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

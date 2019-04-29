@@ -1,0 +1,10 @@
+.position-absolute {
+  top: calc(50% - 0.6em);
+
+  &.gs-icon-left {
+    left: 0;
+  }
+  &.gs-icon-right {
+    right: 0;
+  }
+}

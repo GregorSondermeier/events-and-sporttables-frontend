@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "name": "Ballett & Tanz"
+  },
+  {
+    "id": 2,
+    "name": "Beauty"
+  },
+  {
+    "id": 3,
+    "name": "Bühne"
+  },
+  {
+    "id": 4,
+    "name": "Chöre"
+  },
+  {
+    "id": 5,
+    "name": "Comedy"
+  },
+  {
+    "id": 6,
+    "name": "Eishockey"
+  },
+  {
+    "id": 7,
+    "name": "Fitness"
+  },
+  {
+    "id": 8,
+    "name": "Freizeit"
+  },
+  {
+    "id": 9,
+    "name": "Fußball"
+  },
+  {
+    "id": 10,
+    "name": "Führung"
+  },
+  {
+    "id": 11,
+    "name": "Genuss"
+  },
+  {
+    "id": 12,
+    "name": "Genuss & Wellness"
+  },
+  {
+    "id": 13,
+    "name": "Handball"
+  },
+  {
+    "id": 14,
+    "name": "Jazz, Blues, Soul, Folk"
+  },
+  {
+    "id": 15,
+    "name": "Kabarett"
+  },
+  {
+    "id": 16,
+    "name": "Karneval"
+  },
+  {
+    "id": 17,
+    "name": "Kinder & Jugendliche"
+  },
+  {
+    "id": 18,
+    "name": "Klassik"
+  },
+  {
+    "id": 19,
+    "name": "Kleinkunst"
+  },
+  {
+    "id": 20,
+    "name": "Konzert"
+  },
+  {
+    "id": 21,
+    "name": "Leichtathletik"
+  },
+  {
+    "id": 22,
+    "name": "Lesungen"
+  },
+  {
+    "id": 23,
+    "name": "Messen, Markt, Börse"
+  },
+  {
+    "id": 24,
+    "name": "Musical & Show"
+  },
+  {
+    "id": 25,
+    "name": "Nightlife"
+  },
+  {
+    "id": 26,
+    "name": "Oper & Operette"
+  },
+  {
+    "id": 27,
+    "name": "Puppentheater & Kindertheater"
+  },
+  {
+    "id": 28,
+    "name": "Reggae, Ska"
+  },
+  {
+    "id": 29,
+    "name": "Ringen"
+  },
+  {
+    "id": 30,
+    "name": "Rock & Pop"
+  },
+  {
+    "id": 31,
+    "name": "Schauspiel"
+  },
+  {
+    "id": 32,
+    "name": "Special"
+  },
+  {
+    "id": 33,
+    "name": "Volksmusik / Schlager"
+  },
+  {
+    "id": 34,
+    "name": "Volleyball"
+  },
+  {
+    "id": 35,
+    "name": "Vortrag"
+  },
+  {
+    "id": 36,
+    "name": "Wandes & Ausflüge"
+  },
+  {
+    "id": 37,
+    "name": "Wissen"
+  }
+]

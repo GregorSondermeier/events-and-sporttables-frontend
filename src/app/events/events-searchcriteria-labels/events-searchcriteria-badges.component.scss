@@ -1,0 +1,15 @@
+.badge {
+  padding: .25em .5em;
+  border-radius: 0;
+
+  &:not(:last-child) {
+    margin-right: .5em;
+  }
+
+  .btn {
+    padding: 0;
+    border: 0;
+    line-height: inherit;
+    color: inherit;
+  }
+}

@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <h2 class="font-weight-bold text-uppercase">
+    <a [routerLink]="['/sport']">
+      Sporttabellen
+    </a>
+  </h2>
+
+  <gs-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></gs-sport-quicknav>
+
+  <h3 class="font-weight-bold text-uppercase">
+    Ligen
+  </h3>
+  <p><b>Wählen Sie unten die Liga, für die Sie sich interessieren.</b></p>
+</div>
+
+<div class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let league of leagues | slice:0:10">
+      <td>
+        <a [routerLink]="['/sport/results']" [queryParams]="{sport: league.sport.id, league: league.id, season: league.currentSeason, matchday: league.currentMatchday}">
+          {{league.sport.name}} - {{league.group}} - {{league.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <gs-common-ad></gs-common-ad>
+</div>
+
+<div *ngIf="leagues.length > 10" class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let league of leagues | slice:10:20">
+      <td>
+        <a [routerLink]="['/sport/results']" [queryParams]="{sport: league.sport.id, league: league.id, season: league.currentSeason, matchday: league.currentMatchday}">
+          {{league.sport.name}} - {{league.group}} - {{league.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <gs-common-ad></gs-common-ad>
+</div>
+
+<div *ngIf="leagues.length > 20" class="container-fluid">
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr *ngFor="let league of leagues | slice:20">
+      <td>
+        <a [routerLink]="['/sport/results']" [queryParams]="{sport: league.sport.id, league: league.id, season: league.currentSeason, matchday: league.currentMatchday}">
+          {{league.sport.name}} - {{league.group}} - {{league.name}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <gs-common-ad></gs-common-ad>
+</div>
