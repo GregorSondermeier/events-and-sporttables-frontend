@@ -9,7 +9,7 @@ import { skip } from "rxjs/operators";
   templateUrl: './sport-results.component.html',
   styleUrls: ['./sport-results.component.scss']
 })
-export class FdpSportResultsComponent implements OnInit {
+export class GsSportResultsComponent implements OnInit {
 
   /**
    * the resolved results

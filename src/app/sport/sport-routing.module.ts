@@ -4,7 +4,7 @@ import { GsSportSportsResolverService } from "./sport-sports/sport-sports-resolv
 import { GsSportSportsComponent } from "./sport-sports/sport-sports.component";
 import { GsSportLeaguesComponent } from "./sport-leagues/sport-leagues.component";
 import { GsSportLeaguesResolverService } from "./sport-leagues/sport-leagues-resolver.service";
-import { FdpSportResultsComponent } from "./sport-results/sport-results.component";
+import { GsSportResultsComponent } from "./sport-results/sport-results.component";
 import { GsSportResultsResolverService } from "./sport-results/sport-results-resolver.service";
 import { GsSportTeamsDetailsComponent } from "./sport-teams-details/sport-teams-details.component";
 import { GsSportsTeamDetailsResolverService } from "./sport-teams-details/sports-team-details-resolver.service";
@@ -26,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'sport/results',
-    component: FdpSportResultsComponent,
+    component: GsSportResultsComponent,
     resolve: {
       results: GsSportResultsResolverService
     }
