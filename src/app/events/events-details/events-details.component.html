@@ -33,7 +33,7 @@
 </figure>
 
 <div class="container-fluid">
-  <fdl-common-socialsharebar [entity]="evt"></fdl-common-socialsharebar>
+  <gs-common-socialsharebar [entity]="evt"></gs-common-socialsharebar>
 
   <p class="text-secondary mt-3 mb-2">
     {{evt.categories | GsEventsCategoriesIdsToString : ' / ' | async}}
@@ -43,7 +43,7 @@
     {{evt.teaser}}
   </p>
 
-  <fdl-common-ad></fdl-common-ad>
+  <gs-common-ad></gs-common-ad>
 
   <p>
     {{evt.description}}

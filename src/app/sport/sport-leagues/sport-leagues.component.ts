@@ -3,7 +3,7 @@ import { League } from "../_models/League";
 import { ActivatedRoute, ResolveData, Router } from "@angular/router";
 
 @Component({
-  selector: 'fdl-sport-leagues',
+  selector: 'gs-sport-leagues',
   templateUrl: './sport-leagues.component.html',
   styleUrls: ['./sport-leagues.component.scss']
 })

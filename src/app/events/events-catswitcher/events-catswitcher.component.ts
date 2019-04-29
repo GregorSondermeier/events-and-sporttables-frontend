@@ -3,7 +3,7 @@ import { Category } from "../_models/Category";
 import { GsCommonConfigService } from "../../common/common-config.service";
 
 @Component({
-  selector: 'fdl-events-catswitcher',
+  selector: 'gs-events-catswitcher',
   templateUrl: './events-catswitcher.component.html',
   styleUrls: ['./events-catswitcher.component.scss']
 })

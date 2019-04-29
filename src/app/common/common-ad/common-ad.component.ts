@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GsCommonConfigService } from "../common-config.service";
 
 @Component({
-  selector: 'fdl-common-ad',
+  selector: 'gs-common-ad',
   templateUrl: './common-ad.component.html',
   styleUrls: ['./common-ad.component.scss']
 })

@@ -7,7 +7,7 @@ import { GsCommonConfigService } from "../common/common-config.service";
 import { Category } from "./_models/Category";
 
 @Component({
-  selector: 'fdl-events',
+  selector: 'gs-events',
   styleUrls: ['./events.component.scss'],
   templateUrl: './events.component.html',
 

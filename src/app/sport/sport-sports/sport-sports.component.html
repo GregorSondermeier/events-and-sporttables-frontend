@@ -5,7 +5,7 @@
     </a>
   </h2>
 
-  <fdl-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></fdl-sport-quicknav>
+  <gs-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></gs-sport-quicknav>
 
   <h3 class="font-weight-bold text-uppercase">
     Sportarten
@@ -33,7 +33,7 @@
     </tbody>
   </table>
 
-  <fdl-common-ad></fdl-common-ad>
+  <gs-common-ad></gs-common-ad>
 </div>
 
 <div *ngIf="filteredSports.length > 10" class="container-fluid">
@@ -49,7 +49,7 @@
     </tbody>
   </table>
 
-  <fdl-common-ad></fdl-common-ad>
+  <gs-common-ad></gs-common-ad>
 </div>
 
 <div *ngIf="filteredSports.length > 20" class="container-fluid">
@@ -65,5 +65,5 @@
     </tbody>
   </table>
 
-  <fdl-common-ad></fdl-common-ad>
+  <gs-common-ad></gs-common-ad>
 </div>

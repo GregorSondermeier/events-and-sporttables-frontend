@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from "@angular/forms";
 
 @Component({
-  selector: 'fdl-events-quicknav-query-search',
+  selector: 'gs-events-quicknav-query-search',
   templateUrl: './events-quicknav-query-search.component.html',
   styleUrls: ['./events-quicknav-query-search.component.scss']
 })

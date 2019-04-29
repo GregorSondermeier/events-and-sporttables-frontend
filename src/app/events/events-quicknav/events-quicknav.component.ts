@@ -2,7 +2,7 @@ import { Component, EventEmitter, Inject, LOCALE_ID, OnInit, Output } from '@ang
 import { EventsQuicknavIsExpandedState } from "../_types/EventsQuicknavIsExpandedState";
 
 @Component({
-  selector: 'fdl-events-quicknav',
+  selector: 'gs-events-quicknav',
   templateUrl: './events-quicknav.component.html',
   styleUrls: ['./events-quicknav.component.scss']
 })

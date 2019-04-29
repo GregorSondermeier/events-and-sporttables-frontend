@@ -6,36 +6,36 @@
   </h2>
 </div>
 
-<fdl-events-catswitcher></fdl-events-catswitcher>
+<gs-events-catswitcher></gs-events-catswitcher>
 
 <div class="container-fluid">
-  <fdl-events-quicknav (onQuerySearchSubmit)="addItemToSearchcriteria({query: $event})"
+  <gs-events-quicknav (onQuerySearchSubmit)="addItemToSearchcriteria({query: $event})"
                        (onDateSelect)="addItemToSearchcriteria({date: $event})"
-                       (onLocationSelect)="addItemToSearchcriteria({location: $event})"></fdl-events-quicknav>
+                       (onLocationSelect)="addItemToSearchcriteria({location: $event})"></gs-events-quicknav>
 </div>
 
-<div class="container-fluid mt-4 fdl-events-searchcriteria-badges-wrapper">
-  <fdl-events-searchcriteria-badges [searchcriteria]="searchcriteria"
-                                    (removeItem)="removeItemFromSearchcriteria($event)"></fdl-events-searchcriteria-badges>
+<div class="container-fluid mt-4 gs-events-searchcriteria-badges-wrapper">
+  <gs-events-searchcriteria-badges [searchcriteria]="searchcriteria"
+                                    (removeItem)="removeItemFromSearchcriteria($event)"></gs-events-searchcriteria-badges>
 </div>
 
 
-<fdl-events-list [events]="events | slice:0:5"
+<gs-events-list [events]="events | slice:0:5"
                  [highlightedOnTop]="1"
-                 heading="Suchergebnisse"></fdl-events-list>
+                 heading="Suchergebnisse"></gs-events-list>
 
-<fdl-common-ad></fdl-common-ad>
+<gs-common-ad></gs-common-ad>
 
 <div *ngIf="events && events.length > 5">
-  <fdl-events-list [events]="events | slice:5:10"
-                   [highlightedOnTop]="0"></fdl-events-list>
+  <gs-events-list [events]="events | slice:5:10"
+                   [highlightedOnTop]="0"></gs-events-list>
 
-  <fdl-common-ad></fdl-common-ad>
+  <gs-common-ad></gs-common-ad>
 </div>
 
 <div *ngIf="events && events.length > 10">
-  <fdl-events-list [events]="events | slice:10"
-                   [highlightedOnTop]="0"></fdl-events-list>
+  <gs-events-list [events]="events | slice:10"
+                   [highlightedOnTop]="0"></gs-events-list>
 
-  <fdl-common-ad></fdl-common-ad>
+  <gs-common-ad></gs-common-ad>
 </div>

@@ -3,13 +3,13 @@
     <a [routerLink]="['/events/search']"
        [queryParams]="{date: today | date : 'yyyy-MM-dd'}"
        queryParamsHandling="merge"
-       class="btn fdl-btn-default">
+       class="btn gs-btn-default">
       HEUTE
     </a>
     <a [routerLink]="['/events/search']"
        [queryParams]="{date: tomorrow | date : 'yyyy-MM-dd'}"
        queryParamsHandling="merge"
-       class="btn fdl-btn-default">
+       class="btn gs-btn-default">
       MORGEN
     </a>
   </div>
@@ -35,13 +35,13 @@
 <div *ngFor="let ies of isExpandedStates">
   <div *ngIf="ies.isExpanded" [ngSwitch]="ies.expandable" class="position-relative">
     <div *ngSwitchCase="'location'" class="position-absolute w-100">
-      <fdl-events-quicknav-location-search (onLocationSelect)="onLocationSelect.emit($event)"></fdl-events-quicknav-location-search>
+      <gs-events-quicknav-location-search (onLocationSelect)="onLocationSelect.emit($event)"></gs-events-quicknav-location-search>
     </div>
     <div *ngSwitchCase="'calendar'" class="position-absolute w-100">
-      <fdl-events-quicknav-date-search (onDateSelect)="onDateSelect.emit($event)"></fdl-events-quicknav-date-search>
+      <gs-events-quicknav-date-search (onDateSelect)="onDateSelect.emit($event)"></gs-events-quicknav-date-search>
     </div>
     <div *ngSwitchCase="'query'" class="position-absolute w-100">
-      <fdl-events-quicknav-query-search (onSubmit)="onQuerySearchSubmit.emit($event)"></fdl-events-quicknav-query-search>
+      <gs-events-quicknav-query-search (onSubmit)="onQuerySearchSubmit.emit($event)"></gs-events-quicknav-query-search>
     </div>
   </div>
 </div>

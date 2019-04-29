@@ -3,7 +3,7 @@ import { ActivatedRoute, ResolveData, Router } from "@angular/router";
 import { Team } from "../_models/Team";
 
 @Component({
-  selector: 'fdl-sport-teams-details',
+  selector: 'gs-sport-teams-details',
   templateUrl: './sport-teams-details.component.html',
   styleUrls: ['./sport-teams-details.component.scss']
 })

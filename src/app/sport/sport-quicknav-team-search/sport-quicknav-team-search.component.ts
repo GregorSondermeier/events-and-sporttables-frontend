@@ -7,7 +7,7 @@ import { GsSportApiService } from "../sport-api.service";
 import { debounceTime, distinctUntilChanged, filter, switchMap } from "rxjs/operators";
 
 @Component({
-  selector: 'fdl-sport-quicknav-team-search',
+  selector: 'gs-sport-quicknav-team-search',
   templateUrl: './sport-quicknav-team-search.component.html',
   styleUrls: ['./sport-quicknav-team-search.component.scss']
 })

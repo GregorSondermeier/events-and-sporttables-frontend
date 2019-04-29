@@ -4,7 +4,7 @@ import { GsEventsApiService } from "../events-api.service";
 import { EventPreview } from "../_models/EventPreview";
 
 @Component({
-  selector: 'fdl-events-search',
+  selector: 'gs-events-search',
   templateUrl: './events-search.component.html',
   styleUrls: ['./events-search.component.scss'],
   providers: [GsEventsApiService]

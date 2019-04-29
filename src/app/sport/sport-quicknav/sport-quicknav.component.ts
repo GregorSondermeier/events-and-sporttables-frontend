@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { SportQuicknavIsExpandedState } from "../_types/SportQuicknavIsExpandedState";
 
 @Component({
-  selector: 'fdl-sport-quicknav',
+  selector: 'gs-sport-quicknav',
   templateUrl: './sport-quicknav.component.html',
   styleUrls: ['./sport-quicknav.component.scss']
 })

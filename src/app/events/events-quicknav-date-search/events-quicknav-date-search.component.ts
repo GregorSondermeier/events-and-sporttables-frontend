@@ -3,7 +3,7 @@ import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import { formatDate } from "@angular/common";
 
 @Component({
-  selector: 'fdl-events-quicknav-date-search',
+  selector: 'gs-events-quicknav-date-search',
   templateUrl: './events-quicknav-date-search.component.html',
   styleUrls: ['./events-quicknav-date-search.component.scss']
 })

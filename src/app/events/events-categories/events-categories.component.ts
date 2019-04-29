@@ -4,7 +4,7 @@ import { Category } from "../_models/Category";
 import { aggregateFirstLetters } from "../../_vanilla/helpers";
 
 @Component({
-  selector: 'fdl-events-categories',
+  selector: 'gs-events-categories',
   templateUrl: './events-categories.component.html',
   styleUrls: ['./events-categories.component.scss']
 })

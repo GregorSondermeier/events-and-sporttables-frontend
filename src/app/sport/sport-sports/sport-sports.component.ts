@@ -4,7 +4,7 @@ import { ActivatedRoute, ResolveData, Router } from "@angular/router";
 import { aggregateFirstLetters } from "../../_vanilla/helpers";
 
 @Component({
-  selector: 'fdl-sport-sports',
+  selector: 'gs-sport-sports',
   templateUrl: './sport-sports.component.html',
   styleUrls: ['./sport-sports.component.scss']
 })

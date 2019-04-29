@@ -1,7 +1,7 @@
 import { AfterViewInit, Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[fdlCommonAutofocus]'
+  selector: '[gsCommonAutofocus]'
 })
 export class GsCommonAutofocusDirective implements AfterViewInit {
 

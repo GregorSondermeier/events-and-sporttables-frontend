@@ -4,7 +4,7 @@ import { GsEventsCategoriesIdToStringPipe } from "../events-categories/events-ca
 import { GsEventsLocationsIdToStringPipe } from "../events-locations/events-locations-id-to-string.pipe";
 
 @Component({
-  selector: 'fdl-events-searchcriteria-badges',
+  selector: 'gs-events-searchcriteria-badges',
   templateUrl: './events-searchcriteria-badges.component.html',
   styleUrls: ['./events-searchcriteria-badges.component.scss'],
   providers: [
@@ -33,7 +33,7 @@ export class GsEventsSearchcriteriaBadgesComponent implements OnChanges {
 
   constructor(@Inject(LOCALE_ID) private locale: string,
               private eventsCategoriesIdToStringPipe: GsEventsCategoriesIdToStringPipe,
-              private fdlEventsLocationsIdToStringPipe: GsEventsLocationsIdToStringPipe) { }
+              private gsEventsLocationsIdToStringPipe: GsEventsLocationsIdToStringPipe) { }
 
   /**
    * on changes, populate the searchcriteriaFormatted array with humanly readable formatted values
@@ -60,7 +60,7 @@ export class GsEventsSearchcriteriaBadgesComponent implements OnChanges {
             break;
           case 'location':
             scfItem.formattedKey = 'Location';
-            this.fdlEventsLocationsIdToStringPipe.transform(+ changes.searchcriteria.currentValue.location)
+            this.gsEventsLocationsIdToStringPipe.transform(+ changes.searchcriteria.currentValue.location)
               .subscribe((locationString) => {
                 scfItem.formattedValue = locationString;
               });

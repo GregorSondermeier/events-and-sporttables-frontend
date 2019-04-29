@@ -3,7 +3,7 @@ import { IEventsModuleConfig } from "./events/_interfaces/IEventsModuleConfig";
 import { GsCommonConfigService } from "./common/common-config.service";
 
 @Component({
-  selector: 'fdl-app',
+  selector: 'gs-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

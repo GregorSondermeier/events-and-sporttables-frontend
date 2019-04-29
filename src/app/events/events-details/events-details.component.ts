@@ -3,7 +3,7 @@ import { ActivatedRoute, ResolveData } from "@angular/router";
 import { Event } from "../_models/Event";
 
 @Component({
-  selector: 'fdl-events-details',
+  selector: 'gs-events-details',
   templateUrl: './events-details.component.html',
   styleUrls: ['./events-details.component.scss']
 })

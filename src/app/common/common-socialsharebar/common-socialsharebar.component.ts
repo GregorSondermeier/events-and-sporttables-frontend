@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'fdl-common-socialsharebar',
+  selector: 'gs-common-socialsharebar',
   templateUrl: './common-socialsharebar.component.html',
   styleUrls: ['./common-socialsharebar.component.scss']
 })

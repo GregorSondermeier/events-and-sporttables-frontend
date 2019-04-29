@@ -5,7 +5,7 @@
     </a>
   </h2>
 
-  <fdl-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></fdl-sport-quicknav>
+  <gs-sport-quicknav (onTeamSearchSubmit)="redirectToTeamDetails($event)"></gs-sport-quicknav>
 
   <h3 class="font-weight-bold">
     {{results.league.name}} - {{results.league.group}} - {{results.league.sport.name}}
@@ -18,7 +18,7 @@
 
 <div class="bg-light mt-3 mb-3 pt-1 pb-1">
   <div class="position-relative">
-    <a class="position-absolute fdl-icon-left pl-3 pr-3"
+    <a class="position-absolute gs-icon-left pl-3 pr-3"
        [routerLink]="['/sport/results']"
        [queryParams]="{matchday: results.matchday - 1}"
        queryParamsHandling="merge">
@@ -27,7 +27,7 @@
     <h4 class="font-weight-bold text-center mb-0">
       {{results.matchday}}. Spieltag
     </h4>
-    <a class="position-absolute fdl-icon-right pl-3 pr-3"
+    <a class="position-absolute gs-icon-right pl-3 pr-3"
        [routerLink]="['/sport/results']"
        [queryParams]="{matchday: results.matchday + 1}"
        queryParamsHandling="merge">
@@ -59,7 +59,7 @@
   </tbody>
 </table>
 
-<fdl-common-ad></fdl-common-ad>
+<gs-common-ad></gs-common-ad>
 
 <div class="container-fluid">
   <h5 class="font-weight-bold">
@@ -91,4 +91,4 @@
   <p>{{results.table.description}}</p>
 </div>
 
-<fdl-common-ad></fdl-common-ad>
+<gs-common-ad></gs-common-ad>

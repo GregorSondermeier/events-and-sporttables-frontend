@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { Title } from "@angular/platform-browser";
 
 @Component({
-  selector: 'fdl-sport',
+  selector: 'gs-sport',
   styleUrls: ['./sport.component.scss'],
   templateUrl: './sport.component.html',
 })

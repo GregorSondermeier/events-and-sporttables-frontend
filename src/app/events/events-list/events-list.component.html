@@ -7,7 +7,7 @@
 <ul class="list-unstyled">
   <li *ngFor="let evt of events | slice:0:highlightedOnTop" class="mb-5">
     <a [routerLink]="['/events', evt.id]">
-      <fdl-events-teaser-big [evt]="evt"></fdl-events-teaser-big>
+      <gs-events-teaser-big [evt]="evt"></gs-events-teaser-big>
     </a>
   </li>
 </ul>
@@ -15,7 +15,7 @@
 <ul class="list-unstyled">
   <li *ngFor="let evt of events | slice:highlightedOnTop" class="mb-4">
     <a [routerLink]="['/events', evt.id]">
-      <fdl-events-teaser-small [evt]="evt"></fdl-events-teaser-small>
+      <gs-events-teaser-small [evt]="evt"></gs-events-teaser-small>
     </a>
   </li>
 </ul>

@@ -7,7 +7,7 @@ import { NgForm } from "@angular/forms";
 import { Location } from "../_models/Location";
 
 @Component({
-  selector: 'fdl-events-quicknav-location-search',
+  selector: 'gs-events-quicknav-location-search',
   templateUrl: './events-quicknav-location-search.component.html',
   styleUrls: ['./events-quicknav-location-search.component.scss'],
   providers: [GsEventsApiService]

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { EventPreview } from "../_models/EventPreview";
 
 @Component({
-  selector: 'fdl-events-teaser-small',
+  selector: 'gs-events-teaser-small',
   templateUrl: './events-teaser-small.component.html',
   styleUrls: ['./events-teaser-small.component.scss']
 })
